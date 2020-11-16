@@ -1,0 +1,565 @@
+---
+layout: documentation
+title: "Backdrops"
+---
+
+<div class="container narrow margin-y-4">
+    <p>
+        Backdrops are useful for placing a translucent image behind custom content. Backdrops offer two fundamentally distinct variations: an
+        image proportional block that scales and stacks responsively, and a fixed-height backdrop that, when needed,
+        adjust to the height of its inner content.
+    </p>    
+</div>
+<!-- .container -->
+
+<div class="container narrow margin-y-4">
+    <div class="alert alert--confirm margin-y-3">
+        <div class="alert__head">
+            <p>
+                <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
+                <span class="alert__head__title">Accessibility Touchpoint</span>
+            </p>
+        </div>
+        <div class="alert__body">
+            <p>
+                Backdrops replace CSS background images with inline HTML images so screen readers can read the
+                image's <em>alt</em> text.
+            </p>
+            <p>Learn more about <a href="https://www.w3.org/WAI/tutorials/images/">accessible images</a>.</p>
+        </div>
+    </div>
+</div>
+<!-- .container -->
+
+<hr class="margin-y-5" id="image-proportional">
+
+<div class="container narrow margin-y-4">
+
+    <h2>Image Proportional</h2>
+    
+    <p>
+        The default <code>.backdrop</code> selector requires two immediate children. The first is an image with a class
+        of <code>.backdrop__image</code>. This image sets the size (proportional width and height) of our backdrop. The
+        second direct child is a block-level element with a class of <code>.backdrop__cover</code>, inside of which
+        custom content can be placed.
+    </p>
+    
+    <p>This is a basic example of an image proportional backdrop:</p>
+
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <div class="backdrop theme-dark rounded" {{ site.style_default_theme_colors }}>
+        <img class="backdrop__image opacity-30" src="{{ site.baseurl }}/images/examples/backdrop-example-01.jpg" alt="Placeholder">
+        <div class="backdrop__cover">
+            <div class="container text-align-center">
+                <div class="w-80 mx-auto">
+                    <p class="h3 text-shadow">
+                        <em>What hurrying human tides, or day or night!</em> 
+                    </p>
+                    <p>—Walt Whitman, <a href="#1"><em>Broadway</a></em></p>
+                </div>
+            </div>
+        </div>
+        <!-- cover -->
+    </div>
+    <!-- .backdrop -->
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Backdrops use two additional Framework classes: the <a
+            href="{{ site.baseurl }}/docs/color-system/#backgroundColorClasses">background color</a> class, and
+        an <a href="#1">opacity</a> class. The opacity class (e.g. <code>.opacity-40</code>) applies an
+        opacity to the backdrop's feature image, allowing the background color (set with <code>.theme-dark</code> on the
+        backdrop selector) to show through.
+    </p>
+    <p>Consider the code used to create the example above:</p>
+</div>
+
+<figure class="container medium margin-y-4">
+
+    <pre data-line="1,3,5,6,7,8,9,10,11,12,13,14">
+        <code class="language-html">
+            &lt;div class="backdrop theme-dark rounded"&gt;
+
+                &lt;img class="backdrop__image opacity-40" src="https://via.placeholder.com/750x325" alt="Placeholder"&gt;
+
+                &lt;div class="backdrop__cover"&gt;
+                    &lt;div class="container text-align-center"&gt;
+                        &lt;div class="w-80 mx-auto"&gt;
+                            &lt;p class="h3 text-shadow"&gt;
+                                &lt;em&gt;What hurrying human tides, or day or night!&lt;/em&gt; 
+                            &lt;/p&gt;
+                            &lt;p&gt;—Walt Whitman, &lt;a href="#1"&gt;&lt;em&gt;Broadway&lt;/a&gt;&lt;/em&gt;&lt;/p&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;!-- backdrop__cover --&gt;
+
+            &lt;/div&gt;
+            &lt;!-- .backdrop --&gt;
+        </code>
+    </pre>
+
+</figure>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <table class="table font-size-md">
+        <thead>
+            <tr>
+                <th class="w-30">Line #</th>
+                <th class="w-70">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>1</td>
+                <td>
+                    <p>
+                        The <code>.backdrop</code> class is required on all backdrop selectors. The
+                        <code>.theme-dark</code> class sets the background and text color, while the <code>.rounded</code>
+                        class creates the <a href="#1">rounded corners</a>.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>
+                    <p>
+                        The <code>.backdrop__image</code> class is required for the primary image of the backdrop. The
+                        <code>.opacity-40</code> class sets a 40% opacity to the image.
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>5-14</td>
+                <td>
+                    <p>
+                        The <code>.backdrop__cover</code> selector holds the backdrop's contextual content.
+                    </p>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        The following two examples use <code>.theme-primary</code> (left) and <code>.theme-secondary</code> (right). The <code>&lt;a&gt;</code>
+        tag within <code>backdrop__cover</code> includes a <code>.expanded-link</code> class, making the whole backdrop clickable.
+    </p>
+</div>
+
+<figure class="container medium margin-y-4">
+
+    <div class="grid grid--gap-2 grid--cells-fill--md text-align-center" {{ site.style_default_theme_colors }}>
+
+        <div class="grid__cell">
+
+            <div class="backdrop theme-primary rounded">
+
+                <img class="backdrop__image opacity-50" src="{{ site.baseurl }}/images/examples/backdrop-example-02.jpg" alt="Placeholder">
+
+                <div class="backdrop__cover">
+
+                    <div class="container">
+
+                        <a href="#1" class="h3 expanded-link">Title Link</a>
+
+                    </div>
+                </div>
+                <!-- cover -->
+
+            </div>
+            <!-- .backdrop-feature -->
+
+        </div>
+        <!-- col -->
+
+        <div class="grid__cell">
+
+            <div class="backdrop theme-secondary rounded">
+
+                <img class="backdrop__image opacity-40" src="{{ site.baseurl }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
+
+                <div class="backdrop__cover align-center">
+
+                    <div class="container margin-y-4">
+
+                        <a href="#1" class="h3 expanded-link">Title Link</a>
+
+                    </div>
+                </div>
+                <!-- cover -->
+
+            </div>
+            <!-- .backdrop-feature -->
+
+        </div>
+        <!-- grid__cell -->
+
+    </div>
+    <!-- grid -->
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Modifiers</h3>
+    <p>
+        When using image proportional backdrops for featured content (like the full-width example below) the content may become
+        too tall for the image on small viewports.
+    </p>
+</div>
+
+<figure class="margin-y-4">
+
+    <div class="backdrop backdrop--stack--md theme-dark" {{ site.style_default_theme_colors }}>
+
+        <img class="backdrop__image opacity-30--md" src="{{ site.baseurl }}/images/examples/backdrop-example-04.jpg" alt="Placeholder">
+
+        <div class="backdrop__cover">
+
+            <div class="container medium margin-y-4">
+
+                <h1 class="banner-headline text-align-center text-shadow margin-bottom-4">
+                    Lorem ipsum dolor sit amet consectetur
+                </h1>
+
+                <div class="narrow">
+
+                    <div class="grid grid--gap-2 grid--cells-fill--sm justify-center">
+
+                        <div class="grid__cell">
+                            <a class="btn theme-primary display-block theme-white box-shadow" href="#1">Link</a>
+                        </div>
+                        <!-- .grid__cell -->
+
+                        <div class="grid__cell">
+                            <a class="btn theme-secondary display-block theme-white box-shadow" href="#1">Link</a>
+                        </div>
+                        <!-- .grid__cell -->
+
+                    </div>
+                    <!-- .grid -->
+
+                </div>
+
+            </div>
+            <!-- .container -->
+
+        </div>
+        <!-- .backdrop__cover -->
+
+        <div class="backdrop__credit">
+            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+        </div>
+
+    </div>
+    <!-- .backdrop -->
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Include a <em>stack breakpoint modifier</em> (e.g. <code>.backdrop--stack--md</code>) to a
+        <code>.backdrop</code> selector and the backdrop's image is placed above the content vertically until the
+        viewport reaches the desired breakpoint specified in the modifier.
+    </p>
+</div>
+
+{% include browser-iframe.html iframe_url="/examples/backdrops/stack-breakpoint-modifier-01.html" iframe_width="narrow" %}
+
+<!--
+    
+    <p>
+        Examples on this page include the <code>.backdrop__credit</code> selector which is not required but offers an easy way to credit an image.
+    </p>
+    -->
+
+<div class="container narrow margin-y-4">
+    <p>
+        The above example shows how the same full-with backdrop appears on a smaller (mobile) viewport.
+    </p>
+    <p>
+        Notice the image is at full opacity. That's because our <a href="#1">opacity classes</a> have their own a breakpoint modifiers. Adding <code>.opacity-40--md</code> to the <code>.backdrop__image</code> selector gives that image
+        a specified opacity (40%) at the medium (md) breakpoint.
+    </p>
+    <p>Examine the code used to create the backdrops above:</p>
+</div>
+
+<figure class="container medium margin-y-4">
+
+    <pre data-line="1">
+        <code class="language-html">
+            &lt;div class="backdrop backdrop--stack--md theme-dark"&gt;
+
+                &lt;img class="backdrop__image opacity-40--md" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
+
+                &lt;div class="backdrop__cover"&gt;
+
+                    &lt;div class="container medium margin-y-4"&gt;
+
+                        &lt;h1 class="banner-headline text-align-center text-shadow margin-bottom-4"&gt;
+                            Lorem ipsum dolor sit amet consectetur
+                        &lt;/h1&gt;
+
+                        &lt;div class="narrow"&gt;
+
+                            &lt;div class="grid grid--gap-2 grid--cells-fill--sm justify-center"&gt;
+
+                                &lt;div class="grid__cell"&gt;
+                                    &lt;a class="btn theme-primary display-block theme-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;!-- .grid__cell --&gt;
+
+                                &lt;div class="grid__cell"&gt;
+                                    &lt;a class="btn theme-secondary display-block theme-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
+                                &lt;/div&gt;
+                                &lt;!-- .grid__cell --&gt;
+
+                            &lt;/div&gt;
+                            &lt;!-- .grid --&gt;
+
+                        &lt;/div&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .container --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- .backdrop__cover --&gt;
+
+                &lt;div class="backdrop__credit"&gt;
+                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                &lt;/div&gt;
+                
+            &lt;/div&gt;
+            &lt;!-- .backdrop --&gt;
+        </code>
+    </pre>
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        All of this together makes it easy to create responsive backdrops with different flavors of color and content. What if we don't want our backdrop's size to be dictated by the image?
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="margin-y-5">
+
+<div class="container narrow margin-y-4">
+    <h2>Fixed Height Backdrops</h2>
+    <p>
+        Another way to use backdrops is to append the <code>--fixed</code> modifier to <code>.backdrop</code> resulting
+        in <code>.backdrop--fixed</code>. Now the backdrop has a fixed height. The height value is set in <em>section
+            B</em>. of the <a href="#1">/scss/base/_backdrops.scss</a> partial.
+    </p>
+</div>
+
+<figure class="margin-y-4">
+
+    <div class="backdrop backdrop--fixed theme-dark" {{ site.style_default_theme_colors }}>
+
+        <img class="backdrop__image opacity-40" src="{{ site.baseurl }}/images/examples/backdrop-example-05.jpg" alt="Placeholder">
+
+        <div class="backdrop__cover">
+
+            <div class="container wide margin-y-4">
+
+                <h1 class="banner-headline text-shadow">
+                    Lorem ipsum dolor
+                </h1>
+
+            </div>
+            <!-- .container -->
+
+        </div>
+        <!-- .backdrop__cover -->
+
+        <div class="backdrop__credit">
+            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+        </div>
+
+    </div>
+    <!-- .backdrop -->
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>The HTML for the above example:</p>
+</div>
+
+<figure class="container medium margin-y-4">
+
+    <pre>
+        <code class="language-html">
+            &lt;div class="backdrop backdrop--fixed theme-dark"&gt;
+
+                &lt;img class="backdrop__image opacity-40" src="https://via.placeholder.com/1500x750.jpg" alt="Placeholder"&gt;
+
+                &lt;div class="backdrop__cover"&gt;
+
+                    &lt;div class="container wide margin-y-4"&gt;
+
+                        &lt;h1 class="banner-headline text-shadow margin-bottom-4"&gt;
+                            Lorem ipsum dolor
+                        &lt;/h1&gt;
+
+                    &lt;/div&gt;
+                    &lt;!-- .container --&gt;
+
+                &lt;/div&gt;
+                &lt;!-- .backdrop__cover --&gt;
+
+                &lt;div class="backdrop__credit"&gt;
+                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+            &lt;!-- .backdrop --&gt;
+        </code>
+    </pre>
+
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        The <code>.backdrop--fixed</code> selector stretches to fit the content within <code>.backdrop__cover</code>.
+        Consider the following layout:
+    </p>
+</div>
+
+ <figure class="margin-y-5">
+
+    <div class="backdrop backdrop--fixed theme-dark" {{ site.style_default_theme_colors }}>
+
+        <img class="backdrop__image opacity-20" src="{{ site.baseurl }}/images/examples/backdrop-example-06.jpg" alt="Placeholder">
+
+        <div class="backdrop__cover text-align-center">
+
+            <div class="container medium margin-y-5">
+
+                <h1 class="banner-headline text-shadow margin-bottom-4">
+                    Lorem ipsum dolor sit amet consectetur
+                </h1>
+
+                <div class="margin-y-4">
+
+                    <div class="grid grid--gap-2 grid--cells-fill--md justify-content-center t-left">
+
+                        <div class="grid__cell">
+
+                            <div class="card theme-white box-shadow">
+
+                                <div class="card__head border-bottom ">
+                                    <p>Card Header</p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h4">Card Title</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
+                                        obcaecati autem, ex facilis labore reiciendis.
+                                    </p>
+                                </div>
+
+                                <div class="card__foot border-top font-size-md">
+                                    <a class="btn theme-secondary display-block" href="#1">Action</a>
+                                </div>
+                            </div>
+                            <!-- .card -->
+
+                        </div>
+                        <!-- .grid__cell -->
+
+                        <div class="grid__cell">
+
+                            <div class="card theme-white box-shadow">
+
+                                <div class="card__head border-bottom ">
+                                    <p>Card Header</p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h4">Card Title</h2>
+                                    <p>
+                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
+                                        obcaecati autem, ex
+                                        facilis labore reiciendis.
+                                    </p>
+                                </div>
+
+                                <div class="card__foot border-top font-size-md">
+                                    <a class="btn theme-secondary display-block" href="#1">Action</a>
+                                </div>
+                            </div>
+                            <!-- .card -->
+
+                        </div>
+                        <!-- .grid__cell -->
+
+                    </div>
+                    <!-- .grid -->
+
+                </div>
+
+                <div class="margin-y-3">
+
+                    <p>Follow Us</p>
+
+                    <ul class="nav nav--gap-1 nav--horizontal justify-content-center" role="list">
+                        <li>
+                            <a class="btn btn--icon-only theme-secondary" href="#1" title="Facebook">
+                                <span class="sr-only">Facebook</span>
+                                <span class="fab fa-facebook-f" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn--icon-only theme-secondary" href="#1" title="Facebook">
+                                <span class="sr-only">Facebook</span>
+                                <span class="fab fa-twitter" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn--icon-only theme-secondary" href="#1" title="Facebook">
+                                <span class="sr-only">Facebook</span>
+                                <span class="fab fa-youtube" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a class="btn btn--icon-only theme-secondary" href="#1" title="Facebook">
+                                <span class="sr-only">Facebook</span>
+                                <span class="fas fa-share" aria-hidden="true"></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+            <!-- .container -->
+
+        </div>
+        <!-- .backdrop__cover -->
+
+        <div class="backdrop__credit">
+            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+        </div>
+
+    </div>
+    <!-- backdrop -->
+
+ </figure>
+
+ <div class="container narrow margin-y-4">
+    <p>
+        In this example, the content inside <code>.backdrop__cover</code> is taller than the default height (375px), and
+        <code>.backdrop--fixed</code> adjusts its height accordingly.
+    </p>
+ </div>

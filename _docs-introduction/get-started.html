@@ -1,0 +1,284 @@
+---
+layout: documentation
+title: "Get Started"
+---
+
+<div class="container narrow margin-y-4">
+
+    <h2 class="h1">
+        Make beautiful, accessible websites easier and faster.
+    </h2>
+    
+    <p>
+        The NYC Core Framework is an open-source front end toolkit for building modern websites and browser-based applications.
+        Designed to remove technical barriers for teams with limited resources, it provides a
+        wealth of prebuilt front-end components customizable for projects of any size and complexity.
+    </p>
+
+    <ul class="nav nav--horizontal--md text-primary">
+        <li>
+            <a class="btn btn--outline btn--has-icon" href="#quickStartGuide">
+                <span class="far fa-arrow-alt-circle-down fa-sm btn__icon"></span>
+                <span class="btn__text">Quick Start CDN</span>
+            </a>
+        </li>
+        <li>
+            <a class="btn btn--outline btn--has-icon" href="#1">
+                <span class="fab fa-github fa-sm btn__icon"></span>
+                <span class="btn__text">GitHub</span>
+            </a>
+        </li>
+    </ul>
+
+</div>
+<!-- .container -->
+
+<hr class="margin-y-5" id="theFiles">
+
+<div class="container narrow margin-y-4">
+    <h2>Framework at a Glance</h2>
+    <p>
+        The NYC Core Framework is built with <a href="https://sass-lang.com/">Sass</a>, <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties">CSS Custom Properties</a>, and modern <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"> Javascript</a>. The Framework proper
+        is made up of the following folders and files.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">    
+    <pre class="hide-toolbar" data-line="4,6">
+        <code class="language-plaintext">
+            nyc-core-framework/
+            ├── dist/
+            │   ├── css/
+            |   │   └── nyc_core.css
+            │   ├── js/
+            |   │   └── nyc_core.js
+            ├── src/
+            │   ├── js/
+            |   │   └── nyc_core.js
+            |   └── scss/
+            |       ├── nyc_core.scss
+            |       └── partials/
+            |           ├── _accessibility.scss
+            |           ├── _accordions.scss
+            |           ├── _aspect-ratios.scss
+            |           ├── _backdrops.scss
+            |           ├── _borders.scss
+            |           ├── _breakpoints.scss
+            |           ├── _buttons.scss
+            |           ├── _cards.scss
+            |           ├── _collapse.scss
+            |           ├── _colors.scss
+            |           ├── _dev-tools.scss
+            |           ├── _display.scss
+            |           ├── _flex.scss
+            |           ├── _forms.scss
+            |           ├── _gradients.scss
+            |           ├── _grid.scss
+            |           ├── _links.scss
+            |           ├── _mixins.scss
+            |           ├── _modals.scss
+            |           ├── _navigation.scss
+            |           ├── _opacities.scss
+            |           ├── _shadows.scss
+            |           ├── _sizing.scss
+            |           ├── _spacing.scss
+            |           ├── _tables.scss
+            |           ├── _typography.scss
+            |           ├── _z-index.scss
+            |           └── _rtl.scss
+            ├── images/
+            └── index.html
+        </code>
+    </pre>
+    <figcaption>
+        Figure 1 - The NYC Core Framework's file structure.
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+
+    <h3>CSS and Javascript</h3>
+    <p>
+        In Figure 1 (above), notice the highlighted files: <strong>/dist/css/nyc_core.css</strong> (line
+        4), <strong>/dist/js/nyc_core.js</strong> (line 6).
+    </p>
+    <p>
+        These CSS and Javascript files are the <strong>only two dependencies</strong> generated from
+        the NYC Core Framework, and they are available to be used via CDN (Content Delivery Network). 
+    </p>
+    <p>
+        You don't need to set up a complicated development environment to use the NYC Core Framework. Follow the
+        <em>Quick Start CDN</em> intructions below to get started with our core files.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="margin-y-5" id="quickStartGuide">
+
+<div class="container narrow margin-y-4">
+    <h2>Quick Start CDN</h2>
+    <p>
+        Get up and running in a New York minute. Create a plain HTML document and add the code from Figure 2 (below).
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <pre data-line="3,8,11,12,13,14,15,23,26,32,36,42,47">
+        <code class="language-html">
+            &lt;!DOCTYPE html&gt;
+
+            &lt;html lang="en" dir="ltr"&gt;
+
+                &lt;head&gt;
+
+                    &lt;!-- I.E. Compatibility Mode --&gt;
+                    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+
+                    &lt;!-- I.E. Custom Properties Polyfill --&gt;
+                    &lt;script&gt;
+                        window.MSInputMethodContext && document.documentMode && document.write(
+                            '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
+                        );
+                    &lt;/script&gt;
+
+                    &lt;meta charset="utf-8"&gt;
+                    &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
+
+                    &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
+
+                    &lt;!-- Font Awesome Kit --&gt;
+                    &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+                    &lt;!-- NYC Core Stylesheet --&gt;
+                    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
+
+                &lt;/head&gt;
+
+                &lt;body&gt;
+
+                    &lt;header id="global-header" role="banner"&gt;
+
+                    &lt;/header&gt;
+
+                    &lt;main id="skip-header-content" role="main"&gt;
+
+                        &lt;h1&gt;Hello New York&lt;/h1&gt;
+
+                    &lt;/main&gt;
+
+                    &lt;footer id="global-footer" role="contentinfo"&gt;
+
+                    &lt;/footer&gt;
+
+                    &lt;!-- NYC Core Javascript --&gt;
+                    &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js">&lt;/script&gt;
+
+                &lt;/body&gt;
+
+            &lt;/html&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 2 - HTML Boilerplate required for using the NYC Core Framework.</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Highlighted in Figure 2, line 8 and 11-15 are required for Internet Explorer 11. Lines 26 and 47
+        are required for the Framework. Learn what these scripts do with the table below.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <table class="table table--edge font-size-md">
+        <thead>
+            <tr>
+                <th class="width-30">Line #</th>
+                <th class="width-70">Details</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr>
+                <td>3</td>
+                <td>
+                    <p>
+                        On the HTML tag, the <code>lang="en"</code> attrribute sets the default language (English). The <code>dir="ltr"</code> attribute sets the default text direction (left to right).
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td>
+                    <p>
+                        Meta tag for correcting Internet Explorer 11 page rendering issues with compatibility mode. For whatever reason, this tag must to be first within the <code>&lt;head&gt;</code> in order for it to work.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>11-15</td>
+                <td>
+                    <p>
+                        This Custom Properties polyfill for IE 11 needs to placed before any stylesheet or style reference. All other browsers will not load this script. Thanks to
+                        Tobias Buschor | <a href="#1">https://git.io/fjXMN</a>.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>23</td>
+                <td>
+                    <p>
+                        Javascript link to <a href="https://fontawesome.com/">Font Awesome</a>,
+                        an open-source icon library, used for iconography accross the framework.
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>26</td>
+                <td>
+                    <p>
+                        The Framework's latest stable version of the core stylesheet (available via CDN).
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td>32, 36, 42</td>
+                <td>
+                    <p>
+                        Accessible landmarks (regions and roles) are present for assistive technology.
+                    </p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>47</td>
+                <td>
+                    <p>
+                        The Framework's latest stable core Javascript file.
+                    </p>
+                </td>
+            </tr>
+
+        </tbody>
+
+    </table>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        That's it! With the all of the required scripts in place, you are ready to start building with the NYC Core Framework. Next, learn how to customize your layouts look and feel.
+    </p>
+</div>
+<!-- .container -->
+
+<div class="container narrow margin-y-4">
+    <a class="btn btn--has-icon theme-secondary" href="{{ site.baseurl }}/docs/customization/">
+        <span class="btn__text">Customization</span>
+        <span class="fas fa-long-arrow-alt-right btn__icon"></span>
+    </a>
+</div>
+<!-- .container -->

@@ -1,0 +1,25 @@
+{% if include.iframe_width %}
+    {% assign width_class = include.iframe_width %}
+{% else %}
+    {% assign width_class = 'medium' %}
+{% endif %}
+
+<figure class="container {{ width_class }} margin-y-4">
+
+    <div class="browser box-shadow-1">
+
+        <div class="browser__bar">
+            <div>
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <iframe src="{{ site.baseurl }}{{ include.iframe_url }}" aria-hidden="true"></iframe>
+
+    </div>
+    <!-- .browser -->
+
+</figure>

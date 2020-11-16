@@ -1,0 +1,55 @@
+---
+layout: default
+---
+
+<div class="display-none--lg">
+    <button class="btn theme-dark display-block" data-toggle="collapse" data-target="#sidebar">
+        <span class="fas fa-arrow-down btn__icon"></span>
+        <span class="btn__text">Button</span>
+    </button>
+    
+</div>
+
+<div class="grid">
+
+    <div class="grid__cell-2--lg theme-light display-block--lg" id="sidebar">
+
+        <div class="sticky-top padding-2">
+
+            {% include sidebar.html %}
+
+        </div>
+        <!-- .stick-top -->
+
+    </div>
+    <!-- col -->
+
+    <div class="grid__cell-10--lg overflow-hidden" id="primary-content">
+
+        <div class="theme-secondary overflow-hidden">
+
+            <div class="margin-y-5">
+
+                <div class="container narrow">
+                    <h1 class="banner-headline">
+                        {{ page.title }}
+                    </h1>
+                </div>
+
+            </div>
+            <!-- .container -->
+
+        </div>
+
+        <div class="margin-y-5">
+
+            {{ content }}
+
+        </div>
+        <!-- .margin-y-5 -->
+
+    </div>
+    <!-- col -->
+
+</div>
+<!-- .grid -->

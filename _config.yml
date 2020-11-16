@@ -1,0 +1,54 @@
+# Name of website
+title: Natura11y Inclusive Framwork
+# Short description of your site
+description: An open source accessible design system
+
+# URL (Local)
+baseurl: ''
+
+# Archive (Append '/version/x.x')
+# baseurl: '/nyc-core-framework/version/1.5'
+
+# Permalinks
+permalink: pretty
+
+# Exclude
+exclude:
+  - readme.md
+  
+  # Comment (exclude) for versioning
+  # - version/*`
+
+  - src/*
+  - .babelrc
+  - node_modules/*
+  - Gemfile
+  - Gemfile.lock
+  - nyc-core-framework.code-workspace
+  - package-lock.json
+  - package.json
+  - webpack.config.js
+
+# Collections
+collections:
+
+  docs-introduction:
+    output: true
+    permalink: /docs/:path/
+    order: 
+      - get-started.html
+      - customization.html
+      - accessibility.html
+
+  docs-a-z:
+    output: true
+    permalink: /docs/:path/
+
+# Custom Global Vars
+style_default_theme_colors: 
+    'style="--primary: #25caa4;
+            --secondary: #6500d6;
+            --dark: #262345;
+            --light: #f1f4f6;
+            --primary-text: var(--dark);
+            --secondary-text: white;"'
