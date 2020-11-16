@@ -3,31 +3,35 @@ layout: default
 title: "Home"
 ---
 
-<div class="backdrop backdrop--fixed theme-dark" id="introduction">
+<section class="backdrop backdrop--fixed theme-dark" id="introduction">
 
-    <div class="backdrop__image gradient-veneer-bottom">
-        <img class="opacity-40 " src="{{ site.baseurl }}/images/backdrop-home.jpg" alt="Placeholder">
+    <div class="backdrop__image">
+        <img class="opacity-30" src="{{ site.baseurl }}/images/backdrop-home.jpg" alt="">
+    </div>
+    
+    <div class="backdrop__credit display-none">
+        <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
     </div>
 
     <div class="backdrop__cover">
 
-        <div class="container medium margin-y-4">
+        <div class="container narrow medium--md margin-y-3">
 
-            <h1 class="banner-headline text-align-center text-shadow margin-bottom-3">
-                NYC's open source accessible design system
+            <h1 class="banner-headline text-align-center text-shadow--md margin-bottom-3 text-shadow">
+                Be a good designer.<br>Be inclusive.
             </h1>
 
             <div class="narrow">
 
-                <div class="grid grid--gap-4 grid--cells-fill--sm">
+                <div class="grid grid--gap-2 grid--cells-fill--sm">
 
                     <div class="grid__cell">
-                        <a class="btn display-block theme-white box-shadow" href="{{ site.baseurl }}/docs/get-started/">Get Started</a>
+                        <a class="btn theme-white display-block box-shadow-3" href="#1">Get Started</a>
                     </div>
                     <!-- .grid__cell -->
 
                     <div class="grid__cell">
-                        <a class="btn display-block theme-white box-shadow" href="#1">Templates</a>
+                        <a class="btn btn--outline display-block" href="#1">Templates</a>
                     </div>
                     <!-- .grid__cell -->
 
@@ -37,132 +41,147 @@ title: "Home"
             </div>
 
         </div>
-        <!-- .container -->
 
     </div>
     <!-- .backdrop__cover -->
 
-    <div class="backdrop__credit">
-        <p>Annabel Ruddle/NYC&amp;Company</p>
-    </div>
+</section>
 
-</div>
-<!-- .backdrop -->
-
-<div class="callout overflow-hidden">
+<section class="overflow-hidden text-align-center" id="features">
 
     <div class="container wide margin-y-5">
 
-        <div class="grid grid--cells-fill--md align-items-center">
+        <div class="grid grid--gap-2 grid--cells-6--lg">
 
             <div class="grid__cell">
-                <img src="{{ site.baseurl }}/images/home-accessibility.jpg" alt="Home accessibility">
-            </div>
-            <!-- col -->
 
-            <div class="grid__cell message">
+                <div class="backdrop backdrop--fixed theme-dark justify-content-end">
 
-                <div class="theme-white padding-4--md padding-5--lg margin-left-n5--lg">
+                    <div class="backdrop__image gradient-veneer-bottom">
+                        <img class="opacity-60" src="{{ site.baseurl }}/images/backdrop-accessibility.jpg" alt="">
+                    </div>
 
-                    <h2>Inclusive and Accessible</h2>
+                    <div class="backdrop__cover">
 
-                    <p>
-                        Built-in Accessibility features and best practices for assistive technologies, language translation, and more.
-                    </p>
+                        <div class="container narrow margin-y-4">
 
-                    <a class="btn theme-dark" href="{{ site.baseurl }}/docs/accessibility/">What's Included</a>
+                            <h3 class="text-shadow--md margin-bottom-3 text-shadow">
+                                Built-in Accessibility
+                            </h3>
+
+                            <p class="text-shadow">
+                                Built-in Accessibility features and best practices for assistive technologies, language translation, and more.
+                            </p>
+                            
+                            <a class="btn theme-white box-shadow font-size-md" href="#1">What's Included</a>
+
+                        </div>
+
+                    </div>
+                    <!-- .backdrop__cover -->
 
                 </div>
 
             </div>
-            <!-- col -->
-
-        </div>
-        <!-- .grid -->
-
-    </div>
-    <!-- .container -->
-
-</div>
-<!-- callout -->
-
-<hr>
-
-<div class="callout overflow-hidden">
-
-<div class="container wide margin-y-5">
-
-    <div class="grid grid--cells-fill--md align-items-center">
-
-        <div class="grid__cell">
-            <img src="./images/home-colors.jpg" alt="Home accessibility">
-        </div>
-        <!-- col -->
-
-        <div class="grid__cell message">
-
-            <div class="theme-white padding-4--md padding-5--lg margin-left-n5--lg">
-
-                <h2>Dynamic Color System</h2>
-
-                <p>
-                    Effortlessly apply color wherever you wish while keeping an accessible contrast ratio
-                    throughout your layouts.
-                </p>
-
-                <a class="btn theme-dark" href="{{ site.baseurl }}/docs/color-system/">Color Stystem</a>
-
-            </div>
-
-        </div>
-        <!-- col -->
-
-    </div>
-    <!-- .grid -->
-
-</div>
-<!-- .container -->
-
-</div>
-<!-- callout -->
-
-<hr>
-
-<div class="callout overflow-hidden">
-
-    <div class="container wide margin-y-5">
-
-        <div class="grid grid--cells-fill--md align-items-center">
 
             <div class="grid__cell">
-                <img src="{{ site.baseurl }}/images/home-get-started.jpg" alt="Home accessibility">
-            </div>
-            <!-- col -->
 
-            <div class="grid__cell message">
+                <div class="backdrop backdrop--fixed theme-dark justify-content-end">
 
-                <div class="theme-white padding-4--md padding-5--lg margin-left-n5--lg">
+                    <div class="backdrop__image gradient-veneer-bottom">
+                        <img class="opacity-60" src="{{ site.baseurl }}/images/backdrop-color-system.jpg" alt="">
+                    </div>
 
-                    <h2>Beginner Friendly</h2>
+                    <div class="backdrop__cover">
 
-                    <p>
-                        An unintimidating code base and minimal dependencies make building with the NYC Core
-                        Framework ideal for new developers and flexible
-                        for seasoned ones.
-                    </p>
+                        <div class="container narrow margin-y-4">
 
-                    <a class="btn theme-dark" href="{{ site.baseurl }}/docs/get-started/">Get Started</a>
+                            <h3 class="text-shadow--md margin-bottom-3 text-shadow">
+                                Dynamic Color System
+                            </h3>
+
+                            <p class="text-shadow">
+                                Effortlessly apply color wherever you wish while keeping an accessible contrast
+                                ratio throughout your layouts.
+                            </p>
+                            
+                            <a class="btn theme-white box-shadow font-size-md" href="#1">Color Stystem</a>
+
+                        </div>
+
+                    </div>
+                    <!-- .backdrop__cover -->
 
                 </div>
 
             </div>
-            <!-- col -->
+
+            <div class="grid__cell">
+
+                <div class="backdrop backdrop--fixed theme-dark justify-content-end">
+
+                    <div class="backdrop__image gradient-veneer-bottom">
+                        <img class="opacity-60" src="{{ site.baseurl }}/images/backdrop-customizable-cdn.jpg" alt="">
+                    </div>
+
+                    <div class="backdrop__cover">
+
+                        <div class="container narrow margin-y-4">
+
+                            <h3 class="text-shadow--md margin-bottom-3 text-shadow">
+                                Customizable CDN
+                            </h3>
+
+                            <p class="text-shadow">
+                                An unintimidating code base and minimal dependencies make building with Natura11y
+                                ideal for any developer.
+                            </p>
+                            
+                            <a class="btn theme-white box-shadow font-size-md" href="#1">Customization</a>
+
+                        </div>
+
+                    </div>
+                    <!-- .backdrop__cover -->
+
+                </div>
+
+            </div>
+
+            <div class="grid__cell">
+
+                <div class="backdrop backdrop--fixed theme-dark justify-content-end">
+
+                    <div class="backdrop__image gradient-veneer-bottom">
+                        <img class="opacity-60" src="{{ site.baseurl }}/images/backdrop-beginner-friendly.jpg" alt="">
+                    </div>
+
+                    <div class="backdrop__cover">
+
+                        <div class="container narrow margin-y-4">
+
+                            <h3 class="text-shadow--md margin-bottom-3 text-shadow">
+                                Beginner Friendly
+                            </h3>
+
+                            <p class="text-shadow">
+                                An unintimidating code base and minimal dependencies make building with Natura11y
+                                ideal for any developer.
+                            </p>
+                            
+                            <a class="btn theme-white box-shadow font-size-md" href="#1">Get Started</a>
+
+                        </div>
+
+                    </div>
+                    <!-- .backdrop__cover -->
+
+                </div>
+
+            </div>
 
         </div>
-        <!-- .grid -->
 
     </div>
-    <!-- .container -->
 
-</div>
-<!-- callout -->
+</section>
