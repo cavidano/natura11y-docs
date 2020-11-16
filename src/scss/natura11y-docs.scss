@@ -1,0 +1,69 @@
+/*
+
+In this file:
+
+// A. Imports
+// B. Custom Theme Styles
+
+*/
+
+//////////////////////////////////////////////
+// A. Imports
+//////////////////////////////////////////////
+
+// Required
+
+@import "partials/breakpoints";
+
+//////////////////////////////////////////////
+// B. Custom Theme Styles
+//////////////////////////////////////////////
+
+// Put anything here
+
+:root {
+    --primary: #70d091;
+    --primary-text: #013a3c;
+    --base-font-family: 'Poppins';
+
+    --base-font-weight-bold: 800;
+    --base-font-size: 20px;
+    --base-line-height: 1.5;
+
+    --btn-border-radius: 0.5em;
+
+    --article-sidebar-width: 260px;
+}
+
+strong {
+    font-weight: var(--base-font-weight-medium);
+}
+
+// Logo
+
+a > svg {
+    fill: currentColor;
+    vertical-align: middle;
+}
+
+a[data-logo="brand"] {
+    &:focus {
+        opacity: 0.85;
+    }
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+#introduction {
+    --backdrop-fixed-height: 800px;
+}
+
+#features {
+    --backdrop-fixed-height: 600px;
+    
+    @include breakpoints-down(lg) {
+        --backdrop-fixed-height: 800px;
+    }
+}
