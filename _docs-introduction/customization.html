@@ -8,28 +8,24 @@ title: "Customization"
         Distinguish yourself without starting from scratch.
     </h2>
     <p>
-        Apply your own color, typography, spacing, and more to our prebuilt templates and components. There are two
-        different ways to customize the NYC Core Framework—with our CDN stylesheet and CSS custom
-        properties, or with a Sass development environment.
+        There are two ways to customize the NYC Core Framework. The CDN Stylesheet allows you to redefine styles. We'll
+        cover this method in the following section. Your other option is to set up a modern development environment.
     </p>
 </div>
 <!-- .container -->
 
-<hr class="margin-y-5" id="cdnAndCustomProperties">
+<hr class="margin-y-5" id="customizableCDN">
 
 <div class="container narrow margin-y-4">
-    <h2>CDN and Custom Properties</h2>
+    <h2>Customizable CDN</h2>
         <p>
-            Our <a href="{{ site.baseurl }}/docs/get-started/#quickStartGuide">Quick Start
-                Guide</a> shows you how to include the Framework's core stylesheet via CDN. Within he Framework, a handful of our
-            styles are declared using custom properties (also known as CSS variables).
+            Our <a href="{{ site.baseurl }}/docs/get-started/#quickStart">Quick Start</a> guide shows you how to include the framework's core stylesheet via CDN. Within the framework, we
+            use CSS custom properties to declare styles. CSS People often refer to CSS custom properties as <strong>CSS variables</strong>. We use this term throughout our documentation.
         </p>
         <p>
-        If you're unfamiliar with custom properties, <a href="#1">read the MDN web docs</a>. They are similar to <a
-            href="https://sass-lang.com/documentation/variables">Sass variables</a> because they both allow you to store
-        and reuse values in your CSS (see Figure 6 and 7 below). Custom properties, however, provide additional benefits
-        that Sass variables do not.
-    </p>
+            If you're not familiar with CSS variables, take time now to <a href="#1">read the MDN web docs</a>. Figure 1 (below) offers a simple example of using
+            a SASS variable and a CSS Variable to achieve the same result.
+        </p>
 </div>
 <!-- .container -->
 
@@ -37,24 +33,16 @@ title: "Customization"
 
     <pre class="hide-toolbar">
         <code class="language-scss">
+            // Primary as a SASS Variable:
+
             $primary: navy;
 
             .selector--primary{
                 background-color: $primary
             }
-        </code>
-    </pre>
 
-    <figcaption>
-        <p>Figure 1 - Basic example of Sass variable usage.</p>
-    </figcaption>
+            // Primary as a CSS Variable:
 
-</figure>
-
-<figure class="container narrow margin-y-4">
-
-    <pre class="hide-toolbar">
-        <code class="language-scss">
             --primary: navy;
 
             .selector--primary{
@@ -64,16 +52,23 @@ title: "Customization"
     </pre>
 
     <figcaption>
-        <p>Figure 2 - Basic example of custom property usage.</p>
+        <p>Figure 1</p>
     </figcaption>
 
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
-        Because custom properties update at runtime, we can modify values from our CDN stylesheet by declaring new
-        values in a second stylesheet. In the next exercise, you'll learn how to customize your theme colors using this
-        methodology.
+        CSS variables provide benefits that Sass variables do not. Did you know CSS variables update at runtime?
+        You can declare new values from <strong>nyc_core.css</strong> anytime after that stylesheet reference.
+    </p>
+    <p>
+        There are different ways to declare new values for CSS variables. Adding a style tag in the header is ideal for
+        prototyping and exploring. Creating a second stylesheet is the preferred method. You can even redeclare values
+        using JavaScript!
+    </p>
+    <p>
+        In the following exercise, learn how to change your theme colors with a second stylesheet.
     </p>
 </div>
 <!-- .container -->
@@ -81,10 +76,10 @@ title: "Customization"
 <hr class="margin-y-5" id="customizingColors">
 
 <div class="container narrow margin-y-4">
-    <h2>Customizing Colors</h2>
+    <h2>Practice Exercise: Customizing Colors</h2>
     <p>
-        Copy and paste the following HTML into a new document. Save it as <em>theming-example.html</em>
-        into your project's root directory.
+        Make new directory somewhere on your computer. Call it <strong>color-example</strong>. Copy and paste the
+        markup from Figure 2 (below) into a new HTML document. Save this document as <strong>index.html</strong> inside of the <strong>color-example</strong> directory.
     </p>
 </div>
 <!-- .container -->
@@ -101,20 +96,13 @@ title: "Customization"
                         &lt;!-- I.E. Compatibility Mode --&gt;
                         &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
 
-                        &lt;!-- I.E. Custom Properties Polyfill --&gt;
-                        &lt;script&gt;
-                            window.MSInputMethodContext && document.documentMode && document.write(
-                                '&lt;script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"&gt;&lt;\x2fscript&gt;'
-                            );
-                        &lt;/script&gt;
-
                         &lt;meta charset="utf-8"&gt;
                         &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
 
                         &lt;title&gt;Title • NYC Core Framework&lt;/title&gt;
 
-                        &lt;!-- Font Awesome Kit --&gt;
-                        &lt;script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"&gt;&lt;/script&gt;
+                        &lt;!-- NYC Core Icons --&gt;
+                        &lt;link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css"&gt;
 
                         &lt;!-- NYC Core Stylesheet --&gt;
                         &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
@@ -154,12 +142,12 @@ title: "Customization"
         </code>
     </pre>
     <figcaption>
-        <p>Figure 3 - HTML for color exercise.</p>
+        <p>Figure 2</p>
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
-    <p>Preview it in a browser. It should resemble the following.</p>
+    <p>Preview <strong>index.html</strong> in a browser. It should resemble the following.</p>
 </div>
 <!-- .container -->
 
@@ -167,39 +155,38 @@ title: "Customization"
 
 <div class="container narrow margin-y-4">
     <p>
-        These four colors (<em>primary</em>, <em>secondary</em>, <em>dark</em>, and <em>light</em>) are declared as
-        custom properties within our core stylesheet which is loaded via CDN. Let's replace these values in a second
-        stylesheet referenced just below the core stylesheet.
+        Declared as CSS variables in <strong>nyc_core.css</strong>, we have four colors. They are <em>Primary</em>, <em>Secondary</em>, <em>Dark</em>, and <em>Light</em>.
+        Let's customize their color values with a second stylesheet.
     </p>
     <p>
-        Within your project, create a new CSS file and name it <em>theme-properties.css</em> and
-        save it to the <strong>/css/lib/</strong> directory.
+        Within the <strong>color-example</strong> directory, create a new directory called <strong>css</strong>. Make a new CSS file and name it
+        <strong>new-colors.css</strong>. Save it into the <strong>/css</strong> directory.
     </p>
     <p>
-        Next, open your HTML document and add a link to <em>theme-properties.css</em> below
-        <em>nyc_core.css</em>.
+        Open your HTML document. Add a link to <strong>new-colors.css</strong> somewhere below
+        <strong>nyc_core.css</strong> (Figure 3, line 5).
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container medium margin-y-4">
-    <pre class="hide-toolbar">
+    <pre class="hide-toolbar" data-line="5">
         <code class="language-html">
             &lt;!-- NYC Core Stylesheet --&gt;
             &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
 
             &lt;!-- Custom Theme Properties --&gt;
-            &lt;link rel="stylesheet" href="./css/lib/theme-properties.css"&gt;
+            &lt;link rel="stylesheet" href="./css/lib/new-colors.css"&gt;
         </code>
     </pre>
     <figcaption>
-        <p>Figure 11 - Custom Properties declared in <em>theme-properties.css</em> will override properties in <em>nyc_core.css</em>.</p>
+        <p>Figure 3</p>
     </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
-        With <em>theme-properties.css</em> open, include the following css, save this file, and refresh your browser.
+        With <strong>new-colors.css</strong> open, include the CSS from Figure 4. Save this file and refresh your browser.
     </p>
 
 </div>
@@ -219,7 +206,7 @@ title: "Customization"
     </pre>
 
     <figcaption>
-        <p>Figure 12 - The <code>:root</code> pseudo-class selector represents the root of the document.</p>
+        <p>Figure 4</p>
     </figcaption>
 
 </figure>
@@ -228,941 +215,76 @@ title: "Customization"
 
 <div class="container narrow margin-y-4">
     <p>
-        Did your colors update to the purple palette? With our new stylesheet in place, we have the ability to change more than
-        just colors. You can see just how easy it is to customize the NYC Core Framework using a second stylesheet. 
+        Did your colors update to the purple palette? With your new stylesheet in place, you have the ability to customize
+        much more than just colors. In fact, you have full control over your design. 
     </p>
 </div>
 <!-- .container -->
 
-<hr class="margin-y-5" id="rootCustomProperties">
+<hr class="margin-y-5" id="custom-property-cheat-sheet">
 
 <div class="container narrow margin-y-4">
-    <h2>Root Custom Properties</h2>
+    <h2>Reference Guide: CSS Variables</h2>
     <p>
-        The table below provides a bird's-eye view of the custom properties available to be overridden within your <em>theme-properties.css</em> stylesheet.
+        CSS Variables are hierarchal, or <strong>scoped</strong>. AA variable's scope determines its reach throughout the DOM tree..
+    </p>
+    <p>
+        All CSS Variables in the framework are either scoped to the document or to a block. Document scoped variables
+        use the <code>:root</code> psuedo selector (available to the entire page). Block scoped variables use their selector class
+        (e.g., <code>.card</code>). These variables are available only to their selector (Figure 5).
     </p>
 </div>
 <!-- .container -->
 
-<div class="container medium margin-y-4">
+<figure class="container narrow margin-y-4">
+    
+    <pre class="hide-toolbar">
+        <code class="language-css">
+            /* Scoped to the root */
 
-    <div class="accordion theme-dark rounded" id="custom-property-list">
+            :root {
+                --primary: #0080f8;
+            }
 
-        <button
-            class="accordion__button h6"
-            id="acc-color-system"
-            data-toggle="accordion"
-            aria-controls="acc-panel-color-system"
-            aria-expanded="true">
-                Color System
-        </button>
+            /* Scoped to a parent selector */
 
-        <div 
-            class="accordion__panel show"
-            id="acc-panel-color-system"
-            data-accordion="panel"
-            aria-labelledby="acc-color-system"
-            role="region">
+            .card {
+                --card-padding-y: 1em;
+            }
+        </code>
+    </pre>
+
+    <figcaption>
+        <p>Figure 5</p>
+    </figcaption>
+
+</figure>
+<div class="container narrow margin-y-4">
+    <p>
+        The following table accounts for all CSS variables within the NYC Core framework. Pay close attention to scope of each set of variables (noted under each header in the table). 
+    </p>
+    <p>
+        When declaring new values within your own CSS, be sure their scopes match.
+    </p>
+</div>
+<!-- .container -->
+
+<div class="container medium margin-y-4" id="all-custom-properties">
+
+    <div class="table-scroll" role="region">
             
-            <div class="accordion__panel__content">
+        {% include table-scroll-help.html %}
 
-                <div class="table-scroll font-size-md" role="region">
-            
-                    {% include table-scroll-help.html %}
-            
-                    <div class="table-scroll__container">
-
-                        <table class="table table--edge table--va-middle table--striped" aria-labelledby="table-caption-color-system">
-
-                            <caption class="screen-reader-only" id="table-caption-color-system">
-                              Color System Custom Properties 
-                            </caption>
-
-                            <thead>
-                                <tr>
-                                    <th scope="col">Custom Property</th>
-                                    <th scope="col">Default Value</th>
-
-                                    <th scope="col">
-                                        <span class="screen-reader-only">
-                                            Actions
-                                        </span>
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td data-prop>
-                                       --primary
-                                    </td>
-                                    <td data-val>
-                                        #25caa4
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-primary">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --secondary
-                                    </td>
-                                    <td data-val>
-                                        #6500d6
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info"
-                                                    data-modal-open="cp-modal-secondary">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --dark
-                                    </td>
-                                    <td data-val>
-                                        #262345
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info"
-                                                    data-modal-open="cp-modal-dark">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --light
-                                    </td>
-                                    <td data-val>
-                                        #f1f4f6
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-light">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --a11y-link-color
-                                    </td>
-                                    <td data-val>
-                                        blue
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-a11y-link-color">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --primary-text
-                                    </td>
-                                    <td data-val>
-                                        var(--dark)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-primary-text">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --primary-border
-                                    </td>
-                                    <td data-val>
-                                        hsla(0, 0%, 0%, 0.125)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-primary-border">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --primary-link
-                                    </td>
-                                    <td data-val>
-                                        currentColor
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-primary-link">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --secondary-text
-                                    </td>
-                                    <td data-val>
-                                        white
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-secondary-text">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --secondary-border
-                                    </td>
-                                    <td data-val>
-                                        hsla(0, 0%, 0%, 0.25)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-secondary-border">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --secondary-link
-                                    </td>
-                                    <td data-val>
-                                        currentColor
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-secondary-link">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-            
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --dark-text
-                                    </td>
-                                    <td data-val>
-                                        white
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-dark-text">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --dark-border
-                                    </td>
-                                    <td data-val>
-                                        hsla(0, 0%, 100%, 0.125)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-dark-border">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --dark-link
-                                    </td>
-                                    <td data-val>
-                                        currentColor
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-dark-link">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --light-text
-                                    </td>
-                                    <td data-val>
-                                        var(--dark)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-light-text">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --light-border
-                                    </td>
-                                    <td data-val>
-                                        hsla(0, 0%, 50%, 0.25)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info"
-                                                    data-modal-open="example-modal">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --light-link
-                                    </td>
-                                    <td data-val>
-                                        var(--a11y-link-color)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info"
-                                                    data-modal-open="example-modal">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --white-text
-                                    </td>
-                                    <td data-val>
-                                        var(--dark)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-white-text">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --white-border
-                                    </td>
-                                    <td data-val>
-                                        hsla(0, 0%, 50%, 0.25)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info"  data-modal-open="cp-white-border">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --white-link
-                                    </td>
-                                    <td data-val>
-                                        var(--a11y-link-color)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-white-link">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-            
-                        </table>
-            
-                    </div>
-                    <!-- .table-scroll__container -->
-
-                </div>
-                <!-- .table-scroll -->
-
-            </div>
-            <!-- .panel__content -->
-
-        </div>
-        <!-- .accordion__panel -->
-
-        <button class="accordion__button h6"
-                id="acc-accordion"
-                data-toggle="accordion"
-                aria-controls="acc-panel-accordion"
-                aria-expanded="false">
-                    Accordion
-        </button>
-
-        <div class="accordion__panel"
-             id="acc-panel-accordion"
-             data-accordion="panel"
-             aria-labelledby="acc-accordion"
-             role="region">
-            
-            <div class="accordion__panel__content">
-
-                <div class="table-scroll font-size-md" role="region">
-            
-                    {% include table-scroll-help.html %}
-            
-                    <div class="table-scroll__container">
-
-                        <table class="table table--va-middle table--edge" aria-labelledby="table-caption-color-system">
-
-                            <caption class=" screen-reader-only" id="table-caption-color-system">
-                              Accordion Custom Properties 
-                            </caption>
-
-                            <thead>
-                                <tr>
-                                    <th scope="col">Custom Property</th>
-                                    <th scope="col">Default Value</th>
-                                    <th scope="col">
-                                        <span class="screen-reader-only">
-                                            Actions
-                                        </span>
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td data-prop>
-                                        --accordion-padding-x
-                                    </td>
-                                    <td data-val>
-                                        var(--s2)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-x">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --accordion-padding-y
-                                    </td>
-                                    <td data-val>
-                                        var(--s2)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-y">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-            
-                        </table>
-            
-                    </div>
-                    <!-- .table-scroll__container -->
-
-                </div>
-                <!-- .table-scroll -->
-            
-            </div>
-            <!-- .panel__content -->
-
-        </div>
-        <!-- .accordion__panel -->
-
-        <button class="accordion__button h6"
-                id="acc-alerts"
-                data-toggle="accordion"
-                aria-controls="acc-panel-alerts"
-                aria-expanded="false">
-                    Alerts
-        </button>
-
-        <div class="accordion__panel"
-             id="acc-panel-accordion"
-             data-accordion="panel"
-             aria-labelledby="acc-accordion"
-             role="region">
-            
-            <div class="accordion__panel__content">
-
-                <div class="table-scroll font-size-md" role="region">
-            
-                    {% include table-scroll-help.html %}
-            
-                    <div class="table-scroll__container">
-
-                        <table class="table table--va-middle table--edge" aria-labelledby="table-caption-color-system">
-
-                            <caption class=" screen-reader-only" id="table-caption-color-system">
-                              Accordion Custom Properties 
-                            </caption>
-
-                            <thead>
-                                <tr>
-                                    <th scope="col">Custom Property</th>
-                                    <th scope="col">Default Value</th>
-                                    <th scope="col">
-                                        <span class="screen-reader-only">
-                                            Actions
-                                        </span>
-                                    </th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                <tr>
-                                    <td data-prop>
-                                        --accordion-padding-x
-                                    </td>
-                                    <td data-val>
-                                        var(--s2)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-x">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td data-prop>
-                                        --accordion-padding-y
-                                    </td>
-                                    <td data-val>
-                                        var(--s2)
-                                    </td>
-                                    <td>
-                                        <ul class="nav nav--gap-1 nav--horizontal justify-content-end">
-                                            <li>
-                                                <button data-clipboard>
-                                                    Copy
-                                                </button>
-                                            </li>
-                                            <li>
-                                                <button class="btn btn--icon-only text-secondary" title="Info" data-modal-open="cp-modal-accordion-padding-y">
-                                                    <span class="sr-only">Info</span>
-                                                    <span class="fas fa-info" aria-hidden="true"></span>
-                                                </button>
-                                            </li>
-                                        </ul>
-                                    </td>
-                                </tr>
-                            </tbody>
-            
-                        </table>
-            
-                    </div>
-                    <!-- .table-scroll__container -->
-
-                </div>
-                <!-- .table-scroll -->
-            
-            </div>
-            <!-- .panel__content -->
-
-        </div>
-        <!-- .accordion__panel -->
+        <div class="table-scroll__container theme-dark"></div>
 
     </div>
-    <!-- .accordion -->
 
 </div>
 <!-- .container -->
 
 <div class="container narrow margin-y-4">
-    <a class="btn btn--has-icon theme-secondary" href="{{ site.baseurl }}/docs/accessibility/">
-        <span class="btn__text">Accessibility</span>
-        <span class="fas fa-long-arrow-alt-right btn__icon"></span>
+    <a class="button button--has-icon theme-secondary" href="{{ site.baseurl }}/docs/accessibility/">
+        <span class="button__text">Accessibility</span>
+        <span class="nyc_icon_arrow-right" aria-hidden="true"></span>
     </a>
 </div>
-
-<!-- Modals - Color System -->
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-modal-primary"
-    modal_title="--primary"
-    modal_description="Your theme's global primary color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-modal-secondary"
-    modal_title="--secondary"
-    modal_description="Your theme's global secondary color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-modal-dark"
-    modal_title="--dark"
-    modal_description="Your theme's global dark color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-modal-light"
-    modal_title="--light"
-    modal_description="Your theme's global light color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-a11y-link-color"
-    modal_title="--a11y-link-color"
-    modal_description="Link color used within your <em>white</em> and <em>light</em> theme colors."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-primary-text"
-    modal_title="--primary-text"
-    modal_description="Text color used within your <em>primary</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-primary-border"
-    modal_title="--primary-border"
-    modal_description="Border color used within your <em>primary</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-primary-link"
-    modal_title="--primary-link"
-    modal_description="Link color used within your <em>primary</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-secondary-text"
-    modal_title="--secondary-text"
-    modal_description="Text color used within your <em>secondary</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-secondary-border"
-    modal_title="--secondary-border"
-    modal_description="Border color used within your <em>secondary</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-secondary-link"
-    modal_title="--secondary-link"
-    modal_description="Link color used within your <em>secondary</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-dark-text"
-    modal_title="--dark-text"
-    modal_description="Text color used within your <em>dark</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-dark-border"
-    modal_title="--dark-border"
-    modal_description="Border color used within your <em>dark</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-dark-link"
-    modal_title="--dark-link"
-    modal_description="Link color used within your <em>dark</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-white-text"
-    modal_title="--white-text"
-    modal_description="Text color used within your <em>white</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-white-border"
-    modal_title="--white-border"
-    modal_description="Border color used within your <em>white</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-white-link"
-    modal_title="--white-link"
-    modal_description="Link color used within your <em>white</em> theme color."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-<!-- Modals - Accordion -->
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-modal-accordion-padding-x"
-    modal_title="--accordion-padding-x"
-    modal_description="Left and right padding amount for accordion button and content."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
-
-{% include
-    custom-property-modal.html
-    modal_id="cp-modal-accordion-padding-y"
-    modal_title="--accordion-padding-y"
-    modal_description="Top and bottom padding amount for accordion button and content."
-    modal_link_text="Color System"
-    modal_link_url="/docs/color-system"
-%}
