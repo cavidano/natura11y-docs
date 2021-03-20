@@ -9,12 +9,35 @@
  * 
  */
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+figure .example + figcaption,
+figure .code-toolbar +figcaption {
+	background-color: var(--dark);
+	color: var(--dark-text);
+	padding: var(--spacer-3);
+	margin-top: unset;
+
+	opacity: 0.9;
+}
+
+:root {
+	--code-font-family:
+		'Roboto Mono',
+		Consolas,
+		Monaco,
+		'Andale Mono',
+		'Ubuntu Mono',
+		monospace;
+}
+
+
 code[class*="language-"],
 pre[class*="language-"] {
 	background-color: none;
 	color: #ccc;
 	
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-family: var(--code-font-family);
 	font-size: var(--font-size-md);
 	text-align: left;
 	white-space: pre;
@@ -29,24 +52,22 @@ pre[class*="language-"] {
 	-o-tab-size: 4;
 	tab-size: 4;
 
+	hyphens: none;
 	-webkit-hyphens: none;
 	-moz-hyphens: none;
 	-ms-hyphens: none;
-	hyphens: none;
 }
 
 /* Code blocks */
 
 pre[class*="language-"] {
 	padding: 2em 1em;
-	margin: 0.5em 0;
 	overflow: auto;
 }
 
 :not(pre) > code[class*="language-"],
 pre[class*="language-"] {
-	overflow: hidden;
-	
+	overflow-x: scroll;
 	background-color: var(--dark);
 }
 
@@ -58,13 +79,16 @@ pre[class*="language-"]:not([class*="hide-toolbar"]){
 
 p > code {
 	--code-color: var(--white-confirm);
+
 	position: relative;
 	display: inline-block;
-	padding: 0.075rem 0.25rem;
-    white-space: normal;
-    color: inherit;
+	
+	font-family: var(--code-font-family);
 	font-size: 0.875em;
 	line-height: 1.4;
+    white-space: normal;
+
+	padding: 0.075rem 0.25rem;
 	color: var(--code-color);
 }
 
@@ -79,7 +103,6 @@ p > code::before {
     opacity: .095;
     border-radius: .25em;
 }
-
 
 .token.comment,
 .token.block-comment,
@@ -164,13 +187,13 @@ pre[data-line] {
 	position: absolute;
 	left: 0;
 	right: 0;
-	padding: inherit 0;
+	/* padding: inherit 0; */
 	margin-top: var(--spacer-5); /* Same as .prism’s padding-top */
 	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), hsla(0, 0%, 100%, 0));
 
 	pointer-events: none;
 
-	line-height: inherit;
+	line-height: 1.75;
 	white-space: pre;
 }
 
@@ -215,7 +238,7 @@ div.code-toolbar > .toolbar {
 	left: 0;
 	right: 0;
 	
-	border-bottom: 1px solid hsla(0, 0%, 100%, .125) !important;
+	border-bottom: 1px solid hsla(0, 0%, 100%, 0.125) !important;
 }
 
 div.code-toolbar > .toolbar a, 
