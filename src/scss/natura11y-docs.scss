@@ -2,71 +2,280 @@
 
 In this file:
 
-// A. Imports
-// B. Custom Theme Styles
+// A. Core Framework Breakpoints
+// B. Custom CSS Variables
+// C. Theme Styles
 
 */
 
 //////////////////////////////////////////////
-// A. Imports
+// A. Core Framework Breakpoints
 //////////////////////////////////////////////
 
-// Required
-
-@import "partials/breakpoints";
+$bp-sm: 400px; 
+$bp-md: 760px;
+$bp-lg: 1000px;
+$bp-xl: 1340px;
 
 //////////////////////////////////////////////
-// B. Custom Theme Styles
+// B. Custom CSS Variables
 //////////////////////////////////////////////
-
-// Put anything here
 
 :root {
+
+    // Colors
+
     --primary: #70d091;
     --primary-text: #013a3c;
     --dark: #141733;
+    --light: #f1f4f6;
+
+    --primary-text: white;
+    --primary-border: hsla(0, 0%, 0%, 0.25);
+    --secondary-text: var(--dark);
+
+    // Fonts
 
     --body-font-family: 'Poppins';
     --header-line-height: 1.2;
 
-    --base-font-weight-bold: 800;
     --body-font-size: 20px;
     --base-line-height: 1.5;
 
+    --base-font-weight-bold: 800;
+
+    // Misc
+
+    --table-scroll-min-width: 1000px;
+
     --btn-border-radius: 0.5em;
 
-    --article-sidebar-width: 220px;
 }
 
-strong {
-    font-weight: var(--base-font-weight-medium);
+.article {
+    --article-sidebar-width: 275px;
 }
 
-// Logo
-
-a > svg {
-    fill: currentColor;
-    vertical-align: middle;
-}
+//////////////////////////////////////////////
+// C. Theme Styles
+//////////////////////////////////////////////
 
 a[data-logo="brand"] {
-    &:focus {
-        opacity: 0.85;
+    display: inline-block !important;
+    color: inherit;
+    
+    p {
+        font-weight: bold;
+        line-height: 1.2;
     }
 }
 
-.overflow-hidden {
+#features .backdrop{
+    --backdrop-fixed-height: 600px;
+
+    @media (max-width: $bp-lg) {
+        --backdrop-fixed-height: 800px;
+    }
+}
+
+.accessibility-spotlight {
+   color: hsl(200, 100%, 30%);
+}
+
+.browser {
+    --browser-bar-height: 2rem;
+
+    overflow: hidden;
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+
+    iframe {
+        border: none;
+        width: 100%;
+        display:block;
+        min-height: 200px;
+    }
+}
+
+.browser__bar{
+    display: flex;
+    flex-direction: row;
+    height: var(--browser-bar-height);
+    
+    background-color: hsla(200, 10%, 70%, 0.375);
+
+    > div{
+        display: flex;
+        flex-direction: row;
+        margin-left: calc(var(--browser-bar-height) * 0.25);
+        margin-right: calc(var(--browser-bar-height) * 0.25);
+    }
+
+    > div > span{
+
+        align-self: center;
+
+        height: calc( var(--browser-bar-height) * 0.375 );
+        width: calc( var(--browser-bar-height) * 0.375 );
+        
+        margin-left: 0.25rem;
+        margin-right: 0.25rem;
+        
+        display: inline-block;
+        border-radius: 50%;
+
+        background-color: hsla(0, 0%, 0%, 0.5);
+        opacity: 0.5;
+
+        &:nth-child(1) {
+            background-color: red;
+        }
+
+        &:nth-child(2) {
+            background-color: orange;
+        }
+
+        &:nth-child(3) {
+            background-color: green;
+        }
+    }
+}
+
+#docs-sidebar {
+    overflow: hidden;
+
+    &.filtered {
+
+        ul + hr,
+        .hide {
+            display: none;
+        }
+
+        ul:not(:last-child) {
+            margin-bottom: var(--gap-size);
+        }
+
+        ul {
+            animation: fadeIn 0.5s;
+        }
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
+#all-custom-properties {
+
+    p > code {
+        --code-color: currentColor;
+        font-size: 1em;
+    }
+    
+    .table {
+        table-layout: auto;
+    }
+
+    caption {
+        caption-side: top;
+    }
+
+    th, 
+    td {
+        &:nth-child(1):not([colspan]) {
+            width: 25%;
+        }
+
+        &:nth-child(2) {
+            width: 30%;
+        }
+
+        &:nth-child(3) {
+            width: auto;
+        }
+
+        &:nth-child(4) {
+            width: 30%;
+        }
+    }
+
+    td:nth-child(1) span {
+        color: #f8c555;
+    }
+
+    td:nth-child(2) span {
+        color: #ccc;
+    }
+
+    button[data-clipboard] {
+        text-align: left;
+        color: var(--secondary);
+        font-weight: bold;
+        display: inline-block;
+        
+        > span {
+            display: block;
+        }
+    }
+}
+
+.cp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-normal);
+    padding: var(--spacer-3);
+    min-width: var(--table-scroll-min-width);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: currentColor;
+        opacity: 0.0825;
+        pointer-events: none;
+    }
+}
+
+.cp-header__title {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-normal);
+}
+
+.cp-header__link {
+    font-size: var(--font-size-sm);
+}
+
+:root {
+    --accordion-padding-x: var(--spacer-2);
+    --accordion-padding-y: 0.75;
+}
+
+#icon-view-toggle {
+
+    [aria-selected="true"] {
+        background-color: var(--light);
+        color: var(--primary);
+
+    }
+}
+
+.example > div{
     overflow: hidden;
 }
 
-#introduction {
-    --backdrop-fixed-height: 800px;
-}
-
-#features {
-    --backdrop-fixed-height: 600px;
-    
-    @include breakpoints-down(lg) {
-        --backdrop-fixed-height: 800px;
-    }
+.section-start{
+    margin-top: var(--spacer-5);
+    margin-bottom: var(--spacer-5);
 }
