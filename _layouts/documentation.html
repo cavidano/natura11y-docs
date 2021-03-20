@@ -2,7 +2,7 @@
 layout: default
 ---
 
-<article class="article--two-column">
+<div class="article article--two-column">
 
     <div class="article__sidebar">
         {% include sidebar.html %}
@@ -35,15 +35,23 @@ layout: default
 
             </div>
 
-            <div class="margin-y-5">
-
-                {{ content }}
-
+            <div class="padding-y-4">
+                <div class="container narrow font-size-rg">
+                    <h2 class="screen-reader-only">On this Page:</h2>
+                    <nav id="table-of-contents"></nav>
+                </div>
             </div>
-            
+
+            <hr>
+
+            <div class="margin-y-5">
+                {{ content }}
+            </div>
+        
         </div>
         <!-- .article__body__content -->
 
     </div>
+    <!-- .article__body -->
 
-</article>
+</div>

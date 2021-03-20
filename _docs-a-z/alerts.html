@@ -1,6 +1,11 @@
 ---
 layout: documentation
 title: "Alerts"
+tags:
+    confirm
+    warn
+    feedback
+    dismissable
 ---
 
 <div class="container narrow margin-y-4">
@@ -11,55 +16,47 @@ title: "Alerts"
 </div>
 <!-- .container -->
 
-<div class="container narrow margin-y-4">
-    <div class="alert alert--confirm margin-y-3">
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-universal-access fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">
-                    <span class="sr-only">Alert</span>
-                    Accessibility Touchpoint
-                </span>
-            </p>
-        </div>
-        <div class="alert__body">
-            <p>
-                When modifying alert colors, be sure to check that your colors meet a sufficient <a href="#1">contrast
-                    ratio</a>. The colors provided in the Framework already do.
-            </p>
-            <p>
-                Never rely on color alone to convey meaning. Include a visual icon in alerts for those who
-                experience colors differently.
-            </p>
-        </div>
-    </div>
-</div>
-<!-- .container -->
+{% capture as_body %}
+<p>
+    When modifying alert colors, be sure to check that your colors meet a sufficient <a href="#1">contrast ratio</a>. The colors provided in the Framework already do.
+</p>
+<p>
+    Never rely on color alone to convey meaning. Include a visual icon in alerts for those who
+    experience colors differently.
+</p>
+<p>
+    Include an <a href="#1"><em>alert role</em></a> for assistive technology.
+</p>
+{% endcapture %}
 
-<hr class="margin-y-5" id="Alert Types">
+{% include accessibility-spotlight.html content=as_body %}
+
+<hr class="section-start" id="confirmAndWarn">
 
 <div class="container narrow margin-y-4">
-    <h2>Alert Types</h2>
+    <h2>Confirm and Warn</h2>
     <p>
-        Out-of-the-box, the NYC Core framework offers three accessible colors relating to each type of alert:
-        <strong>Green</strong> implies <em>confirm</em>, <strong>Blue</strong> implies <em>attention</em>, while
-        <strong>Red</strong> implies <em>warn</em>.
+        The NYC Core framework provides two types of alerts:
+        <strong>Confirm</strong> implied with <em>green</em>, and
+        <strong>Warn</strong> implied with <em>red</em>.
+    </p>
+    <p>
+        Every instance of an alert should include an icon to help convey meaning. Across the Framework <a href="{{ site.baseurl}}/icons">NYC Core Icons</a>, our open-source icon library, is used
+        for all icons.
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
 
-    <div class="alert alert--confirm margin-y-3">
+    <div class="alert alert--confirm rounded margin-y-3">
 
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-check-circle fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Alert Confirm</span>
-            </p>
+        <div class="alert__title">
+            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+            <span class="alert__title__text">Confirm Title</span>
         </div>
 
-        <div class="alert__body">
+        <div class="alert__description">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
                 <a href="#1">quos natus aliquam</a>.
@@ -67,18 +64,15 @@ title: "Alerts"
         </div>
 
     </div>
-    <!-- .alert -->
 
-    <div class="alert alert--confirm margin-y-3">
+    <div class="alert alert--warn alert--confirm rounded margin-y-3">
 
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-parking fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Alert Attention</span>
-            </p>
+        <div class="alert__title">
+            <span class="nyc_icon_warn" aria-hidden="true"></span>
+            <span class="alert__title__text">Warn Title</span>
         </div>
 
-        <div class="alert__body">
+        <div class="alert__description">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
                 <a href="#1">quos natus aliquam</a>.
@@ -86,55 +80,20 @@ title: "Alerts"
         </div>
 
     </div>
-    <!-- .alert -->
-
-    <div class="alert alert--warn margin-y-3">
-
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-exclamation-triangle fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Alert Warning</span>
-            </p>
-        </div>
-
-        <div class="alert__body">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
-                <a href="#1">quos natus aliquam</a>.
-            </p>
-        </div>
-
-    </div>
-    <!-- .alert -->
 
 </figure>
 
-<div class="container narrow margin-y-4">
-    <p>
-        Across the Framework <a href="https://fontawesome.com/">Font Awesome</a>, an open-source icon library, is used
-        for all icons. If you're unsure how to use Font Awesome,
-        <a href="https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use">
-        read their docs</a>.
-    </p>
-    <p>
-        The following HTML creates a basic <em>confirm</em> alert:
-    </p>
-</div>
-<!-- .container -->
-
 <figure class="container medium margin-y-4">
-    <pre data-line="1,3,4,5,6,7,8, 10,11,12,13,14,15">
+    <pre data-line="1,3,4,5,6,8,9,10,11,12,13">
         <code class="language-html">
-            &lt;div class="alert alert--confirm"&gt;
+            &lt;div class="alert alert--confirm rounded margin-y-3"&gt;
 
-                &lt;div class="alert__head"&gt;
-                    &lt;p&gt;
-                        &lt;span class="fas fa-check-circle fa-lg" aria-hidden="true"&gt;&lt;/span&gt;
-                        &lt;span class="alert__head__title"&gt;Alert Confirm&lt;/span&gt;
-                    &lt;/p&gt;
+                &lt;div class="alert__title"&gt;
+                    &lt;span class="nyc_icon_confirm" aria-hidden="true"&gt;&lt;/span&gt;
+                    &lt;span class="alert__title__text"&gt;Confirm Title&lt;/span&gt;
                 &lt;/div&gt;
 
-                &lt;div class="alert__body"&gt;
+                &lt;div class="alert__description"&gt;
                     &lt;p&gt;
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
                         &lt;a href="#1"&gt;quos natus aliquam&lt;/a&gt;.
@@ -142,22 +101,19 @@ title: "Alerts"
                 &lt;/div&gt;
 
             &lt;/div&gt;
-            &lt;!-- .alert --&gt;
         </code>
     </pre>
     <figcaption>
-        <p>
-            Figure 3 - Example HTML for a simple <em>confirm</em> alert.
-        </p>
+        <p>Figure 1</p>
     </figcaption>
 </figure>
 
 <figure class="container narrow margin-y-4">
-    <table class="table font-size-md">
+    <table class="table table--edge">
         <thead>
             <tr>
-                <th class="w-30">Line #</th>
-                <th class="w-70">Details</th>
+                <th class="width-30" scope="col">Line #</th>
+                <th class="width-70" scope="col">Details</th>
             </tr>
         </thead>
         <tbody>
@@ -173,7 +129,7 @@ title: "Alerts"
                 </td>
             </tr>
             <tr>
-                <td>3-8</td>
+                <td>3-6</td>
                 <td>
                     <p>
                         The <code>.alert__head</code> holds the alert icon (a <code>&lt;span&gt;</code> with Font Awesome classes)
@@ -182,7 +138,7 @@ title: "Alerts"
                 </td>
             </tr>
             <tr>
-                <td>10-15</td>
+                <td>8-13</td>
                 <td>
                     <p>
                         The <code>.alert__body</code> selector holds the alert's message. All links
@@ -197,27 +153,23 @@ title: "Alerts"
 </figure>
 
 <div class="container narrow margin-y-4">
-    <h3>Dark Alerts</h3>
+    <h3>Inverse Color Modifier</h3>
     <p>
-        For a bolder looking alert, chain the <code>--dark</code> modifier class to the <code>alert--{x}</code> class,
-        where <em>x</em> is the alert type (e.g. <em>confirm</em>).
+        For a bolder look, chain the <code>--inverse</code> modifier class to <code>alert--confirm</code> or <code>alert--warn</code> respectively.
     </p>
-    
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
 
-    <div class="alert alert--confirm--dark margin-y-3">
+    <div class="alert alert--confirm--inverse margin-y-3">
 
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-check-circle fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Alert Confirm</span>
-            </p>
+        <div class="alert__title">
+            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+            <span class="alert__title__text">Confirm Title</span>
         </div>
 
-        <div class="alert__body">
+        <div class="alert__description">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
                 <a href="#1">quos natus aliquam</a>.
@@ -225,18 +177,15 @@ title: "Alerts"
         </div>
 
     </div>
-    <!-- .alert -->
 
-    <div class="alert alert--confirm--dark margin-y-3">
+    <div class="alert alert--warn--inverse margin-y-3">
 
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-parking fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Alert Attention</span>
-            </p>
+        <div class="alert__title">
+            <span class="nyc_icon_warn" aria-hidden="true"></span>
+            <span class="alert__title__text">Warn Title</span>
         </div>
 
-        <div class="alert__body">
+        <div class="alert__description">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
                 <a href="#1">quos natus aliquam</a>.
@@ -244,73 +193,106 @@ title: "Alerts"
         </div>
 
     </div>
-    <!-- .alert -->
-
-    <div class="alert alert--warn--dark margin-y-3">
-
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-exclamation-triangle fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Alert Warning</span>
-            </p>
-        </div>
-
-        <div class="alert__body">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
-                <a href="#1">quos natus aliquam</a>.
-            </p>
-        </div>
-
-    </div>
-    <!-- .alert -->
 
 </figure>
-
-<div class="container narrow margin-y-4">
-    <p>
-        Below are the classes needed to create a dark <em>confirm</em> alert:
-    </p>
-</div>
-<!-- .container -->
 
 <figure class="container narrow margin-y-4">
     <pre class="hide-toolbar">
         <code class="language-html">
-            &lt;div class="alert alert--confirm--dark"&gt;
+            &lt;div class="alert alert--confirm--inverse"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="alert alert--warn--inverse"&gt;
                 ...
             &lt;/div&gt;
         </code>
     </pre>
     <figcaption>
-        <p>
-            Figure 3 - Alert with the optional dark modifier class.
-        </p>
+        <p>Figure 2</p>
     </figcaption>
 </figure>
 
-<hr class="margin-y-5" id="Alert Types">
+<hr class="section-start" id="dismissableAlerts">
+
+<div class="container narrow margin-y-4">
+    <h2>Dismissable Alerts</h2>
+    <p>
+        For dismissable alerts, add the <code>.alert--dismissable</code> modifier class. Doing so places a close button inside the <code>.alert__title</code> child selector.
+    </p>
+    <p>
+        When the close button is pressed, the alert fades out, then the entire <code>.alert</code> selector is removed from the DOM.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <div class="alert alert--confirm alert--dismissable rounded margin-y-3">
+
+        <div class="alert__title">
+            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+            <span class="alert__title__text">Confirm Title</span>
+        </div>
+
+        <div class="alert__description">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                <a href="#1">quos natus aliquam</a>.
+            </p>
+        </div>
+
+    </div>
+
+    <div class="alert alert--warn alert--dismissable rounded margin-y-3">
+
+        <div class="alert__title">
+            <span class="nyc_icon_confirm" aria-hidden="true"></span>
+            <span class="alert__title__text">Confirm Title</span>
+        </div>
+
+        <div class="alert__description">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
+                <a href="#1">quos natus aliquam</a>.
+            </p>
+        </div>
+
+    </div>
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;div class="alert alert--confirm alert--dismissable"&gt;
+                ...
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 3</p>
+    </figcaption>
+</figure>
+
+<hr class="section-start" id="moreStyleVariations">
 
 <div class="container narrow margin-y-4">
     <h2>More Style Variations</h2>
     <p>
-        Looking for even more alert styles? Consider adding classes already available to you within the Framework.
+        Looking for even more alert styles? Exclude the <code>.alert--confirm</code> or <code>.alert--warn</code> modifier classes. Instead, add the color utilities or border utilities for different accents and style variations.
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4" {{ site.style_default_theme_colors }}>
 
-    <div class="alert text-secondary border-top margin-y-3">
+    <div class="alert theme-secondary margin-y-3">
 
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-check-circle fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Alert Confirm</span>
-            </p>
+        <div class="alert__title">
+            <span class="nyc_icon_warn" aria-hidden="true"></span>
+            <span class="alert__title__text">Alert Title</span>
         </div>
 
-        <div class="alert__body">
+        <div class="alert__description">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
                 <a href="#1">quos natus aliquam</a>.
@@ -320,16 +302,14 @@ title: "Alerts"
     </div>
     <!-- .alert -->
 
-    <div class="alert theme-primary rounded margin-y-3">
+    <div class="alert text-color-secondary margin-y-3">
 
-        <div class="alert__head">
-            <p>
-                <span class="fas fa-exclamation-triangle fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Alert Attention</span>
-            </p>
+        <div class="alert__title">
+            <span class="nyc_icon_warn" aria-hidden="true"></span>
+            <span class="alert__title__text">Alert Title</span>
         </div>
 
-        <div class="alert__body">
+        <div class="alert__description">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
                 <a href="#1">quos natus aliquam</a>.
@@ -339,16 +319,14 @@ title: "Alerts"
     </div>
     <!-- .alert -->
 
-    <div class="alert theme-dark rounded text-align-center margin-y-3">
+    <div class="alert text-color-secondary border rounded margin-y-3">
 
-        <div class="alert__head text-primary">
-            <p>
-                <span class="fas fa-skull-crossbones fa-lg" aria-hidden="true"></span>
-                <span class="alert__head__title">Alert Warning</span>
-            </p>
+        <div class="alert__title">
+            <span class="nyc_icon_warn" aria-hidden="true"></span>
+            <span class="alert__title__text">Alert Title</span>
         </div>
 
-        <div class="alert__body">
+        <div class="alert__description">
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
                 <a href="#1">quos natus aliquam</a>.
@@ -358,4 +336,21 @@ title: "Alerts"
     </div>
     <!-- .alert -->
 
+</figure>
+
+<figure class="container narrow margin-y-4">
+    <pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;div class="alert theme-secondary"&gt;
+                ...
+            &lt;/div&gt;
+
+            &lt;div class="alert text-color-secondary border rounded"&gt;
+                ...
+            &lt;/div&gt;
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 2</p>
+    </figcaption>
 </figure>
