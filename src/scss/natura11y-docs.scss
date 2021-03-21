@@ -25,15 +25,12 @@ $bp-xl: 1340px;
 
     // Colors
 
-    --primary: #70d091;
-    --primary-text: #013a3c;
-    --dark: #141733;
+    --primary: #00A870;
+    --primary-text: var(--dark);
+    --dark: #141433;
     --light: #f1f4f6;
 
-    --primary-text: white;
-    --secondary-text: var(--dark);
-
-    --a11y-link-color: blue;
+    --a11y-link-color: #005fcc;
 
     // Fonts
 
@@ -47,10 +44,11 @@ $bp-xl: 1340px;
 
     // Misc
 
+     --spacer-base: 1.25rem;
+
     --table-scroll-min-width: 1000px;
 
     --btn-border-radius: 0.5em;
-
 }
 
 .article {
