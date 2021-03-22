@@ -33,7 +33,7 @@ const displayIcons = (icons) => {
 
             <div class="aspect-ratio aspect-ratio--1by1 theme-light margin-bottom-1">
                 <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
-                    <span class="nyc_icon_${name}" style="font-size: 2em !important;"></span>   
+                    <span class="icon_${name}" style="font-size: 2em !important;"></span>   
                 </div>
             </div>
         
@@ -57,7 +57,7 @@ const displayIcons = (icons) => {
                 <span class="token attr-value">
                     <span class="token punctuation attr-equals">=</span>
                     <span class="token punctuation">"</span>
-                    nyc_icon_${name}
+                    icon_${name}
                     <span class="token punctuation">" </span>
                 </span>
                 <span class="token attr-name">aria-hidden</span>
@@ -81,7 +81,7 @@ const displayIcons = (icons) => {
 
                 <div class="display-flex width-25 border-right padding-2">
                     <div class="margin-y-auto text-align-center width-100">
-                        <span class="nyc_icon_${name} display-inline-block" style="font-size: 1.5em !important;"></span>
+                        <span class="icon_${name} display-inline-block" style="font-size: 1.5em !important;"></span>
                     </div>
                 </div>
 

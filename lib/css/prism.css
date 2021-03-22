@@ -29,8 +29,6 @@ figure .code-toolbar +figcaption {
 		'Andale Mono',
 		'Ubuntu Mono',
 		monospace;
-
-		
 }
 
 code[class*="language-"],
