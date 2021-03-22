@@ -1,4 +1,4 @@
-const coreIconsData = "https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/selection-svg.json";
+const coreIconsData = "https://i.icomoon.io/public/395bc97f45/Natura11yIcons/selection-svg.json";
 
 const coreIconsGridView = document.getElementById("coreIconsGrid");
 const coreIconsListView = document.getElementById("coreIconsList");

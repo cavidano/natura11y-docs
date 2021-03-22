@@ -110,10 +110,10 @@
                 return `
                     <tr>
                         <td>
-                          <span data-prop>--${property.name}</span>
+                          <span class="code-font" data-prop>--${property.name}</span>
                         </td>
                         <td>
-                            <span data-val>${property.value}</span>
+                            <span class="code-font" data-val>${property.value}</span>
                         </td>
                         <td>  
                             <button data-clipboard="single">
@@ -290,7 +290,7 @@ ${myClipboardProperties}
 
 {% endif %}
 
-{% if page.title == 'NYC Core Icons' %}
+{% if page.title == 'Natura11y Icons' %}
 
 <script defer src="{{ site.baseurl }}/dist/js/icon_display.js"></script>
 

@@ -21,16 +21,6 @@ figure .code-toolbar +figcaption {
 	opacity: 0.9;
 }
 
-:root {
-	--code-font-family:
-		'Roboto Mono',
-		Consolas,
-		Monaco,
-		'Andale Mono',
-		'Ubuntu Mono',
-		monospace;
-}
-
 code[class*="language-"],
 pre[class*="language-"] {
 	background-color: none;
