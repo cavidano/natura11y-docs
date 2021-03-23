@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+<div class="backdrop backdrop--fixed theme-dark">
+
+	<div class="backdrop__image">
+		<img class="opacity-40" src="{{ site.baseurl }}/images/backdrop-icons.jpg" alt="">
+	</div>
+
+	<div class="backdrop__cover">
+
+		<div class="margin-y-5">
+
+			<div class="container narrow">
+				<h1 class="banner-headline text-shadow">
+					{{ page.title }}
+				</h1>
+			</div>
+
+		</div>
+
+	</div>
+	<!-- .backdrop__cover -->
+
+</div>
+
+<div class="overflow-hidden">
+    {{ content }}
+</div>

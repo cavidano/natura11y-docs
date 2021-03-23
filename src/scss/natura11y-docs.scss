@@ -27,6 +27,7 @@ $bp-xl: 1340px;
 
     --primary: #00A870;
     --primary-text: var(--dark);
+    --secondary: #0D5156;
     --dark: #141433;
     --light: #f1f4f6;
 
@@ -85,13 +86,24 @@ a[data-logo="brand"] {
         line-height: 1.2;
     }
 
-    .a11y {
-        transition: fill 0.5s ease;
+    g {
+        // transition: fill 0.5s ease;
     }
 
-    &:focus .a11y, 
-    &:hover .a11y {
-        fill: #00A870 !important;
+    &:focus, 
+    &:hover {
+
+        .natur {
+            fill: var(--secondary);
+        }
+
+        .a11y {
+            fill: var(--primary);
+        }
+        
+        .tagline {
+            opacity: 0.5;
+        }
     }
 }
 
