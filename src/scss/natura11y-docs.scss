@@ -108,13 +108,13 @@ a[data-logo="brand"] {
     }
 }
 
-#features .backdrop{
-    --backdrop-fixed-height: 600px;
+// #features .backdrop {
+//     --backdrop-fixed-height: 600px;
 
-    @media (max-width: $bp-lg) {
-        --backdrop-fixed-height: 800px;
-    }
-}
+//     @media (max-width: $bp-lg) {
+//         --backdrop-fixed-height: 800px;
+//     }
+// }
 
 .accessibility-spotlight {
    color: hsl(200, 100%, 30%);

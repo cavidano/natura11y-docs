@@ -1,0 +1,29 @@
+
+In this file:
+
+// A. Modules
+/*
+
+// B. Variables
+// C. Backdrop Block
+// D. Backdrop Elements
+// E. Backdrop Breakpoint Modifiers
+// F. Backdrop Fixed Modifier
+
+*/
+
+
+//////////////////////////////////////////////
+// A. Modules
+//////////////////////////////////////////////
+
+@use "sass:map";
+@use "../breakpoints/style" as breakpoints;
+
+#features .backdrop {
+    --backdrop-fixed-height: 600px;
+
+    @include breakpoints.breakpoints-up(lg) {
+        --backdrop-fixed-height: 800px;
+    }
+}

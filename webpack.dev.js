@@ -10,7 +10,7 @@ module.exports = merge(common, {
     devtool: 'eval-cheap-source-map',
     target: 'web',
     stats: {
-        children: false
+        children: true
     },
     devServer: {
         port: 8080, 

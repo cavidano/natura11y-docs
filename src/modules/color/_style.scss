@@ -26,18 +26,18 @@ In this file:
 
     // Theme Color Palette
 
-    --primary: #1E00B3;
+    --primary: #00A870;
     --secondary: #64cc7e;
     --dark: #191b35;
     --light: #f1f4f6;
 
     // Accessible Link Color
 
-    --a11y-link-color: var(--primary);
+    --a11y-link-color: #005fcc;
 
     // Associated Primary Colors
 
-    --primary-text: white;
+    --primary-text: var(--dark);
     --primary-border: hsla(0, 0%, 0%, 0.25);
     --primary-link: currentColor;
     --primary-confirm: #16db93;
