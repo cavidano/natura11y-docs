@@ -93,6 +93,8 @@ p > code::before {
     border-radius: .25em;
 }
 
+/* Colors */
+
 .token.comment,
 .token.block-comment,
 .token.prolog,
@@ -109,7 +111,7 @@ p > code::before {
 .token.attr-name,
 .token.namespace,
 .token.deleted {
-	color: #e2777a;
+	color: #7ee787;
 }
 
 .token.function-name {
@@ -118,6 +120,7 @@ p > code::before {
 
 .token.boolean,
 .token.number,
+.token.attr-value,
 .token.function {
 	color: #f08d49;
 }
@@ -139,7 +142,6 @@ p > code::before {
 
 .token.string,
 .token.char,
-.token.attr-value,
 .token.regex,
 .token.variable {
 	color: #7ec699;
@@ -172,11 +174,13 @@ pre[data-line] {
 	padding-left: 3em;
 }
 
+/* Line Highlight */
+
 .line-highlight {
 	position: absolute;
 	left: 0;
 	right: 0;
-	/* padding: inherit 0; */
+	
 	margin-top: var(--spacer-5); /* Same as .prism’s padding-top */
 	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), hsla(0, 0%, 100%, 0));
 
@@ -197,7 +201,7 @@ pre[data-line] {
 	top: 50%;
 	transform: translateY(-50%);
 	left: 1em;
-	color: var(--secondary);
+	color: var(--primary);
 	font-size: var(--font-size-md);
 	font-weight: bold;
 }
@@ -212,6 +216,8 @@ pre[data-line] {
 .line-numbers .line-highlight:after {
 	content: none;
 }
+
+/* Code Toolbar */
 
 div.code-toolbar {
 	position: relative;
@@ -249,9 +255,8 @@ div.code-toolbar > .toolbar button {
 	-ms-user-select: none;
 
 	font-weight: bold;
-	color: var(--secondary);
+	color: var(--primary);
 }
-
 
 .toolbar-item {
 	font-size: var(--font-size-md);
@@ -264,6 +269,62 @@ div.code-toolbar > .toolbar button {
 pre.hide-toolbar + div.toolbar {
 	display: none;
 }
+
+/* Line Numbers */
+
+pre[id].linkable-line-numbers span.line-numbers-rows {
+	pointer-events: all;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
+	cursor: pointer;
+}
+
+pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
+	background-color: rgba(128, 128, 128, .2);
+}
+
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.line-numbers-rows > span {
+	display: block;
+	counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+	content: counter(linenumber);
+	color: #999;
+	display: block;
+	padding-right: 0.8em;
+	text-align: right;
+}
+
+/* Treeview */
 
 .token.treeview-part .entry-line {
 	position: relative;
@@ -449,4 +510,9 @@ pre.hide-toolbar + div.toolbar {
 .token.treeview-part .entry-name.ext-ppt:before,
 .token.treeview-part .entry-name.ext-pptx:before {
 	content: "\ea0b";
+}
+
+.token.keyword.keyword-return,
+.token.keyword.keyword-if {
+	 background-color: #f92672;
 }
