@@ -100,18 +100,18 @@ p > code::before {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-	color: #999;
+	color: hsla(200, 75%,90%, 0.5);
 }
 
 .token.punctuation {
-	color: #ccc;
+	color: hsl(200, 75%,90%);
 }
 
 .token.tag,
 .token.attr-name,
 .token.namespace,
 .token.deleted {
-	color: #7ee787;
+	color: hsl(325, 100%, 75%);
 }
 
 .token.function-name {
@@ -122,14 +122,14 @@ p > code::before {
 .token.number,
 .token.attr-value,
 .token.function {
-	color: #f08d49;
+	color: hsl(100, 100%, 75%);
 }
 
 .token.property,
 .token.class-name,
 .token.constant,
 .token.symbol {
-	color: #f8c555;
+	color: hsl(35, 100%, 75%);
 }
 
 .token.selector,
@@ -137,14 +137,14 @@ p > code::before {
 .token.atrule,
 .token.keyword,
 .token.builtin {
-	color: #cc99cd;
+	color: hsl(350, 100%, 75%);
 }
 
 .token.string,
 .token.char,
 .token.regex,
 .token.variable {
-	color: #7ec699;
+	color: hsl(150, 100%, 75%);
 }
 
 .token.operator,
