@@ -90,6 +90,8 @@ import "./modules/typography";
 
 import "./modules/z-index/index";
 
+import "./modules/theme/index";
+
 //////////////////////////////////////////////
 // Environments (For Testing Webpack)
 //////////////////////////////////////////////
