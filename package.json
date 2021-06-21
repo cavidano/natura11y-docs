@@ -1,7 +1,7 @@
 {
   "name": "nyc-core-framework-website",
   "version": "2.0.0",
-  "description": "NYC Core Framework",
+  "description": "Natura11y",
   "private": true,
   "scripts": {
     "start": "webpack serve --config webpack.dev.js --open --hot",

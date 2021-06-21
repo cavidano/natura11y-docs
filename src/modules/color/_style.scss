@@ -144,7 +144,8 @@ body:not([class*="theme-"]),
 
     td > a, 
     .td-content > a,
-    p > a:not([class*="text-"]) {
+    p > a:not([class*="text-"]),
+    .text-color-link {
         color: var(--link-color);
     }
 
@@ -228,7 +229,7 @@ body:not([class*="theme-"]),
                 background-color: var(--background-color) !important;
             }
 
-            .text-#{$name}#{$mod}{
+            .text-color#{$name}#{$mod}{
                 --text-color: #{$swatch};
                 color: var(--text-color) !important;
             }
