@@ -1,7 +1,7 @@
-const coreIconsData = "https://i.icomoon.io/public/395bc97f45/Natura11yIcons/selection-svg.json";
+const coreIconsData = "https://i.icomoon.io/public/395bc97f45/Natura11yIcons/selection.json";
 
-const coreIconsGridView = document.getElementById("coreIconsGrid");
-const coreIconsListView = document.getElementById("coreIconsList");
+const natura11yIconGridView = document.getElementById("natura11yIconGrid");
+const natura11yIconListView = document.getElementById("natura11yIconList");
 
 let coreIconsArray = [];
 
@@ -31,8 +31,8 @@ const displayIcons = (icons) => {
         return `
         <div class="grid__cell">
 
-            <div class="aspect-ratio aspect-ratio--1by1 theme-light margin-bottom-1">
-                <div class="aspect-ratio__content display-flex justify-content-center align-items-center">
+            <div class="aspect-ratio aspect-ratio--1by1 margin-bottom-1">
+                <div class="aspect-ratio__content display-flex justify-content-center align-items-center border border-radius ">
                     <span class="icon_${name}" style="font-size: 2em !important;"></span>   
                 </div>
             </div>
@@ -100,8 +100,8 @@ const displayIcons = (icons) => {
 
     }).join('');
 
-    coreIconsGrid.innerHTML = iconGridHTML;
-    coreIconsList.innerHTML = iconListHTML;
+    natura11yIconGrid.innerHTML = iconGridHTML;
+    natura11yIconList.innerHTML = iconListHTML;
 
 };
 
