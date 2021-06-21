@@ -1,5 +1,6 @@
-
-    const customPropertiesData = "{{ site.url }}/lib/json/root-custom-properties.json";
+window.addEventListener('DOMContentLoaded', (event) => {
+    
+    const customPropertiesData = "../../lib/json/root-custom-properties.json";
     const customPropertiesContainer = document.getElementById("all-custom-properties");
     const customPropertiesTable = customPropertiesContainer.querySelector(".table-scroll__container");
 
@@ -54,7 +55,7 @@
                 return `
                     <tr>
                         <td>
-                          <span data-prop>--${property.name}</span>
+                            <span data-prop>--${property.name}</span>
                         </td>
                         <td>
                             <span data-val>${property.value}</span>
@@ -74,7 +75,7 @@
             return `
                 <div class="cp-header box-shadow-1" id="cp_${id}">
                     <span class="cp-header__title">${type}</span>
-                    <a class="cp-header__link button button--has-icon" href="{{ site.url }}/docs/${slug}">
+                    <a class="cp-header__link button button--has-icon" href="../../docs/${slug}">
                         <span class="button__text">Docs</span>
                         <span class="nyc_icon_arrow-right button__icon"></span>
                     </a>
@@ -217,9 +218,11 @@
                 document.body.removeChild(aux);
 
             });
-    
+
         });
 
     };
 
     loadcustomProperties();
+
+});
