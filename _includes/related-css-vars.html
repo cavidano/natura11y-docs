@@ -1,0 +1,16 @@
+{% if include.anchor %}
+    {% assign width_class = include.anchor %}
+{% else %}
+    {% assign width_class = 'accordions' %}
+{% endif %}
+
+<hr class="section-start" id="relatedCSSVariables">
+
+<div class="container narrow margin-y-4">
+	<h2>Related CSS Variables</h2>
+	<p>
+		Further <a href="{{ site.url }}/docs/customization/#customizableCDN">customization</a>
+		options are available with <a href="{{ site.url }}/docs/customization/#cp_{{ include.anchor }}">CSS variables</a>.
+	</p>
+</div>
+<!-- .container -->
