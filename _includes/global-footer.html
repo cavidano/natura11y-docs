@@ -55,8 +55,10 @@
 
 </footer>
 
-{% if page.title == 'Home' %}  
+{% if page.title == 'Home' %}
+
 <script src="{{ site.url }}/dist/js/home.js"></script>
+
 {% endif %}
 
 {% if page.title == 'Customization' %}
@@ -104,16 +106,24 @@
             let properties = customPropertyArray.customProperties;
             let scope = customPropertyArray.scope;
 
-            let slug = type.replace(/\s+/g, '-').toLowerCase();
+            let id = type.replace(/\s+/g, '-').toLowerCase();
+
+            let slug;
+
+            if(type === 'Gradient Veneer' || type === 'Subtle Fill') {
+                slug = 'accents/#' + id;
+            } else {
+                slug = id;
+            }
 
             let cpRows = properties.map((property) => {
                 return `
                     <tr>
                         <td>
-                          <span class="code-font" data-prop>--${property.name}</span>
+                          <span data-prop>--${property.name}</span>
                         </td>
                         <td>
-                            <span class="code-font" data-val>${property.value}</span>
+                            <span data-val>${property.value}</span>
                         </td>
                         <td>  
                             <button data-clipboard="single">
@@ -128,11 +138,11 @@
             }).join('');
 
             return `
-                <div class="cp-header box-shadow-1" id="cp_${slug}">
+                <div class="cp-header box-shadow-1" id="cp_${id}">
                     <span class="cp-header__title">${type}</span>
-                    <a class="cp-header__link button button--has-icon" href="{{ site.url }}/docs/${slug}/">
+                    <a class="cp-header__link button button--has-icon" href="{{ site.url }}/docs/${slug}">
                         <span class="button__text">Docs</span>
-                        <span class="icon_arrow-right button__icon"></span>
+                        <span class="nyc_icon_arrow-right button__icon"></span>
                     </a>
                 </div>
                 <table class="table">
@@ -205,9 +215,9 @@
                 }).join('\n');
                 
                 let myClipboardText = `
-:root {
-${myClipboardProperties}
-}`;
+                    :root {
+                        ${myClipboardProperties}
+                    }`;
 
                 // Create an auxiliary hidden input
                 var aux = document.createElement( 'textarea' );
@@ -284,13 +294,7 @@ ${myClipboardProperties}
 
 {% endif %}
 
-{% if page.url contains '/docs' or '/templates' %}
-
-<script src="{{ site.url }}/dist/js/iframe_height.js"></script>
-
-{% endif %}
-
-{% if page.title == 'Natura11y Icons' %}
+{% if page.title == 'NYC Core Icons' %}
 
 <script defer src="{{ site.url }}/dist/js/icon_display.js"></script>
 
@@ -301,6 +305,8 @@ ${myClipboardProperties}
 <script src="{{ site.url }}/lib/js/prism.js"></script>
 
 <script src="{{ site.url }}/dist/js/table_of_contents.js"></script>
+
+<script src="{{ site.url }}/dist/js/iframe_height.js"></script>
 
 <script>
 

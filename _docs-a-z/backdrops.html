@@ -5,7 +5,9 @@ title: "Backdrops"
 
 <div class="container narrow margin-y-4">
     <p>
-        Backdrops provide a useful design pattern—placing a translucent image behind contextual content. Backdrops offer two distinct style variations: <a href="#imageProportional">Image proportional</a> and <a href="#fixedHeight">fixed height</a>.
+        Backdrops provide a useful design pattern—placing a translucent image behind contextual content. Backdrops offer
+        two distinct style variants: <a href="#imageProportional">Image proportional</a> and <a
+            href="#fixedHeight">fixed height</a>.
     </p>
 </div>
 <!-- .container -->
@@ -66,8 +68,10 @@ title: "Backdrops"
         The size of this backdrop (proportional width and height) is determined by the size of its feature image.
     </p>
     <p>
-        The translucent effect of the backdrop is acheived with the use of additional utility classes. Our <a href="#1">theme color utilities</a> (e.g. <code>.theme-dark</code>) provide the background and text color. The <a href="#1">opacity utility class</a> (e.g. <code>.opacity-30</code>) applied backdrop's feature image, allows the background
-        color to show through.
+        The translucent effect of the backdrop is acheived with the use of additional utility classes. Our <a
+            href="#1">theme color utilities</a> (e.g. <code>.theme-dark</code>) provide the background and text color.
+        The <a href="#1">opacity utility class</a> (e.g. <code>.opacity-30</code>) applied to the backdrop's feature image,
+        allows the background color to show through.
     </p>
     <p>
         Review the markup for the above example shown in Figure 1:
@@ -79,6 +83,10 @@ title: "Backdrops"
     <pre data-line="1,3,4,5,7,8,9,10,11,12,13,14,15,16,17,18,20,21,22">
         <code class="language-html">
             &lt;div class="backdrop theme-dark"&gt;
+
+                &lt;div class="backdrop__credit"&gt;
+                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
+                &lt;/div&gt;
 
                 &lt;div class="backdrop__image"&gt;
                     &lt;img class="opacity-30" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
@@ -95,10 +103,6 @@ title: "Backdrops"
                         &lt;/div&gt;
                     &lt;/div&gt;
 
-                &lt;/div&gt;
-
-                &lt;div class="backdrop__credit"&gt;
-                    &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
                 &lt;/div&gt;
                 
             &lt;/div&gt;
@@ -190,35 +194,30 @@ title: "Backdrops"
 
         <div class="backdrop__cover">
 
-            <div class="container text-align-center">
-                <div class="container medium margin-y-4">
+            <div class="container medium text-align-center margin-y-4">
 
                 <h1 class="banner-headline text-align-center text-shadow margin-bottom-4">
                     Lorem ipsum dolor sit amet consectetur
                 </h1>
 
-                <div class="narrow">
+               <div div class="narrow">
 
-                    <div class="grid grid--gap-2 grid--cell-fill--sm justify-center">
-
-                        <div class="grid__cell">
-                            <a class="button theme-primary display-block theme-white box-shadow" href="#1">Link</a>
-                        </div>
-                        <!-- .grid__cell -->
+                    <div class="grid grid--gap-2 grid--cell-fill--sm">
 
                         <div class="grid__cell">
-                            <a class="button theme-secondary display-block theme-white box-shadow" href="#1">Link</a>
+                            <a class="button theme-primary width-100 box-shadow-1" href="#1">Link</a>
                         </div>
-                        <!-- .grid__cell -->
+
+                        <div class="grid__cell">
+                            <a class="button theme-secondary width-100 box-shadow-1" href="#1">Link</a>
+                        </div>
 
                     </div>
-                    <!-- .grid -->
 
                 </div>
 
             </div>
             <!-- .container -->
-            </div>
 
         </div>
         <!-- .backdrop__cover -->
@@ -235,7 +234,7 @@ title: "Backdrops"
     </p>
 </div>
 
-{% include browser-iframe.html iframe_url="/examples/backdrops/stack-breakpoint-modifier-01.html" iframe_width="narrow" %}
+{% include browser-iframe.html iframe_url="/examples/backdrop/stack-breakpoint-modifier-01.html" iframe_width="narrow" %}
 
 <div class="container narrow margin-y-4">
     <p>
@@ -263,7 +262,7 @@ title: "Backdrops"
                 &lt;/div&gt;
 
                 &lt;div class="backdrop__image"&gt;
-                    &lt;img class="opacity-30" src="https://via.placeholder.com/1500x750" loading="lazy" alt="Placeholder"&gt;
+                    &lt;img class="opacity-30" src="https://via.placeholder.com/1500x750" alt="Placeholder"&gt;
                 &lt;/div&gt;
 
                 &lt;div class="backdrop__cover"&gt;
@@ -277,7 +276,7 @@ title: "Backdrops"
 
                             &lt;div class="narrow"&gt;
 
-                                &lt;div class="grid grid--gap-2 grid--cell-fill--sm justify-center"&gt;
+                                &lt;div class="grid grid--gap-2 grid--cell-fill--sm"&gt;
 
                                     &lt;div class="grid__cell"&gt;
                                         &lt;a class="button theme-primary display-block theme-white box-shadow" href="#1"&gt;Link&lt;/a&gt;
@@ -361,7 +360,7 @@ title: "Backdrops"
 </figure>
 
 <div class="container narrow margin-y-4">
-    <p>The HTML for the above example:</p>
+    <p>Figure 3 gives us the HTML for the above example:</p>
 </div>
 
 <figure class="container medium margin-y-4">
@@ -393,7 +392,9 @@ title: "Backdrops"
             &lt;!-- .backdrop --&gt;
         </code>
     </pre>
-
+    <figcaption>
+        Figure 3
+    </figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
@@ -488,17 +489,17 @@ title: "Backdrops"
                     <ul class="nav nav--gap-2 nav--horizontal justify-content-center font-size-lg" role="list">
                         <li>
                             <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Facebook">
-                                <span class="icon_facebook" aria-hidden="true"></span>
+                                <span class="nyc_icon_facebook" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li>
                             <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Twitter">
-                                <span class="icon_twitter" aria-hidden="true"></span>
+                                <span class="nyc_icon_twitter" aria-hidden="true"></span>
                             </a>
                         </li>
                         <li>
                             <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="YouTube">
-                                <span class="icon_youtube" aria-hidden="true"></span>
+                                <span class="nyc_icon_youtube" aria-hidden="true"></span>
                             </a>
                         </li>
                     </ul>
@@ -610,17 +611,17 @@ title: "Backdrops"
                             &lt;ul class="nav nav--gap-2 nav--horizontal justify-content-center font-size-lg" role="list"&gt;
                                 &lt;li&gt;
                                     &lt;a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Facebook"&gt;
-                                        &lt;span class="icon_facebook" aria-hidden="true"&gt;&lt;/span&gt;
+                                        &lt;span class="nyc_icon_facebook" aria-hidden="true"&gt;&lt;/span&gt;
                                     &lt;/a&gt;
                                 &lt;/li&gt;
                                 &lt;li&gt;
                                     &lt;a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Twitter"&gt;
-                                        &lt;span class="icon_twitter" aria-hidden="true"&gt;&lt;/span&gt;
+                                        &lt;span class="nyc_icon_twitter" aria-hidden="true"&gt;&lt;/span&gt;
                                     &lt;/a&gt;
                                 &lt;/li&gt;
                                 &lt;li&gt;
                                     &lt;a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="YouTube"&gt;
-                                        &lt;span class="icon_youtube" aria-hidden="true"&gt;&lt;/span&gt;
+                                        &lt;span class="nyc_icon_youtube" aria-hidden="true"&gt;&lt;/span&gt;
                                     &lt;/a&gt;
                                 &lt;/li&gt;
                             &lt;/ul&gt;
@@ -635,15 +636,18 @@ title: "Backdrops"
             &lt;/div&gt;
         </code>
     </pre>
-
+    <figcaption>
+        Figure 4
+    </figcaption>
 </figure>
 
 <hr class="section-start" id="relatedCSSVariables">
 
 <div class="container narrow margin-y-4">
-    <h2>Related CSS Variables</h2>
-    <p>
-        For even more control over button styles, consider <a href="{{ site.url }}/docs/customization/#customizableCDN">customizing</a> their related CSS variable values.
-    </p>
+	<h2>Related CSS Variables</h2>
+	<p>
+		Further <a href="{{ site.url }}/docs/customization/#customizableCDN">customization</a>
+		options are available with <a href="{{ site.url }}/docs/customization/#cp_backdrops">CSS variables</a>.
+	</p>
 </div>
 <!-- .container -->
