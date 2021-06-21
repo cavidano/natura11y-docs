@@ -182,7 +182,7 @@ pre[data-line] {
 	right: 0;
 	
 	margin-top: var(--spacer-5); /* Same as .prism’s padding-top */
-	background: linear-gradient(to right, rgba(255, 255, 255, 0.15), hsla(0, 0%, 100%, 0));
+	background: linear-gradient(to right, rgba(255, 255, 255, 0.10), hsla(0, 0%, 100%, 0));
 
 	pointer-events: none;
 
