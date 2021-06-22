@@ -2,10 +2,12 @@
 layout: documentation
 title: "Alerts"
 tags:
+    alert
     confirm
     warn
     feedback
     dismissable
+    dialog
 ---
 
 <div class="container narrow margin-y-4">
@@ -41,7 +43,7 @@ tags:
         <strong>Warn</strong> implied with <em>red</em>.
     </p>
     <p>
-        Every instance of an alert should include an icon to help convey meaning. Across the Framework <a href="{{ site.url }}/icons">NYC Core Icons</a>, our open-source icon library, is used
+        Every instance of an alert should include an icon to help convey meaning. Across the Framework <a href="{{ site.url }}/icons">Natura11y Icons</a>, our open-source icon library, is used
         for all icons.
     </p>
 </div>
@@ -177,11 +179,10 @@ tags:
                 <td>13-16</td>
                 <td>
                     <p>
-                        The <code>.alert__description</code> selector holds the alert's description message. It is not
-                        reguired. It includes the unique <code>id</code> targeted by the <code>aria-describedby</code> attribute
-                        present on the <code>.alert</code> selector. All links (<code>&lt;a&gt;</code> tags) within the
-                        <code>&lt;p&gt;</code> tags, will automatically inherit the
-                        alert's text color.
+                        The <code>.alert__description</code> selector holds the alert's description message. It is not required. It includes the unique <code>id</code> targeted by the <code>aria-describedby</code> attribute present on the <code>.alert</code> selector.
+                    </p>
+                    <p>
+                        All links (<code>&lt;a&gt;</code> tags) within the <code>&lt;p&gt;</code> tags, will automatically inherit the alert's text color.
                     </p>
                 </td>
             </tr>
@@ -193,7 +194,7 @@ tags:
 <div class="container narrow margin-y-4">
     <h3>Inverse Color Modifier</h3>
     <p>
-        For a bolder look, chain the <code>--inverse</code> to <code>alert--confirm</code> or
+        For a bolder look, chain <code>--inverse</code> to the <code>alert--confirm</code> or
         <code>alert--warn</code> modifier classes respectively.
     </p>
 </div>
@@ -264,13 +265,34 @@ tags:
     </figcaption>
 </figure>
 
+<div class="container narrow margin-y-4">
+    <h3>Title Only Alert</h3>
+    <p>
+        The <code>.alert__description</code> is not required. Leaving it out creates a title only alert.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <div
+        class="alert alert--confirm--inverse margin-y-3"
+        aria-labelledby="alert-title-only-label">
+
+        <div class="alert__title">
+            <span class="icon_confirm" aria-hidden="true"></span>
+            <span class="alert__title__text" id="alert-title-only-label">
+                Alert Title
+            </span>
+        </div>
+    </div>
+</figure>
+
 <hr class="section-start" id="dismissableAlerts">
 
 <div class="container narrow margin-y-4">
     <h2>Dismissable Alerts</h2>
     <p>
-        For dismissable alerts, add the <code>.alert--dismissable</code> modifier class. Doing so places a close button
-        inside the <code>.alert</code>.
+        For dismissable alerts, add the <code>.alert--dismissable</code> modifier class. Doing so automatically places a close button inside the <code>.alert</code>.
     </p>
     <p>
         When the close button is pressed, the alert fades out, then the entire <code>.alert</code> selector is removed
@@ -280,7 +302,6 @@ tags:
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
-
     <div
         class="alert alert--confirm--inverse alert--dismissable margin-y-3"
         aria-labelledby="alert-example-05-label"
@@ -299,21 +320,6 @@ tags:
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident omnis ipsum
                 <a href="#1">quos natus aliquam</a>.
             </p>
-        </div>
-
-    </div>
-
-    <div
-        class="alert alert--confirm--inverse alert--dismissable margin-y-3"
-        aria-labelledby="alert-example-05-label"
-        aria-describedby="alert-example-05-desc"
-        role="alertdialog">
-
-        <div class="alert__title">
-            <span class="icon_warn" aria-hidden="true"></span>
-            <span class="alert__title__text" id="alert-example-05-label">
-                Alert Title
-            </span>
         </div>
 
     </div>
