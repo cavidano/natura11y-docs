@@ -104,6 +104,10 @@ In this file:
     }
 }
 
+.alert__title + .alert__description {
+   margin-top: calc(var(--alert-padding-y) * 0.5) ; 
+}
+
 //////////////////////////////////////////////
 // D. Alert Dismissable
 //////////////////////////////////////////////

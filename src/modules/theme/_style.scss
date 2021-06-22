@@ -23,10 +23,11 @@ In this file:
 :root {
     --primary: #00A870;
     --secondary: #004857;
+    --dark: #131B40;
 
     --secondary-text: white;
 
-    --dark: #131B40;
+    --a11y-link-color: #005fcc;
     
     --body-font-family: 'Poppins';
     
@@ -97,7 +98,7 @@ a[data-logo="brand"] {
 }
 
 .accessibility-spotlight {
-   color: hsl(200, 100%, 30%);
+   color: var(--a11y-link-color);
 }
 
 .browser {
