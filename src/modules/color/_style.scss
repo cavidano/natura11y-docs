@@ -29,7 +29,7 @@ In this file:
     --primary: #1E00B3;
     --secondary: #64cc7e;
     --dark: #191b35;
-    // --light: #f1f4f6;
+    --light: #f1f4f6;
 
     // Accessible Link Color
 
@@ -61,11 +61,11 @@ In this file:
 
     // Associated Light Colors
 
-    // --light-text: var(--dark);
-    // --light-border: hsla(0, 0%, 50%, 0.25);
-    // --light-link: var(--a11y-link-color);
-    // --light-confirm: #007e35;
-    // --light-warn: #ce1736;
+    --light-text: var(--dark);
+    --light-border: hsla(0, 0%, 50%, 0.25);
+    --light-link: var(--a11y-link-color);
+    --light-confirm: #007e35;
+    --light-warn: #ce1736;
 
     // Associated Light Colors
 
@@ -112,16 +112,16 @@ $theme-colors: (
         link: var(--dark-link),
         confirm: var(--dark-confirm),
         warn: var(--dark-warn)
-    )
+    ),
     
-    // "light": (
-    //     swatch: var(--light),
-    //     text: var(--light-text),
-    //     border: var(--light-border),
-    //     link: var(--light-link),
-    //     confirm: var(--light-confirm),
-    //     warn: var(--light-warn)
-    // )
+    "light": (
+        swatch: var(--light),
+        text: var(--light-text),
+        border: var(--light-border),
+        link: var(--light-link),
+        confirm: var(--light-confirm),
+        warn: var(--light-warn)
+    )
 );
 
 //////////////////////////////////////////////
@@ -129,10 +129,11 @@ $theme-colors: (
 //////////////////////////////////////////////
 
 body:not([class*="theme-"]),
+body > footer:not([class*="theme-"]),
 [class*="theme-"] {
     background-color: var(--background-color);
 
-    color: var(--text-);
+    color: var(--text-color);
     
     border-color: var(--border-color);
 
@@ -217,14 +218,14 @@ body:not([class*="theme-"]),
 
             .theme-#{$name}#{$mod} {
                 --background-color: #{$swatch};
-                --text-: #{$text};
+                --text-color: #{$text};
                 --border-color: #{$border};
                 --link-color: #{$link};
                 --confirm-color: #{$confirm};
                 --warn-color: #{$warn};
             }
 
-            .background-#{$name}#{$mod}{
+            .background-color#{$name}#{$mod}{
                 --background-color: #{$swatch};
                 background-color: var(--background-color) !important;
             }
