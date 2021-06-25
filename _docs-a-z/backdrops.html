@@ -335,7 +335,7 @@ title: "Backdrops"
         </div>
 
         <div class="backdrop__image">
-            <img class="opacity-30" src="{{ site.url }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
+            <img class="opacity-40" src="{{ site.url }}/images/examples/backdrop-example-03.jpg" alt="Placeholder">
         </div>
 
         <div class="backdrop__cover">
@@ -401,15 +401,24 @@ title: "Backdrops"
 </div>
 
  <figure class="margin-y-5">
-
-    <div class="backdrop backdrop--fixed theme-dark" {{ site.style_default_theme_colors }}>
+    
+    <div
+        class="backdrop backdrop--fixed theme-dark"
+        style="
+            --primary: #25caa4;
+            --secondary: #f9d8c5;
+            --dark: #181A16;
+            --light: #f1f4f6;
+            --primary-text: var(--dark);
+            --secondary-text: var(--dark);
+            --body-font-family: 'Georgia'">
 
         <div class="backdrop__credit">
             <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
         </div>
 
         <div class="backdrop__image gradient-veneer-bottom">
-            <img class="opacity-20" src="{{ site.url }}/images/examples/backdrop-example-04.jpg" alt="">
+            <img class="opacity-50" src="{{ site.url }}/images/examples/backdrop-example-04.jpg" alt="">
         </div>
 
         <div class="backdrop__cover">
@@ -417,16 +426,16 @@ title: "Backdrops"
             <div class="container medium text-align-center margin-y-5">
 
                 <h1 class="banner-headline text-shadow margin-bottom-4">
-                    Lorem ipsum dolor sit amet consectetur
+                    This is the land the <br>sunset  washes
                 </h1>
 
                 <div class="text-align-left">
 
-                    <div class="grid grid--gap-2 grid--cell-fill--md justify-content-center">
+                    <div class="grid grid--gap-3 grid--cell-fill--md justify-content-center">
 
                         <div class="grid__cell">
 
-                            <div class="card theme-white rounded box-shadow-1">
+                            <div class="card theme-white border-radius box-shadow-2">
 
                                 <div class="card__head border-bottom">
                                     <p>Card Header</p>
@@ -451,7 +460,7 @@ title: "Backdrops"
 
                         <div class="grid__cell">
 
-                            <div class="card theme-white rounded box-shadow-1">
+                            <div class="card theme-white border-radius box-shadow-2">
 
                                 <div class="card__head border-bottom">
                                     <p>Card Header</p>
@@ -482,23 +491,17 @@ title: "Backdrops"
 
                     <p><strong>Follow Us</strong></p>
 
-                    <ul class="nav nav--gap-2 nav--horizontal justify-content-center font-size-lg" role="list">
-                        <li>
-                            <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Facebook">
-                                <span class="nyc_icon_facebook" aria-hidden="true"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Twitter">
-                                <span class="nyc_icon_twitter" aria-hidden="true"></span>
-                            </a>
-                        </li>
-                        <li>
-                            <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="YouTube">
-                                <span class="nyc_icon_youtube" aria-hidden="true"></span>
-                            </a>
-                        </li>
-                    </ul>
+                    <div class="button-group">
+                        <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Facebook">
+                            <span class="icon_facebook" aria-hidden="true"></span>
+                        </a>
+                        <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Twitter">
+                            <span class="icon_twitter" aria-hidden="true"></span>
+                        </a>
+                        <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="YouTube">
+                            <span class="icon_youtube" aria-hidden="true"></span>
+                        </a>
+                    </div>
                 </div>
 
             </div>

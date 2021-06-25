@@ -7,23 +7,15 @@
     <!-- IE Compatibility Mode -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <!-- IE Custom Properties Polyfill -->
-    <script>
-        window.MSInputMethodContext && document.documentMode && document.write(
-            '<script src="https://cdn.jsdelivr.net/npm/ie11-custom-properties@3.0.6/ie11CustomProperties.min.js"><\x2fscript>'
-        );
-    </script>
+    <title>{{ page.title }} • Natura11y Inclusive Framework</title>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Natura11y CSS and Icons -->
+    <link rel="stylesheet" href="/dist/css/natura11y_docs.css">
+    <link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/Natura11yIcons/style.css">
 
-    <title>Theme Color • Natura11y</title>
-
-    <!-- Font Awesome Kit -->
-    <script data-search-pseudo-elements defer src="https://kit.fontawesome.com/d0e9d4ccb2.js" crossorigin="anonymous"></script>
-
-    <!-- NYC Core Stylesheet -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;0,800;1,400;1,600;1,800&display=swap" rel="stylesheet">
 
     <style>
         body{
@@ -31,6 +23,12 @@
 
             --narrow-width: 34rem;
             --backdrop-fixed-height: 200px;
+            --primary: #25caa4;
+            --secondary: #6500d6;
+            --dark: #262345;
+            --light: #f1f4f6;
+            --primary-text: var(--dark);
+            --secondary-text: white;
         }
     </style>
     
@@ -40,9 +38,9 @@
 
     <main class="overflow-hidden" id="skip-header-content" role="main">
 
-        <div class="backdrop backdrop--stack--md theme-dark" {{ site.style_default_theme_colors }}>
+        <div class="backdrop backdrop--stack--md theme-dark">
 
-            <img class="backdrop__image opacity-30--md" src="../../images/examples/backdrop-example-04.jpg"
+            <img class="backdrop__image opacity-30--md" src="/images/examples/backdrop-example-02.jpg"
                 alt="Placeholder">
 
             <div class="backdrop__cover">
@@ -55,15 +53,15 @@
 
                     <div class="narrow">
 
-                        <div class="grid grid--gap-2 grid--cell-fill--sm justify-center">
+                        <div class="grid grid--gap-2 grid--cell-fill">
 
                             <div class="grid__cell">
-                                <a class="btn theme-primary display-block theme-white box-shadow" href="#1">Link</a>
+                                <a class="button width-100 theme-primary box-shadow-1" href="#1">Link</a>
                             </div>
                             <!-- .grid__cell -->
 
                             <div class="grid__cell">
-                                <a class="btn theme-secondary display-block theme-white box-shadow" href="#1">Link</a>
+                                <a class="button width-100 theme-secondary box-shadow-1" href="#1">Link</a>
                             </div>
                             <!-- .grid__cell -->
 
@@ -88,7 +86,7 @@
     </main>
     
     <!-- NYC Core Javascript -->
-    <script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js"></script>
+    <script src="/dist/js/natura11y_docs.js"></script>
 
 </body>
 
