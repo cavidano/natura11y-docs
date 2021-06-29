@@ -15,7 +15,7 @@ permalink: pretty
 # Exclude
 exclude:
   - readme.md
-  
+
   # Comment (exclude) for versioning
   # - version/*`
 
@@ -31,11 +31,10 @@ exclude:
 
 # Collections
 collections:
-
   docs-introduction:
     output: true
     permalink: /docs/:path/
-    order: 
+    order:
       - get-started.html
       - customization.html
       - accessibility.html
@@ -45,10 +44,10 @@ collections:
     permalink: /docs/:path/
 
 # Custom Global Vars
-style_default_theme_colors: 
-    'style="--primary: #25caa4;
-            --secondary: #6500d6;
-            --dark: #262345;
-            --light: #f1f4f6;
-            --primary-text: var(--dark);
-            --secondary-text: white;"'
+style_default_theme_colors: 'style="
+  --primary: #25caa4;
+  --secondary: #6500d6;
+  --dark: #262345;
+  --light: #f1f4f6;
+  --primary-text: var(--dark);
+  --secondary-text: white;"'
