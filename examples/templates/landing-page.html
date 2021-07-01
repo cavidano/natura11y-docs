@@ -21,10 +21,10 @@
 
     <style>
 
-    :root{
+    :root {
         --body-font-family: 'Roboto', sans-serif;
 
-        --primary-h: 216;
+        /* --primary-h: 216;
         --primary-s: 100%;
         --primary-l: 22%;
         
@@ -35,16 +35,16 @@
         --dark-s: 75%;
         --dark-l: 10%;
 
-        --dark: hsl(var(--primary-h), 75%, 7.5%);
+        --dark: hsl(var(--primary-h), 75%, 7.5%); */
     }
 
     </style>
     
 </head>
 
-<body class="theme-dark--lg">
+<body>
 
-    <header class="box-shadow-sm z-index-900" id="global-header" role="banner">
+    <header id="global-header" role="banner">
 
         <div class="primary-nav--below--lg box-shadow-1 z-index-1500">
 
@@ -111,6 +111,9 @@
                     <li>
                         <a href="#1">Link</a>
                     </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
                 </ul>
 
             </nav>
@@ -125,14 +128,12 @@
                 </button>
                 
                 <div class="button-group">
-
                     <button class="button button--icon-only" aria-label="Language" data-modal-open="global-language">
                         <span class="icon_language"></span>
                     </button>
                     <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
                         <span class="icon_search"></span>
                     </button>
-
                 </div>
 
             </div>
@@ -147,14 +148,8 @@
 
         <div class="backdrop backdrop--stack--md">
 
-            <div class="backdrop__credit">
-                <p>
-                    Photo by <a href="#1">Jane Doe</a> on Unsplash
-                </p>
-            </div>
-
             <div class="backdrop__image gradient-veneer-bottom">
-                <img class="opacity-40" src="/images/examples/backdrop-example-04.jpg" alt="Placeholder">
+                <img class="opacity-50" src="/images/examples/backdrop-example-01.jpg" alt="Placeholder">
             </div>
 
             <div class="backdrop__cover">
@@ -162,8 +157,8 @@
                 <div class="container text-align-center">
                     <div class="container medium margin-y-4">
 
-                        <h1 class="banner-headline text-align-center text-shadow margin-bottom-4">
-                            Lorem ipsum dolor sit amet consectetur
+                        <h1 class="banner-headline text-align-center text-shadow--lg">
+                            Lorem ipsum dolor sit amet
                         </h1>
 
                         <div class="narrow">
