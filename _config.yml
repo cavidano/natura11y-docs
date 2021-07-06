@@ -43,7 +43,7 @@ collections:
     output: true
     permalink: /docs/:path/
 
-  examples:
+  example-pages:
     output: true
     permalink: /examples/:slug.html
 
