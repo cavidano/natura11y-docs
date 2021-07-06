@@ -8,8 +8,7 @@ title: "Customization"
         Distinguish yourself without starting from scratch.
     </h2>
     <p>
-        There are two ways to customize Natura11y. The CDN Stylesheet allows you to redefine styles. We'll
-        cover this method in the following section. Your other option is to set up a modern development environment.
+        There are two ways to customize Natura11y. The CDN Stylesheet allows you to redefine styles. We'll cover this method in the following section. Your other option is to set up a modern development environment.
     </p>
 </div>
 <!-- .container -->
@@ -23,8 +22,7 @@ title: "Customization"
             use CSS custom properties to declare styles. People often refer to CSS custom properties as <strong>CSS variables</strong>. We use this term throughout our documentation.
         </p>
         <p>
-            If you're not familiar with CSS variables, take time now to <a href="#1">read the MDN web docs</a>. Figure 1 (below) offers a simple example of using
-            a SASS variable and a CSS Variable to achieve the same result.
+            If you're not familiar with CSS variables, take time now to <a href="#1">read the MDN web docs</a>. Figure 1 (below) offers a simple example of using a SASS variable and a CSS Variable to achieve the same result.
         </p>
 </div>
 <!-- .container -->
@@ -59,13 +57,10 @@ title: "Customization"
 
 <div class="container narrow margin-y-4">
     <p>
-        CSS variables provide benefits that Sass variables do not. Did you know CSS variables update at runtime?
-        You can declare new values from <strong>nyc_core.css</strong> anytime after that stylesheet reference.
+        CSS variables provide benefits that Sass variables do not. Did you know CSS variables update at runtime? You can declare new values from <strong>nyc_core.css</strong> anytime after that stylesheet reference.
     </p>
     <p>
-        There are different ways to declare new values for CSS variables. Adding a style tag in the header is ideal for
-        prototyping and exploring. Creating a second stylesheet is the preferred method. You can even redeclare values
-        using JavaScript!
+        There are different ways to declare new values for CSS variables. Adding a style tag in the header is ideal for prototyping and exploring. Creating a second stylesheet is the preferred method. You can even redeclare values using JavaScript.
     </p>
     <p>
         In the following exercise, learn how to change your theme colors with a second stylesheet.
@@ -78,8 +73,7 @@ title: "Customization"
 <div class="container narrow margin-y-4">
     <h2>Practice Exercise: Customizing Colors</h2>
     <p>
-        Make new directory somewhere on your computer. Call it <strong>color-example</strong>. Copy and paste the
-        markup from Figure 2 (below) into a new HTML document. Save this document as <strong>index.html</strong> inside of the <strong>color-example</strong> directory.
+        Make new directory somewhere on your computer. Call it <strong>color-example</strong>. Copy and paste the markup from Figure 2 (below) into a new HTML document. Save this document as <strong>index.html</strong> inside of the <strong>color-example</strong> directory.
     </p>
 </div>
 <!-- .container -->
@@ -101,11 +95,11 @@ title: "Customization"
 
                         &lt;title&gt;Title • Natura11y&lt;/title&gt;
 
-                        &lt;!-- NYC Core Icons --&gt;
+                        &lt;!-- Natura11y Icons --&gt;
                         &lt;link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css"&gt;
 
-                        &lt;!-- NYC Core Stylesheet --&gt;
-                        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
+                        &lt;!-- Natura11y Stylesheet --&gt;
+                        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natura11y.css"&gt;
 
                     &lt;/head&gt;
 
@@ -215,8 +209,7 @@ title: "Customization"
 
 <div class="container narrow margin-y-4">
     <p>
-        Did your colors update to the purple palette? With your new stylesheet in place, you have the ability to customize
-        much more than just colors. In fact, you have full control over your design. 
+        Did your colors update to the purple palette? With your new stylesheet in place, you have the ability to customize much more than just colors. In fact, you have full control over your design. 
     </p>
 </div>
 <!-- .container -->
@@ -229,9 +222,7 @@ title: "Customization"
         CSS Variables are hierarchal, or <strong>scoped</strong>. A variable's scope determines its reach throughout the DOM tree.
     </p>
     <p>
-        All CSS Variables in the framework are either scoped to the document or to a block. Document scoped variables
-        use the <code>:root</code> psuedo selector (available to the entire page). Block scoped variables use their selector class
-        (e.g., <code>.card</code>). These variables are available only to their selector (Figure 5).
+        All CSS Variables in the framework are either scoped to the document or to a block. Document scoped variables use the <code>:root</code> psuedo selector (available to the entire page). Block scoped variables use their selector class (e.g., <code>.card</code>). These variables are available only to their selector (Figure 5).
     </p>
 </div>
 <!-- .container -->
