@@ -43,6 +43,10 @@ collections:
     output: true
     permalink: /docs/:path/
 
+  examples:
+    output: true
+    permalink: /examples/:slug.html
+
 # Custom Global Vars
 
 style_default_theme_colors: 'style="
