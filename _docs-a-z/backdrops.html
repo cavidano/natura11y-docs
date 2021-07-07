@@ -43,10 +43,12 @@ title: "Backdrops"
         <div class="backdrop__cover">
 
             <div class="container text-align-center text-shadow">
-                <p class="h4">In Their Eternal Faces<br>The Sun&#8212;with just delight</p>
+                <p class="h4">
+                    In Their Eternal Faces<br>The Sun&#8212;with just delight
+                </p>
                 <p>
                     <strong class="display-block text-color-primary">The Mountains—grow unnoticed—</strong>
-                    <em class="font-size-md">by <a href="#1">Emily Dickensen</a></em>
+                    <em class="font-size-md">by <a href="#1">Emily Dickenson</a></em>
                 </p>
             </div>
 
@@ -62,10 +64,7 @@ title: "Backdrops"
         The size of this backdrop (proportional width and height) is determined by the size of its feature image.
     </p>
     <p>
-        The translucent effect of the backdrop is acheived with the use of additional utility classes. Our <a
-            href="#1">theme color utilities</a> (e.g. <code>.theme-dark</code>) provide the background and text color.
-        The <a href="#1">opacity utility class</a> (e.g. <code>.opacity-30</code>) applied to the backdrop's feature image,
-        allows the background color to show through.
+        The translucent effect of the backdrop is acheived with the use of additional utility classes. Our <a href="#1">theme color utilities</a> (e.g. <code>.theme-dark</code>) provide the background and text color. The <a href="#1">opacity utility class</a> (e.g. <code>.opacity-30</code>) applied to the backdrop's feature image, allows the background color to show through.
     </p>
     <p>
         The markup for the above backdrop shown in Figure 1:
@@ -121,7 +120,6 @@ title: "Backdrops"
             </tr>
         </thead>
         <tbody>
-
             <tr class="border-top">
                 <td>1</td>
                 <td>
@@ -133,7 +131,6 @@ title: "Backdrops"
                     </p>
                 </td>
             </tr>
-
             <tr>
                 <td>3-5</td>
                 <td>
@@ -142,7 +139,6 @@ title: "Backdrops"
                     </p>
                 </td>
             </tr>
-
             <tr>
                 <td>7-18</td>
                 <td>
@@ -151,7 +147,6 @@ title: "Backdrops"
                     </p>
                 </td>
             </tr>
-
             <tr>
                 <td>20-22</td>
                 <td>
@@ -160,7 +155,6 @@ title: "Backdrops"
                     </p>
                 </td>
             </tr>
-
         </tbody>
 
     </table>
@@ -179,7 +173,9 @@ title: "Backdrops"
     <div class="backdrop backdrop--stack--md theme-dark example" {{ site.example-custom-properties }}>
 
         <div class="backdrop__credit">
-            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+            <p>
+                Photo by <a href="#1">Jane Doe</a> on Unsplash
+            </p>
         </div>
 
         <div class="backdrop__image">
@@ -214,7 +210,7 @@ title: "Backdrops"
                     </div>
 
                 </div>
-                
+
             </div>
 
         </div>
@@ -226,9 +222,7 @@ title: "Backdrops"
 
 <div class="container narrow margin-y-4">
     <p>
-        Include a <em>stack breakpoint modifier</em> (e.g. <code>.backdrop--stack--md</code>) to the
-        <code>.backdrop</code> selector and the backdrop's image is placed above the content vertically until the
-        viewport reaches the desired breakpoint specified in the modifier.
+        Include a <em>stack breakpoint modifier</em> (e.g. <code>.backdrop--stack--md</code>) to the <code>.backdrop</code> selector and the backdrop's image is placed above the content vertically until the viewport reaches the desired breakpoint specified in the modifier.
     </p>
 </div>
 
@@ -239,8 +233,7 @@ title: "Backdrops"
         The above example shows how the same full-with backdrop appears on a smaller (mobile) viewport.
     </p>
     <p>
-        Notice the image is at full opacity. That's because our <a href="#1">opacity classes</a> have their own a breakpoint modifiers. Adding <code>.opacity-40--md</code> to the <code>.backdrop__image</code> selector gives that image
-        a specified opacity (40%) at the medium (md) breakpoint.
+        Notice the image is at full opacity. That's because our <a href="#1">opacity classes</a> have their own a breakpoint modifiers. Adding <code>.opacity-40--md</code> to the <code>.backdrop__image</code> selector gives that image a specified opacity (40%) at the medium (md) breakpoint.
     </p>
     <p>
         Figure 2 (below) shows the code used to create the backdrops above. Notice the <code>.backdrop--stack--md</code> breakpoint modifier present on line 1.
@@ -321,10 +314,8 @@ title: "Backdrops"
     <p>
         Fixed height backdrops retain their height across viewport sizes. When needed, they adjust to the height of their inner content.
     </p>
-
     <p>
-        For a fixed height backdrop, append the <code>backdrop--fixed</code> modifier to the <code>.backdrop</code>
-        selector.
+        For a fixed height backdrop, append the <code>backdrop--fixed</code> modifier to the <code>.backdrop</code> selector.
     </p>
 </div>
 
@@ -333,7 +324,9 @@ title: "Backdrops"
     <div class="backdrop backdrop--fixed theme-dark" {{ site.example-custom-properties }}>
 
         <div class="backdrop__credit">
-            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+            <p>
+                Photo by <a href="#1">Jane Doe</a> on Unsplash
+            </p>
         </div>
 
         <div class="backdrop__image">
@@ -347,13 +340,11 @@ title: "Backdrops"
                     The Mountain sat upon the Plain
                 </h1>
             </div>
-            <!-- .container -->
 
         </div>
         <!-- .backdrop__cover -->
 
     </div>
-    <!-- .backdrop -->
 
 </figure>
 
@@ -416,85 +407,66 @@ title: "Backdrops"
 
         <div class="backdrop__cover">
 
-            <div class="container medium text-align-center margin-y-5">
+            <div class="text-align-center margin-y-5">
 
-                <h1 class="banner-headline text-shadow margin-bottom-4">
-                    This is the land the sunset washes
-                </h1>
+                <div class="container narrow">
+                    <h1 class="banner-headline text-shadow margin-bottom-4">
+                       <em>This is the land the sunset washes</em> 
+                    </h1>
+                </div>
 
-                <div class="text-align-left">
+                <div class="container narrow medium--xl text-align-left">
 
-                    <div class="grid grid--gap-3 grid--cell-fill--md justify-content-center">
+                    <div class="grid grid--gap-2 grid--cell-6--xl justify-content-center">
 
                         <div class="grid__cell">
 
-                            <div class="card theme-light border-radius box-shadow-2">
+                            <div class="border-radius box-shadow-2">
+                                <img class="width-100" src="/images/examples/backdrop-example-04-a.jpg" alt="">
+                            </div>
+
+                        </div>
+                        <!-- .grid__cell -->
+
+                        <div class="grid__cell">
+
+                            <div class="card border-radius theme-dark box-shadow-2">
 
                                 <div class="card__head border-bottom">
-                                    <p>Card Header</p>
+                                    <p class="text-color-primary">
+                                    <em>About the Poet</em>
+                                    </p>
                                 </div>
 
                                 <div class="card__body">
-                                    <h2 class="h4">Card Title</h2>
+                                    <h2 class="h4">
+                                        Emily Dickenson
+                                    </h2>
                                     <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
-                                        obcaecati autem, ex facilis labore reiciendis.
+                                        Emily Elizabeth Dickinson was an American poet. Little-known during her life, she has since been regarded as one of the most important figures in American poetry.
+                                    </p>
+                                    <p>
+                                        Dickinson was born in Amherst, Massachusetts into a prominent family with strong ties to its community.
                                     </p>
                                 </div>
 
                                 <div class="card__foot border-top">
-                                    <a class="button theme-primary width-100" href="#1">Action</a>
+                                    <a class="button button--has-icon--disperse theme-primary" href="#1">
+                                        <span class="button__text">Read Full Bio</span>
+                                        <span class="icon_arrow-right button__icon"></span>
+                                    </a>
                                 </div>
+
                             </div>
                             <!-- .card -->
 
                         </div>
                         <!-- .grid__cell -->
 
-                        <div class="grid__cell">
-
-                            <div class="card theme-white border-radius box-shadow-2">
-
-                                <div class="card__head border-bottom">
-                                    <p>Card Header</p>
-                                </div>
-
-                                <div class="card__body">
-                                    <h2 class="h4">Card Title</h2>
-                                    <p>
-                                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
-                                        obcaecati autem, ex facilis labore reiciendis.
-                                    </p>
-                                </div>
-
-                                <div class="card__foot border-top">
-                                    <a class="button theme-secondary display-block" href="#1">Action</a>
-                                </div>
-                            </div>
-
-                        </div>
-                        <!-- .grid__cell -->
-
+                        
                     </div>
                     <!-- .grid -->
 
-                </div>
-
-                <div class="margin-y-4">
-
-                    <p><strong>Follow Us</strong></p>
-
-                    <div class="button-group">
-                        <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Facebook">
-                            <span class="icon_facebook" aria-hidden="true"></span>
-                        </a>
-                        <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="Twitter">
-                            <span class="icon_twitter" aria-hidden="true"></span>
-                        </a>
-                        <a class="button button--icon-only theme-secondary rounded-circle" href="#1" aria-label="YouTube">
-                            <span class="icon_youtube" aria-hidden="true"></span>
-                        </a>
-                    </div>
                 </div>
 
             </div>
