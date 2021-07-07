@@ -5,48 +5,50 @@ title: "Backdrop (Breakpoint)"
 
 <main class="overflow-hidden" id="skip-header-content" role="main">
 
-    <div class="backdrop backdrop--stack--md theme-dark">
-
-        <img class="backdrop__image opacity-30--md" src="/images/examples/backdrop-example-02.jpg" alt="Placeholder">
-
-        <div class="backdrop__cover">
-
-            <div class="container medium margin-y-4">
-
-                <h1 class="banner-headline text-align-center text-shadow margin-bottom-4">
-                    Lorem ipsum dolor sit amet consectetur
-                </h1>
-
-                <div class="narrow">
-
-                    <div class="grid grid--gap-2 grid--cell-fill">
-
-                        <div class="grid__cell">
-                            <a class="button width-100 theme-primary box-shadow-1" href="#1">Link</a>
-                        </div>
-                        <!-- .grid__cell -->
-
-                        <div class="grid__cell">
-                            <a class="button width-100 theme-secondary box-shadow-1" href="#1">Link</a>
-                        </div>
-                        <!-- .grid__cell -->
-
-                    </div>
-                    <!-- .grid -->
-
-                </div>
-
-            </div>
-            <!-- .container -->
-
-        </div>
-        <!-- .backdrop__cover -->
+    <div class="backdrop backdrop--stack--md theme-dark example">
 
         <div class="backdrop__credit">
             <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
         </div>
 
+        <div class="backdrop__image">
+            <img class="opacity-30" src="{{ site.url }}/images/examples/backdrop-example-02.jpg" alt="Placeholder">
+        </div>
+
+        <div class="backdrop__cover">
+
+            <div class="container narrow margin-y-4">
+
+                <div class="text-shadow text-align-center margin-bottom-4">
+                    <h1 class="banner-headline"> 
+                        Yosemite
+                    </h1>
+                    <p class="font-size-xl">
+                        It is by far the grandest of all the special temples of nature I was ever permitted to enter.
+                    </p>
+                </div>
+
+                <div class="grid grid--gap-2 grid--cell-fill--sm">
+
+                    <div class="grid__cell">
+                        <a class="button theme-primary width-100 box-shadow-1" href="#1">
+                            About John Muir
+                        </a>
+                    </div>
+
+                    <div class="grid__cell">
+                        <a class="button button--outline width-100" href="#1">
+                            About Yosemite
+                        </a>
+                    </div>
+
+                </div>
+                
+            </div>
+
+        </div>
+        <!-- .backdrop__cover -->
+
     </div>
-    <!-- .backdrop -->
 
 </main>

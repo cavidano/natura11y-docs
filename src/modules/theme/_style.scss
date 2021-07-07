@@ -59,10 +59,7 @@ In this file:
     --article-sidebar-width: 275px;
 }
 
-.example {
-    --body-font-family: 'Source Sans Pro';
-    --body-font-size: 22px;
-    --body-line-height: 1.4;
+[data-example] {
     font-family: var(--body-font-family);
     font-size:  var(--body-font-size);
     line-height:  var(--body-line-height);
