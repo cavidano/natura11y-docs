@@ -199,7 +199,7 @@ $headers: (
 //////////////////////////////////////////////
 
 body {
-    font-family: var(--body-font-family), $base-font-fallbacks;
+    font-family: var(--body-font-family, #{$base-font-fallbacks});
 
     font-size: var(--body-font-size);
     
