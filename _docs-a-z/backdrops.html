@@ -6,8 +6,7 @@ title: "Backdrops"
 <div class="container narrow margin-y-4">
     <p>
         Backdrops provide a useful design pattern—placing a translucent image behind contextual content. Backdrops offer
-        two distinct style variants: <a href="#imageProportional">Image proportional</a> and <a
-            href="#fixedHeight">fixed height</a>.
+        two distinct style variants: <a href="#imageProportional">Image proportional</a> and <a href="#fixedHeight">fixed height</a>.
     </p>
 </div>
 <!-- .container -->
@@ -35,7 +34,32 @@ title: "Backdrops"
 
 <figure class="container narrow margin-y-4">
 
-    <div class="backdrop theme-dark roboto" {{ site.example-custom-properties }}>
+    <div class="backdrop theme-dark example border-radius" {{ site.example-custom-properties }}>
+
+        <div class="backdrop__image">
+            <img class="opacity-40" src="{{ site.url }}/images/examples/backdrop-example-01.jpg" alt="Placeholder">
+        </div>
+
+        <div class="backdrop__cover">
+
+            <div class="container text-align-center text-shadow">
+                <p class="h4">In Their Eternal Faces<br>The Sun&#8212;with just delight</p>
+                <p>
+                    <strong class="display-block text-color-secondary">The Mountains—grow unnoticed—</strong>
+                    <em class="font-size-md">by <a href="#1">Emily Dickensen</a></em>
+                </p>
+            </div>
+
+        </div>
+        
+    </div>
+    <!-- .backdrop -->
+
+</figure>
+
+<figure class="container narrow margin-y-4 display-none">
+
+    <div class="backdrop theme-dark example" {{ site.example-custom-properties }}>
 
         <div class="backdrop__image">
             <img class="opacity-50" src="{{ site.url }}/images/examples/backdrop-example-01.jpg" alt="Placeholder">
@@ -44,11 +68,12 @@ title: "Backdrops"
         <div class="backdrop__cover">
 
             <div class="container text-align-center">
-                <div class="width-80 margin-x-auto text-shadow">
-                    <p class="h3">
-                        <em>What hurrying human tides, or day or night!</em> 
-                    </p>
-                    <p>—Walt Whitman, <a href="#1"><em>Broadway</a></em></p>
+                <div class="margin-x-auto text-shadow">
+                    <p class="h3">Yosemite</p>
+                    <strong>
+                        It is by far the grandest of all the special temples of nature I was ever permitted to enter.
+                    <em class="display-block margin-top-2">—John Muir, 1868</em>
+                    </strong>
                 </div>
             </div>
 
@@ -70,7 +95,7 @@ title: "Backdrops"
         allows the background color to show through.
     </p>
     <p>
-        Review the markup for the above example shown in Figure 1:
+        The markup for the above backdrop shown in Figure 1:
     </p>
 </div>
 
@@ -178,7 +203,7 @@ title: "Backdrops"
 
 <figure class="margin-y-4">
 
-    <div class="backdrop backdrop--stack--md theme-dark" {{ site.example-custom-properties }}>
+    <div class="backdrop backdrop--stack--md theme-dark example" {{ site.example-custom-properties }}>
 
         <div class="backdrop__credit">
             <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
@@ -190,13 +215,17 @@ title: "Backdrops"
 
         <div class="backdrop__cover">
 
-            <div class="container medium text-align-center margin-y-4">
+            <div class="container narrow margin-y-4">
 
-                <h1 class="banner-headline text-align-center text-shadow margin-bottom-4">
-                    Lorem ipsum dolor sit amet consectetur
+
+                <h1 class="banner-headline">
+                    Yosemite
                 </h1>
+                <p class="font-size-lg">
+                It is by far the grandest of all the special temples of nature I was ever permitted to enter.
+                </p>
 
-               <div div class="narrow">
+               <div class="narrow">
 
                     <div class="grid grid--gap-2 grid--cell-fill--sm">
 
