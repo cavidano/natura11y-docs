@@ -5,7 +5,7 @@ title: "Color"
 
 <div class="container narrow margin-y-4">
     <p>
-        The Natura11y's dynamic color system allows you to intuitively manage colors and apply them
+        Natura11y's dynamic color system allows you to intuitively manage colors and apply them
         with little effort across pages, components, and content.
     </p>
 </div>
@@ -19,7 +19,7 @@ title: "Color"
 
 {% include accessibility-spotlight.html content=as_body %}
 
-<hr class="section-start" id="basicNavigation">
+<hr class="section-start" id="themeColors">
 
 <div class="container narrow margin-y-4">
     <h2>Theme Colors</h2>
@@ -45,6 +45,9 @@ title: "Color"
         <div class="theme-light padding-3 margin-y-2">
             <p>Light</p>
         </div>
+        <div class="theme-white border padding-3 margin-y-2">
+            <p>White (default)</p>
+        </div>
 
     </div>
     <!-- .container -->    
@@ -54,426 +57,184 @@ title: "Color"
 
 <div class="container narrow margin-y-4">
     <p>
-        You can modify these colors with <a
-            href="{{ site.url }}/docs/customization/#cdnAndCustomProperties">CSS
-            custom
-        properties</a> or <a href="#1">Sass</a>. These theme colors generate our
-        background-color classes (below), <a href="#1">text color classes</a>, and <a href="#1">border color classes</a>.
+        With Natura11y, <em>white</em> is treated as a color and it serves as your default theme color. These five colors generate our <a href="#1">theme color utilities</a>, <a href="#1">background color utilities</a>, and <a href="#1">border color utilities</a>. 
+    </p>
+    <p>
+        Customize all colors with <a href="{{ site.url }}/docs/customization/#customizingColors">CSS variables</a> or <a href="https://github.com/cavidano/natura11y/blob/main/src/modules/color/_style.scss" target="_blank">Sass</a>.
     </p>
 </div>
 <!-- .container -->
 
-<hr class="section-start" id="backgroundColorClasses">
-
 <div class="container narrow margin-y-4">
-    <h2>Background-color Classes</h2>
+    <h3>Theme Color Utilities</h3>
     <p>
-        In the Natura11y <em>white</em> is treated as a color and it serves as your default theme color. Throughout our templates and examples, you
-        may have noticed the <code>&lt;body&gt;</code> tag has a <code>.theme-white</code> class applied (see Figure 1 below).
+        Probably one of Natura11y's coolest (and most useful) features are the theme color utility classes. Each theme color utility applies a predefined <strong>background color</strong>, <strong>text color</strong>, <strong>border color</strong>, <strong>link color</strong>, even <strong>warn</strong> and <strong>confirm</strong> colors to any selector!  
+    </p>
+    <p>
+        The above run-on sentence might take a bit to soak in, so let's look at it in practice. In Figure 1 below, we have our five theme color utilities:
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
-    <pre class="hide-toolbar">
+	<pre class="hide-toolbar">
         <code class="language-html">
-            &lt;body class="theme-white"&gt;
-                ...
-            &lt;/body&gt;
+            &lt;div class="theme-primary"&gt;...&lt;/div&gt;
+            &lt;div class="theme-secondary"&gt;...&lt;/div&gt;
+            &lt;div class="theme-dark"&gt;...&lt;/div&gt;
+            &lt;div class="theme-light"&gt;...&lt;/div&gt;
+            &lt;div class="theme-white"&gt;...&lt;/div&gt;
         </code>
     </pre>
-    <figcaption>
-        <p>Figure 1 - Example usage of the <em>white</em> background-color class.</p>
-    </figcaption>
+	<figcaption>
+		<p>Figure 1</p>
+	</figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
-        In the Framework, each theme color (e.g. <em>Primary</em>) is assigned a designated <strong>text color</strong>, <strong>link 
-        color</strong>, and <strong>border color</strong>.
-    </p>
-    <p>
-        This designation occurs within our color system's <a href="#1">Sass partial</a>. Notice the
-        <em>Primary</em> theme color declarations are highlighted in Figure 2 below.
+        You can apply theme colors to virtually any block-level selector within the DOM. Consider the following cards, where each has a different theme color utility applied. 
     </p>
 </div>
 <!-- .container -->
 
-<figure class="container narrow margin-y-4">
-    <pre class="hide-toolbar" data-line="5, 16,17,18">
-        <code class="language-scss">
-            :root {
+ <figure class="container narrow margin-y-4">
+    <div  {{ site.example-custom-properties }}>
 
-                // Theme Color Palette
+        <div class="card theme-primary margin-y-3">
 
-                --primary: #25caa4;
-                --secondary: #6500d6;
-                --dark: #262345;
-                --light: #f1f4f6;
-
-                // Accessible Link Color
-
-                --a11y-link: blue;
-
-                // Associated Primary Colors
-
-                --primary-text: var(--dark);
-                --primary-border: hsla(0, 0%, 0%, 0.125);
-                --primary-link: currentColor;
-
-                // Associated Secondary Colors
-
-                --secondary-text: white;
-                --secondary-border: hsla(0, 0%, 0%, 0.25);
-                --secondary-link: currentColor;
-
-                // Associated Dark Colors
-
-                --dark-text: white;
-                --dark-border: hsla(0, 0%, 100%, 0.125);
-                --dark-link: currentColor;
-
-                // Associated Light Colors
-
-                --light-text: var(--dark);
-                --light-border: hsl(0, 0%, 50%, 0.25);
-                --light-link: var(--a11y-link);
-
-                // Associated Light Colors
-
-                --white-text: var(--dark);
-                --white-border: hsl(0, 0%, 50%, 0.25);
-                --white-link: var(--a11y-link);
-
-                // Alert and Form Feedback Colors
-
-                --confirm: #008230;
-                --attention: #3953B1;
-                --warn: #dc3545;
-            }
-        </code>
-    </pre>
-    <figcaption>
-        <p>Figure 2 - Example of our color system's SASS custom property declarations.</p>
-    </figcaption>
-</figure>
-
-<figure class="container narrow margin-y-4">
-    <table class="table">
-        <thead>
-            <tr>
-                <th class="width-30">Line #</th>
-                <th class="width-70">Details</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>5</td>
-                <td>
-                    <p>
-                        Our theme's <em>Primary</em> color.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>16</td>
-                <td>
-                    <p>
-                        Color of all text within <code>.theme-primary</code>.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>17</td>
-                <td>
-                    <p>
-                        Color of all borders within <code>.theme-primary</code>.
-                    </p>
-                </td>
-            </tr>
-            <tr>
-                <td>18</td>
-                <td>
-                    <p>
-                        Color of all paragraph links within<code>.theme-primary</code>.
-                    </p>
-                </td>
-            </tr>
-
-        </tbody>
-
-    </table>
-</figure>
-
-<div class="container narrow margin-y-4">
-    <p>
-        When a background-color class is applied to an element, its text, borders, and links (only those inside
-        <code>&lt;p&gt;</code> tags) automatically inherit their appropriate predesignated color.
-    </p>
-    <p>
-        Let's apply our background-color classes to Framework <a href="{{ site.baseurl}}/documentation/cards/">cards</a>:
-    </p>
-</div>
-<!-- .container -->
-
-<figure class="container narrow margin-y-4">
-
-    <div {{ site.example-custom-properties }}>
-
-        <div class="card theme-primary rounded border margin-y-3">
-
-            <div class="card__head border-bottom ">
-                <p>Walt Whitman</p>
+            <div class="card__head border-bottom">
+                <p>
+                    <strong>Theme Primary</strong>
+                </p>
             </div>
 
             <div class="card__body">
-                <h2 class="h5"><em>Mannahatta</em></h2>
+                <h2 class="h5">
+                    Card Header
+                </h2>
                 <p>
-                    I WAS asking for something specific and perfect for my city,
-                    Whereupon lo! upsprang the [Natura11y].
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                    ex facilis labore reiciendis.
                 </p>
-                <p>
-                    <a href="#1">Read Full Poem</a>
-                </p>
+            </div>
+
+            <div class="card__foot border-top">
+                <a class="button button--outline display-block" href="#1">
+                Link
+                </a>
             </div>
 
         </div>
         <!-- .card -->
 
-        <div class="card theme-secondary rounded border margin-y-3">
+        <div class="card theme-secondary margin-y-3">
 
-            <div class="card__head border-bottom ">
-                <p>Walt Whitman</p>
+            <div class="card__head border-bottom">
+                <p>
+                    <strong>Theme Socondary</strong>
+                </p>
             </div>
 
             <div class="card__body">
-                <h2 class="h5"><em>Mannahatta</em></h2>
+                <h2 class="h5">
+                    Card Header
+                </h2>
                 <p>
-                    I WAS asking for something specific and perfect for my city,
-                    Whereupon lo! upsprang the [Natura11y].
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                    ex facilis labore reiciendis.
                 </p>
-                <p>
-                    <a href="#1">Read Full Poem</a>
-                </p>
+            </div>
+
+            <div class="card__foot border-top">
+                <a class="button button--outline display-block" href="#1">
+                Link
+                </a>
             </div>
 
         </div>
         <!-- .card -->
 
-        <div class="card theme-dark rounded border margin-y-3">
+        <div class="card theme-dark margin-y-3">
 
-            <div class="card__head border-bottom ">
-                <p>Walt Whitman</p>
+            <div class="card__head border-bottom">
+                <p>
+                    <strong>Theme Dark</strong>
+                </p>
             </div>
 
             <div class="card__body">
-                <h2 class="h5"><em>Mannahatta</em></h2>
+                <h2 class="h5">
+                    Card Header
+                </h2>
                 <p>
-                    I WAS asking for something specific and perfect for my city,
-                    Whereupon lo! upsprang the [Natura11y].
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                    ex facilis labore reiciendis.
                 </p>
-                <p>
-                    <a href="#1">Read Full Poem</a>
-                </p>
+            </div>
+
+            <div class="card__foot border-top">
+                <a class="button button--outline display-block" href="#1">
+                Link
+                </a>
             </div>
 
         </div>
         <!-- .card -->
 
-        <div class="card theme-light rounded border margin-y-3">
+        <div class="card theme-light">
 
-            <div class="card__head border-bottom ">
-                <p>Walt Whitman</p>
+            <div class="card__head border-bottom">
+                <p>
+                    <strong>Theme Light</strong>
+                </p>
             </div>
 
             <div class="card__body">
-                <h2 class="h5"><em>Mannahatta</em></h2>
+                <h2 class="h5">
+                    Card Header
+                </h2>
                 <p>
-                    I WAS asking for something specific and perfect for my city,
-                    Whereupon lo! upsprang the [Natura11y].
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                    ex facilis labore reiciendis.
                 </p>
-                <p>
-                    <a href="#1">Read Full Poem</a>
-                </p>
+            </div>
+
+            <div class="card__foot border-top">
+                <a class="button button--outline display-block" href="#1">
+                Link
+                </a>
             </div>
 
         </div>
         <!-- .card -->
 
-        <div class="card theme-white rounded border margin-y-3">
+        <div class="card border margin-y-3">
 
-            <div class="card__head border-bottom ">
-                <p>Walt Whitman</p>
+            <div class="card__head border-bottom">
+                <p>
+                    <strong>Theme White</strong>
+                </p>
             </div>
 
             <div class="card__body">
-                <h2 class="h5"><em>Mannahatta</em></h2>
+                <h2 class="h5">
+                    Card Header
+                </h2>
                 <p>
-                    I WAS asking for something specific and perfect for my city,
-                    Whereupon lo! upsprang the [Natura11y].
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa obcaecati autem,
+                    ex facilis labore reiciendis.
                 </p>
-                <p>
-                    <a href="#1">Read Full Poem</a>
-                </p>
+            </div>
+
+            <div class="card__foot border-top">
+                <a class="button button--outline display-block" href="#1">
+                Link
+                </a>
             </div>
 
         </div>
         <!-- .card -->
 
     </div>
-    <!-- default theme -->
-
-</figure>
-
-<div class="container narrow margin-y-4">
-    <p>
-        With these cards, we need only to specify the background-color class (e.g. <code>.theme-primary</code>). Each card's text,
-        borders, and paragraph links inherit their assigned colors. Figure 3 below displays the HTML used to create the
-        <em>Primary</em> card.
-    </p>
-</div>
-<!-- .container -->
-
-<figure class="container medium margin-y-4">
-    <pre data-line="1">
-        <code class="language-html">
-            &lt;div class="card theme-primary rounded border margin-y-3">
-
-                &lt;div class="card__head border-bottom "&gt;
-                    &lt;p&gt;Walt Whitman&lt;/p&gt;
-                &lt;/div&gt;
-
-                &lt;div class="card__body"&gt;
-                    &lt;h2 class="h5"&gt;&lt;em&gt;Mannahatta&lt;/em&gt;&lt;/h2&gt;
-                    &lt;p&gt;
-                        I WAS asking for something specific and perfect for my city,
-                        Whereupon lo! upsprang the [Natura11y].
-                    &lt;/p&gt;
-                    &lt;p&gt;
-                        &lt;a href="#1"&gt;Read Full Poem&lt;/a&gt;
-                    &lt;/p&gt;
-                &lt;/div&gt;
-
-            &lt;/div&gt;
-            &lt;!-- .card --&gt;
-        </code>
-    </pre>
-    <figcaption>
-        <p>Figure 3 - Example HTML used to create the <em>Primary</em> card.</p>
-    </figcaption>
-</figure>
-
-<div class="container narrow margin-y-4">
-    <p>
-        Each one of our theme colors (above) are available as a background-color class (Figure 4):
-    </p>
-</div>
-<!-- .container -->
-
-<figure class="container narrow margin-y-4">
-    <pre class="hide-toolbar">
-        <code class="language-html">
-            &lt;div class="theme-primary"&gt;
-                ...
-            &lt;/div&gt;
-
-            &lt;div class="theme-secondary"&gt;
-                ...
-            &lt;/div&gt;
-
-            &lt;div class="theme-dark"&gt;
-                ...
-            &lt;/div&gt;
-
-            &lt;div class="theme-light"&gt;
-                ...
-            &lt;/div&gt;
-
-            &lt;div class="theme-white"&gt;
-                ...
-            &lt;/div&gt;
-        </code>
-    </pre>
-    <figcaption>
-        <p>Figure 4 - Our theme color generated background-color classes.</p>
-    </figcaption>
-</figure>
-
-<div class="container narrow margin-y-4" id="cool">
-    <h3>Inheritance and Selectivity</h3>
-    <p>
-        Apply a background-color class to any element along the DOM (Document Object Model) and every child element
-        within inherits their appropriate colors until a new class is specified.
-    </p>
-    <p>
-        In other words, <strong>background-color classes are infinitely nestable</strong>. Let's look at this concept of nesting put in practice.
-    </p>
-    <p>
-        The layout below has  a <code>.theme-white</code> class applied to the <code>&lt;body&gt;</code> tag. Notice the
-        text, border, and link colors across the page receive their assigned color, regardless of their position within
-        the DOM.
-    </p>
-</div>
-<!-- .container -->
-
-{% include browser-iframe.html iframe_url="/examples/color-system/theming-01.html" %}
-
-<div class="container narrow margin-y-4">
-    <p>
-        Suppose we want a dark theme for our entire page. Of course, dark pages are <em>not</em> recommended for
-        readability, but we've made one here for sake of demonstration.
-    </p>
-    <p>
-        To create our dark theme, we changed the <code>.theme-white</code> class (applied to the
-        <code>&lt;body&gt;</code> tag) to <code>.theme-dark</code>.
-    </p>
-</div>
-<!-- .container -->
-
-{% include browser-iframe.html iframe_url="/examples/color-system/theming-02.html" %}
-<div class="container narrow margin-y-4">
-    <p>
-        That was easy but now our page looks really flat. Let's make our header, sidebar, and footer stand out by adding
-        background-color classes to them as well.
-    </p>
-</div>
-<!-- .container -->
-
-{% include browser-iframe.html iframe_url="/examples/color-system/theming-03.html" %}
-
-<div class="container narrow margin-y-4">
-    <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora quia ea, excepturi facilis, veniam quaerat eos
-        aperiam itaque doloribus, perspiciatis earum nam ipsam quas quidem possimus illo aut voluptatum recusandae?
-    </p>
-</div>
-<!-- .container -->
-
-<figure class="container narrow margin-y-4">
-    <pre class="hide-toolbar">
-        <code class="language-html">
-            &lt;div class="theme-primary"&gt;
-                ...
-            &lt;/div&gt;
-
-            &lt;div class="theme-secondary"&gt;
-                ...
-            &lt;/div&gt;
-
-            &lt;div class="theme-dark"&gt;
-                ...
-            &lt;/div&gt;
-
-            &lt;div class="theme-light"&gt;
-                ...
-            &lt;/div&gt;
-
-            &lt;div class="theme-white"&gt;
-                ...
-            &lt;/div&gt;
-        </code>
-    </pre>
-    <figcaption>
-        <p>Figure 2 - Example of the <em>primary</em> background-color class applied to a card.</p>
-    </figcaption>
-</figure>
+ </figure>
