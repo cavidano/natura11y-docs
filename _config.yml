@@ -58,7 +58,6 @@ example-custom-properties: ' style="
   --secondary-text: var(--dark);
   --a11y-link: #0066cc;
   --body-font-family: Source Sans Pro ;
-  --body-font-size: 22px;
   --body-line-height: 1.4;"
   data-example
   '
