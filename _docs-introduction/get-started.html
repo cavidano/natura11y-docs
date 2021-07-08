@@ -52,12 +52,12 @@ title: "Get Started"
 <figure class="container narrow margin-y-4">    
     <pre class="hide-toolbar" data-line="4,6,8">
         <code class="language-treeview">
-            nyc-core-framework/
+            natura11y/
             ├── dist/
             │   ├── css/
-            │   │   └── nyc_core.css
+            │   │   └── natura11y.css
             │   ├── js/
-            │   │   └── nyc_core.js
+            │   │   └── natura11y.js
             ├── src/
             │   └── modules/
             │       ├── [module-name]/
@@ -75,10 +75,10 @@ title: "Get Started"
 
 <div class="container narrow margin-y-4"> 
     <p>
-        The <strong>/src/modules/</strong> <a href="https://github.com/CityOfNewYork/nyc-core-framework/tree/new-version/src/modules" target="_blank">directory</a> (Figure 1, line 8) contains the framework <em>modules</em>. Each <em>module</em> (e.g., <em>button</em>) is a directory containing two files: <strong>_style.scss</strong> and <strong>index.js</strong>.
+        The <strong>/src/modules/</strong> <a href="https://github.com/cavidano/natura11y/tree/main/src/modules" target="_blank">directory</a> (Figure 1, line 8) contains the framework <em>modules</em>. Each <em>module</em> (e.g., <em>button</em>) is a directory containing two files: <strong>_style.scss</strong> and <strong>index.js</strong>.
     </p>
     <p>
-        We use a module bundler to process all modules into a single CSS file, and a single JavaScript file. This helps maintain (and future-proof) the framework while accounting for out-of-date browsers. Figure 1 highlights these files: <strong>/dist/css/nyc_core.css</strong> (line 4), <strong>dist/js/nyc_core.js</strong>/ (line 6).
+        We use a module bundler to process all modules into a single CSS file, and a single JavaScript file. This helps maintain (and future-proof) the framework while accounting for out-of-date browsers. Figure 1 highlights these files: <strong>/dist/css/natura11y.css</strong> (line 4), <strong>dist/js/natura11y.js</strong>/ (line 6).
     </p>
     <p>
        These files are two of the three required dependencies of the framework. The third dependency is for icons. Follow our <em>Quick Start</em> instructions for including these dependencies (via CDN).
@@ -113,10 +113,10 @@ title: "Get Started"
 
                     &lt;title&gt;Page Title • Your Website Name&lt;/title&gt;
 
-                    &lt;!-- NYC Core Icons --&gt;
+                    &lt;!-- Natura11y Icons --&gt;
                     &lt;link rel="stylesheet" href="{{ site.cdn_url_icons }}"&gt;
 
-                    &lt;!-- NYC Core Stylesheet --&gt;
+                    &lt;!-- Natura11y Stylesheet --&gt;
                     &lt;link rel="stylesheet" href="{{ site.cdn_url_css }}"&gt;
 
                 &lt;/head&gt;
@@ -126,14 +126,12 @@ title: "Get Started"
                     &lt;header id="global-header"&gt;&lt;/header&gt;
 
                     &lt;main id="skip-header-content"&gt;
-
-                        &lt;h1&gt;Hello NYC&lt;/h1&gt;
-
+                        &lt;h1&gt;Hello Nature&lt;/h1&gt;
                     &lt;/main&gt;
 
                     &lt;footer id="global-footer"&gt;&lt;/footer&gt;
 
-                    &lt;!-- NYC Core Javascript --&gt;
+                    &lt;!-- Natura11y Javascript --&gt;
                     &lt;script src="{{ site.cdn_url_js }}"&gt;&lt;/script&gt;
 
                 &lt;/body&gt;
@@ -178,7 +176,7 @@ title: "Get Started"
                 <td>16</td>
                 <td>
                     <p>
-                        CDN Stylesheet link to <a href="{{ site.url }}/icons/">NYC Core Icons</a>,
+                        CDN Stylesheet link to <a href="{{ site.url }}/icons/">Natura11y Icons</a>,
                         our very own open-source icon library.
                     </p>
                 </td>
@@ -224,7 +222,7 @@ title: "Get Started"
 <div class="container narrow margin-y-4">
     <a class="button button--has-icon theme-secondary" href="{{ site.url }}/docs/customization/">
         <span class="button__text">Customization</span>
-        <span class="nyc_icon_arrow-right" aria-hidden="true"></span>
+        <span class="icon_arrow-right" aria-hidden="true"></span>
     </a>
 </div>
 <!-- .container -->

@@ -6,9 +6,6 @@ description: An open source accessible design system
 # URL (Local)
 baseurl: ''
 
-# Archive (Append '/version/x.x')
-# baseurl: '/nyc-core-framework/version/1.5'
-
 # Permalinks
 permalink: pretty
 
@@ -24,7 +21,6 @@ exclude:
   - node_modules/*
   - Gemfile
   - Gemfile.lock
-  - nyc-core-framework.code-workspace
   - package-lock.json
   - package.json
   - webpack.config.js
@@ -60,7 +56,7 @@ example-custom-properties: ' style="
   --light: #ede7e2;
   --primary-text: white;
   --secondary-text: var(--dark);
-  --a11y-link: #1f1fcc;
+  --a11y-link: #0066cc;
   --body-font-family: Source Sans Pro ;
   --body-font-size: 22px;
   --body-line-height: 1.4;"

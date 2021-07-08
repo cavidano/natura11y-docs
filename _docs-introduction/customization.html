@@ -57,7 +57,7 @@ title: "Customization"
 
 <div class="container narrow margin-y-4">
     <p>
-        CSS variables provide benefits that Sass variables do not. Did you know CSS variables update at runtime? You can declare new values from <strong>nyc_core.css</strong> anytime after that stylesheet reference.
+        CSS variables provide benefits that Sass variables do not. Did you know CSS variables update at runtime? You can declare new values from <strong>natura11y.css</strong> anytime after that stylesheet reference.
     </p>
     <p>
         There are different ways to declare new values for CSS variables. Adding a style tag in the header is ideal for prototyping and exploring. Creating a second stylesheet is the preferred method. You can even redeclare values using JavaScript.
@@ -96,10 +96,10 @@ title: "Customization"
                         &lt;title&gt;Title • Natura11y&lt;/title&gt;
 
                         &lt;!-- Natura11y Icons --&gt;
-                        &lt;link rel="stylesheet" href="https://i.icomoon.io/public/395bc97f45/NYCCoreIcons/style.css"&gt;
+                        &lt;link rel="stylesheet" href="{{ site.cdn_url_icons }}"&gt;
 
                         &lt;!-- Natura11y Stylesheet --&gt;
-                        &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natura11y.css"&gt;
+                        &lt;link rel="stylesheet" href="{{ site.cdn_url_css }}"&gt;
 
                     &lt;/head&gt;
 
@@ -127,8 +127,8 @@ title: "Customization"
 
                         &lt;/main&gt;
 
-                        &lt;!-- NYC Core Javascript --&gt;
-                        &lt;script src="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/js/nyc_core.js">&lt;/script&gt;
+                        &lt;!-- Natura11y Javascript --&gt;
+                        &lt;script src="{{ site.cdn_url_js }}"&gt;&lt;/script&gt;
 
                     &lt;/body&gt;
 
@@ -149,7 +149,7 @@ title: "Customization"
 
 <div class="container narrow margin-y-4">
     <p>
-        Declared as CSS variables in <strong>nyc_core.css</strong>, we have four colors. They are <em>Primary</em>, <em>Secondary</em>, <em>Dark</em>, and <em>Light</em>.
+        Declared as CSS variables in <strong>natura11y.css</strong>, we have four colors. They are <em>Primary</em>, <em>Secondary</em>, <em>Dark</em>, and <em>Light</em>.
         Let's customize their color values with a second stylesheet.
     </p>
     <p>
@@ -158,7 +158,7 @@ title: "Customization"
     </p>
     <p>
         Open your HTML document. Add a link to <strong>new-colors.css</strong> somewhere below
-        <strong>nyc_core.css</strong> (Figure 3, line 5).
+        <strong>natura11y.css</strong> (Figure 3, line 5).
     </p>
 </div>
 <!-- .container -->
@@ -166,8 +166,8 @@ title: "Customization"
 <figure class="container medium margin-y-4">
     <pre class="hide-toolbar" data-line="5">
         <code class="language-html">
-            &lt;!-- NYC Core Stylesheet --&gt;
-            &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/CityOfNewYork/nyc-core-framework@new-version/dist/css/nyc_core.css"&gt;
+            &lt;!-- Natura11y Stylesheet --&gt;
+            &lt;link rel="stylesheet" href="{{ site.cdn_url_css }}"&gt;
 
             &lt;!-- Custom Theme Properties --&gt;
             &lt;link rel="stylesheet" href="./css/lib/new-colors.css"&gt;

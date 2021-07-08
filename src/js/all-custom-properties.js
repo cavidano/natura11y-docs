@@ -77,7 +77,7 @@ window.addEventListener('DOMContentLoaded', (event) => {
                     <span class="cp-header__title">${type}</span>
                     <a class="cp-header__link button button--has-icon" href="../../docs/${slug}">
                         <span class="button__text">Docs</span>
-                        <span class="nyc_icon_arrow-right button__icon"></span>
+                        <span class="icon_arrow-right button__icon"></span>
                     </a>
                 </div>
                 <table class="table">

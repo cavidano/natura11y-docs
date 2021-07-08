@@ -9,15 +9,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CityOfNewYork/nyc-core-framework-website.git"
+    "url": "git+https://github.com/cavidano/natura11y.git"
   },
   "keywords": [],
   "author": "Carl Avidano",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/CityOfNewYork/nyc-core-framework-website/issues"
-  },
-  "homepage": "https://github.com/CityOfNewYork/nyc-core-framework-website#readme",
+  "homepage": "https://github.com/cavidano/natura11y#readme",
   "devDependencies": {
     "@babel/core": "^7.12.13",
     "@babel/plugin-transform-runtime": "^7.14.5",
