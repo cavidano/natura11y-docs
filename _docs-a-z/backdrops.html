@@ -393,31 +393,69 @@ title: "Backdrops"
     <div class="backdrop backdrop--fixed theme-dark" {{ site.example-custom-properties }}>
 
         <div class="backdrop__credit">
-            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+            <p>
+                Photo by <a href="https://unsplash.com/@albertorestifo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Alberto Restifo</a> on <a href="https://unsplash.com/@albertorestifo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a>
+            </p>
         </div>
 
-        <div class="backdrop__image gradient-veneer-bottom">
-            <img class="opacity-50" src="{{ site.url }}/images/examples/backdrop-example-04.jpg" alt="">
+        <div class="backdrop__image">
+            <img class="opacity-40" src="{{ site.url }}/images/examples/backdrop-example-04.jpg" alt="">
         </div>
 
         <div class="backdrop__cover">
 
-            <div class="text-align-center margin-y-5">
+            <div class="margin-y-5">
 
                 <div class="container narrow">
-                    <h1 class="banner-headline text-shadow margin-bottom-4">
-                       <em>This is the land the sunset washes</em> 
+                    <h1 class="banner-headline text-align-center text-shadow margin-bottom-4">
+                       <em>Nature in Poetry</em> 
                     </h1>
                 </div>
 
-                <div class="container narrow medium--xl text-align-left">
+                <div class="container narrow medium--xl">
 
                     <div class="grid grid--gap-2 grid--cell-6--xl justify-content-center">
 
                         <div class="grid__cell">
 
-                            <div class="border-radius box-shadow-2">
-                                <img class="width-100" src="/images/examples/backdrop-example-04-a.jpg" alt="">
+                            <div class="card border-radius theme-light box-shadow-2">
+
+                                <div class="card__head border-bottom">
+                                    <p>
+                                        <em>Featured Poem</em>
+                                    </p>
+                                </div>
+
+                                <div class="card__body">
+                                    <h2 class="h6">
+                                        This—is the land—the Sunset washes—
+                                    </h2>
+                                    <p>
+                                        <em>
+                                            This—is the land—the Sunset washes—<br>
+                                            These—are the Banks of the Yellow Sea—<br>
+                                            Where it rose—or whither it rushes—<br>
+                                            These—are the Western Mystery!
+                                        </em>
+                                    </p>
+                                    <p>
+                                        <em>
+                                            Night after Night<br>
+                                            Her purple traffic<br>
+                                            Strews the landing with Opal Bales—<br>
+                                            Merchantmen—poise upon Horizons—<br>
+                                            Dip—and vanish like Orioles!
+                                        </em>
+                                    </p>
+                                </div>
+
+                                <div class="card__foot border-top">
+                                    <a class="button button--has-icon--disperse theme-primary" href="#1">
+                                        <span class="button__text">Emily Dickenson Poetry</span>
+                                        <span class="icon_arrow-right button__icon"></span>
+                                    </a>
+                                </div>
+
                             </div>
 
                         </div>
@@ -425,11 +463,11 @@ title: "Backdrops"
 
                         <div class="grid__cell">
 
-                            <div class="card border-radius theme-dark box-shadow-2">
+                            <div class="card border-radius theme-light box-shadow-2">
 
                                 <div class="card__head border-bottom">
-                                    <p class="text-color-secondary">
-                                    <em>About the Poet</em>
+                                    <p>
+                                        <em>About the Poet</em>
                                     </p>
                                 </div>
 
@@ -446,18 +484,16 @@ title: "Backdrops"
                                 </div>
 
                                 <div class="card__foot border-top">
-                                    <a class="button button--has-icon--disperse theme-secondary" href="#1">
-                                        <span class="button__text">Read Full Bio</span>
+                                    <a class="button button--has-icon--disperse theme-primary" href="#1">
+                                        <span class="button__text">About Emily Dickenson</span>
                                         <span class="icon_arrow-right button__icon"></span>
                                     </a>
                                 </div>
 
                             </div>
-                            <!-- .card -->
 
                         </div>
                         <!-- .grid__cell -->
-
                         
                     </div>
                     <!-- .grid -->
@@ -475,7 +511,7 @@ title: "Backdrops"
 
  <div class="container narrow margin-y-4">
     <p>
-        In this example, the content inside <code>.backdrop__cover</code> is taller than the default height (400px), and
+        In this example, the content inside <code>.backdrop__cover</code> is taller than the default height (400px), thus
         <code>.backdrop--fixed</code> adjusts its height automatically.
     </p>
     <p>
@@ -484,7 +520,6 @@ title: "Backdrops"
  </div>
 
 <figure class="container medium margin-y-4">
-
     <pre>
         <code class="language-html">
             &lt;div class="backdrop backdrop--fixed theme-dark"&gt;
@@ -493,66 +528,98 @@ title: "Backdrops"
                     &lt;p&gt;Photo by &lt;a href="#1"&gt;Jane Doe&lt;/a&gt; on Unsplash&lt;/p&gt;
                 &lt;/div&gt;
 
-                &lt;div class="backdrop__image gradient-veneer-bottom"&gt;
-                    &lt;img class="opacity-20" src="https://via.placeholder.com/1600x900.jpg" alt=""&gt;
+                &lt;div class="backdrop__image"&gt;
+                    &lt;img class="opacity-40" src="https://via.placeholder.com/1600x900.jpg" alt=""&gt;
                 &lt;/div&gt;
 
                 &lt;div class="backdrop__cover"&gt;
 
-                    &lt;div class="container medium text-align-center margin-y-5"&gt;
+                    &lt;div class="margin-y-5"&gt;
 
-                        &lt;h1 class="banner-headline text-shadow margin-bottom-4"&gt;
-                            Lorem ipsum dolor sit amet consectetur
-                        &lt;/h1&gt;
+                        &lt;div class="container narrow"&gt;
+                            &lt;h1 class="banner-headline text-align-center text-shadow margin-bottom-4"&gt;
+                            &lt;em&gt;Nature in Poetry&lt;/em&gt; 
+                            &lt;/h1&gt;
+                        &lt;/div&gt;
 
-                        &lt;div class="text-align-left"&gt;
+                        &lt;div class="container narrow medium--xl"&gt;
 
-                            &lt;div class="grid grid--gap-2 grid--cell-fill--md justify-content-center"&gt;
+                            &lt;div class="grid grid--gap-2 grid--cell-6--xl justify-content-center"&gt;
 
                                 &lt;div class="grid__cell"&gt;
 
-                                    &lt;div class="card theme-white rounded box-shadow-1"&gt;
+                                    &lt;div class="card border-radius theme-light box-shadow-2"&gt;
 
                                         &lt;div class="card__head border-bottom"&gt;
-                                            &lt;p&gt;Card Header&lt;/p&gt;
+                                            &lt;p&gt;
+                                                &lt;em&gt;Featured Poem&lt;/em&gt;
+                                            &lt;/p&gt;
                                         &lt;/div&gt;
 
                                         &lt;div class="card__body"&gt;
-                                            &lt;h2 class="h4"&gt;Card Title&lt;/h2&gt;
+                                            &lt;h2 class="h6"&gt;
+                                                This—is the land—the Sunset washes—
+                                            &lt;/h2&gt;
                                             &lt;p&gt;
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
-                                                obcaecati autem, ex facilis labore reiciendis.
+                                                &lt;em&gt;
+                                                    This—is the land—the Sunset washes—&lt;br&gt;
+                                                    These—are the Banks of the Yellow Sea—&lt;br&gt;
+                                                    Where it rose—or whither it rushes—&lt;br&gt;
+                                                    These—are the Western Mystery!
+                                                &lt;/em&gt;
+                                            &lt;/p&gt;
+                                            &lt;p&gt;
+                                                &lt;em&gt;
+                                                    Night after Night&lt;br&gt;
+                                                    Her purple traffic&lt;br&gt;
+                                                    Strews the landing with Opal Bales—&lt;br&gt;
+                                                    Merchantmen—poise upon Horizons—&lt;br&gt;
+                                                    Dip—and vanish like Orioles!
+                                                &lt;/em&gt;
                                             &lt;/p&gt;
                                         &lt;/div&gt;
 
                                         &lt;div class="card__foot border-top"&gt;
-                                            &lt;a class="button theme-secondary display-block" href="#1"&gt;Action&lt;/a&gt;
+                                            &lt;a class="button button--has-icon--disperse theme-primary" href="#1"&gt;
+                                                &lt;span class="button__text"&gt;Emily Dickenson Poetry&lt;/span&gt;
+                                                &lt;span class="icon_arrow-right button__icon"&gt;&lt;/span&gt;
+                                            &lt;/a&gt;
                                         &lt;/div&gt;
+
                                     &lt;/div&gt;
-                                    &lt;!-- .card --&gt;
 
                                 &lt;/div&gt;
                                 &lt;!-- .grid__cell --&gt;
 
                                 &lt;div class="grid__cell"&gt;
 
-                                    &lt;div class="card theme-white rounded box-shadow-1"&gt;
+                                    &lt;div class="card border-radius theme-light box-shadow-2"&gt;
 
                                         &lt;div class="card__head border-bottom"&gt;
-                                            &lt;p&gt;Card Header&lt;/p&gt;
+                                            &lt;p&gt;
+                                                &lt;em&gt;About the Poet&lt;/em&gt;
+                                            &lt;/p&gt;
                                         &lt;/div&gt;
 
                                         &lt;div class="card__body"&gt;
-                                            &lt;h2 class="h4"&gt;Card Title&lt;/h2&gt;
+                                            &lt;h2 class="h4"&gt;
+                                                Emily Dickenson
+                                            &lt;/h2&gt;
                                             &lt;p&gt;
-                                                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Culpa
-                                                obcaecati autem, ex facilis labore reiciendis.
+                                                Emily Elizabeth Dickinson was an American poet. Little-known during her life, she has since been regarded as one of the most important figures in American poetry.
+                                            &lt;/p&gt;
+                                            &lt;p&gt;
+                                                Dickinson was born in Amherst, Massachusetts into a prominent family with strong ties to its community.
                                             &lt;/p&gt;
                                         &lt;/div&gt;
 
                                         &lt;div class="card__foot border-top"&gt;
-                                            &lt;a class="button theme-secondary display-block" href="#1"&gt;Action&lt;/a&gt;
+                                            &lt;a class="button button--has-icon--disperse theme-primary" href="#1"&gt;
+                                                &lt;span class="button__text"&gt;About Emily Dickenson&lt;/span&gt;
+                                                &lt;span class="icon_arrow-right button__icon"&gt;&lt;/span&gt;
+                                            &lt;/a&gt;
                                         &lt;/div&gt;
+
                                     &lt;/div&gt;
 
                                 &lt;/div&gt;
