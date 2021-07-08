@@ -93,7 +93,7 @@ title: "Customization"
                         &lt;meta charset="utf-8"&gt;
                         &lt;meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"&gt;
 
-                        &lt;title&gt;Title • Natura11y&lt;/title&gt;
+                        &lt;title&gt;Color Example • Natura11y&lt;/title&gt;
 
                         &lt;!-- Natura11y Icons --&gt;
                         &lt;link rel="stylesheet" href="{{ site.cdn_url_icons }}"&gt;
@@ -105,7 +105,7 @@ title: "Customization"
 
                     &lt;body&gt;
 
-                        &lt;main id="skip-header-content" role="main"&gt;
+                        &lt;main class="overflow-hidden" id="skip-header-content"&gt;
 
                             &lt;div class="container narrow margin-y-5"&gt;
 
@@ -170,7 +170,7 @@ title: "Customization"
             &lt;link rel="stylesheet" href="{{ site.cdn_url_css }}"&gt;
 
             &lt;!-- Custom Theme Properties --&gt;
-            &lt;link rel="stylesheet" href="./css/lib/new-colors.css"&gt;
+            &lt;link rel="stylesheet" href="./css/new-colors.css"&gt;
         </code>
     </pre>
     <figcaption>
@@ -191,10 +191,12 @@ title: "Customization"
     <pre>
         <code class="language-css">
             :root {
-                --primary: #0080f8;
-                --secondary: #004080;
-                --dark: #09172c;
-                --light: #e6f6fe;
+                --primary: #440381;
+                --secondary: #ffcc66;
+                --dark: #1f163f;
+                --light: #ede7e2;
+                --primary-text: white;
+                --secondary-text: var(--dark);
             }
         </code>
     </pre>
