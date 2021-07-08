@@ -136,7 +136,7 @@
         "scope" : ":root",
         "customProperties": [
             {
-                "name": "a11y-link-color",
+                "name": "a11y-link",
                 "value": "blue",
                 "description": "Accessible link color applied to links within <em>white</em> and <em>light</em> themes"
             },
@@ -247,7 +247,7 @@
             },
             {
                 "name": "light-link",
-                "value": "var(--a11y-link-color)",
+                "value": "var(--a11y-link)",
                 "description": "Color of links within the <em>light theme</em> utility class"
             },
             {
@@ -272,7 +272,7 @@
             },
             {
                 "name": "white-link",
-                "value": "var(--a11y-link-color)",
+                "value": "var(--a11y-link)",
                 "description": "Color of links within the <em>white theme</em> (default) utility class"
             },
             {

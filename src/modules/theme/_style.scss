@@ -21,14 +21,6 @@ In this file:
 //////////////////////////////////////////////
 
 :root {
-    --primary: #00A870;
-    --secondary: #004857;
-    --dark: #131B40;
-
-    --secondary-text: white;
-
-    --a11y-link-color: #005fcc;
-    
     --body-font-family: 'Poppins';
     
     --body-font-weight-normal: 400;
@@ -104,7 +96,7 @@ a[data-logo="brand"] {
 }
 
 .accessibility-spotlight {
-   color: var(--a11y-link-color);
+   color: var(--a11y-link);
 }
 
 .browser {

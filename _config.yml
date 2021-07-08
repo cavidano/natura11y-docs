@@ -60,7 +60,7 @@ example-custom-properties: ' style="
   --light: #ede7e2;
   --primary-text: white;
   --secondary-text: var(--dark);
-  --a11y-link-color: #1f1fcc;
+  --a11y-link: #1f1fcc;
   --body-font-family: Source Sans Pro ;
   --body-font-size: 22px;
   --body-line-height: 1.4;"
