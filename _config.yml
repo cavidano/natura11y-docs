@@ -54,12 +54,13 @@ cdn_url_js: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/js/natura1
 cdn_url_icons: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@1.0.0/dist/css/natura11y_icons.css'
 
 example-custom-properties: ' style="
-  --primary: #ffcc66;
-  --secondary: #591650;
-  --dark: #1a1a33;
+  --primary: #440381;
+  --secondary: #ffcc66;
+  --dark: #1f163f;
   --light: #ede7e2;
-  --primary-text: var(--dark);
-  --secondary-text: white;
+  --primary-text: white;
+  --secondary-text: var(--dark);
+  --a11y-link-color: #1f1fcc;
   --body-font-family: Source Sans Pro ;
   --body-font-size: 22px;
   --body-line-height: 1.4;"
