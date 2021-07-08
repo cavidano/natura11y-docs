@@ -55,8 +55,8 @@ cdn_url_icons: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@1.0.0/dist/
 
 example-custom-properties: ' style="
   --primary: #ffcc66;
-  --secondary: #4c1344;
-  --dark: #140f33;
+  --secondary: #591650;
+  --dark: #1a1a33;
   --light: #ede7e2;
   --primary-text: var(--dark);
   --secondary-text: white;
