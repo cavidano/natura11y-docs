@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body {% if page.theme != blank %} class="theme-{{page.theme}}" {% endif %}>
     
     {{ content }}
 
