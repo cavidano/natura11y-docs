@@ -12,7 +12,10 @@ title: "Color"
 
 {% capture as_body %}
 <p>
-    When selecting colors for your theme, you must check that your colors meet a sufficient <a href="#1">contrast ratio</a>.
+    When selecting colors for your theme, make sure your colors meet a <a href="https://colorable.jxnblk.com/" target="_blank">sufficient contrast</a> minimum.
+</p>
+<p>
+    Learn more about <a href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html" target="_blank">accessible contrast ratios</a>.
 </p>
 {% endcapture %}
 
@@ -23,7 +26,7 @@ title: "Color"
 <div class="container narrow margin-y-4">
     <h2>Theme Colors</h2>
     <p>
-        The following palette makes up your default <em>theme colors</em>. 
+        Your principal <em>theme color palette</em> includes <strong><em>Primary</em></strong>, <strong><em>Secondary</em></strong>, <strong><em>Dark</em></strong>, <strong><em>Light</em></strong>, and <strong><em>White</em></strong>.
     </p>
 </div>
 <!-- .container -->
@@ -55,22 +58,67 @@ title: "Color"
 <!-- .container -->
 
 <div class="container narrow margin-y-4">
-    <p>
-        With Natura11y, <em>white</em> is treated as a color and it serves as your default theme color. These five colors generate our <a href="#1">theme color utilities</a>, <a href="#1">background color utilities</a>, and <a href="#1">border color utilities</a>. 
+    <p> 
+        The five principal theme colors generate our <a href="#themeColorUtilities">theme color utilities</a>, <a href="#1">background color utilities</a>, and <a href="#1">border color utilities</a> across the framework.
     </p>
     <p>
-        Customize all colors with <a href="{{ site.url }}/docs/customization/#customizingColors">CSS variables</a> or <a href="https://github.com/cavidano/natura11y/blob/main/src/modules/color/_style.scss" target="_blank">Sass</a>.
+        With Natura11y, <strong><em>White</em></strong> is treated as a color and it serves as your default theme color. The white theme is applied automatically to the <code>&lt;body&gt;</code> of pages linked to Naturally's CSS file. 
     </p>
 </div>
 <!-- .container -->
 
+
+
 <div class="container narrow margin-y-4">
-    <h3>Theme Color Utilities</h3>
+    <h3>Correlated Colors</h3>
     <p>
-        Probably one of Natura11y's coolest (and most useful) features are the theme color utility classes. Each theme color utility applies a predefined <strong>background color</strong>, <strong>text color</strong>, <strong>border color</strong>, <strong>link color</strong>, even <strong>warn</strong> and <strong>confirm</strong> colors to any selector!  
+        Each theme color has five correlated colors&#8212;for text, border, link, confirm, and warn. Figure 1 (below) depicts the colors used within our <strong><em>Primary</em></strong> theme</em>.
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+    <pre data-line="4,8,9,10,11,12">
+        <code class="language-css">
+            :root {
+                // Primary Theme Color
+
+                --primary: #440381;
+
+                // Primary Correlated Colors
+                
+                --primary-text: var(--dark);
+                --primary-border: hsla(0, 0%, 0%, 0.25);
+                --primary-link: currentColor;
+                --primary-confirm: #16db93;
+                --primary-warn: #ff73aa;
+            }
+        </code>
+    </pre>
+    <figcaption>
+        <p>Figure 1</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        In Figure 1, line 4 declares the primary color itself while lines 8-12 declare primary's correlated colors. Each <em>theme</em> represents the sum of their colors.
     </p>
     <p>
-        The above run-on sentence might take a bit to soak in, so let's look at it in practice. In Figure 1 below, we have our five theme color utilities:
+        Refer to our color's <a href="https://github.com/cavidano/natura11y/blob/d82f77213caf4c43588747927c82fe918d4d568f/src/modules/color/_style.scss#L20" target="_blank">Scss file on Github</a> for a quick look at all colors available. If you haven't yet done so, read our <a href="{{ site.url }}/docs/customization/#customizingColors">customization</a> docs where we offer a simple practice exercise for customizing colors from Natura11y's CDN.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="themeColorUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Theme Color Utilities</h2>
+    <p>
+        Probably one of Natura11y's most useful features&#8212;our theme color utility classes. Each theme color utility applies a predefined <strong>background color</strong>, <strong>text color</strong>, <strong>border color</strong>, <strong>link color</strong>, <strong>confirm color</strong>, and <strong>warn color</strong> to its selector!  
+    </p>
+    <p>
+        The above run-on sentence might take a bit to soak in, so let's look at it in practice. Figure 1 below provides our five theme color utilities:
     </p>
 </div>
 <!-- .container -->
@@ -86,13 +134,13 @@ title: "Color"
         </code>
     </pre>
 	<figcaption>
-		<p>Figure 1</p>
+		<p>Figure 2</p>
 	</figcaption>
 </figure>
 
 <div class="container narrow margin-y-4">
     <p>
-        You can apply theme colors to virtually any block-level selector within the DOM. Consider the following cards, where each has a different theme color utility applied. 
+        You can apply theme colors to virtually any containing block-level element within the DOM. Consider the following cards, where each applies a different theme color utility. 
     </p>
 </div>
 <!-- .container -->
@@ -270,14 +318,79 @@ title: "Color"
 
 <div class="container narrow margin-y-4">
     <p>
-        With the cards above, it's obvious the background colors and text colors change for each theme. Notice too, the border and link colors change as well. 
+        With the cards above, it's evident that the background color and text color change for each theme. Did you notice the border and link colors change as well? This is most apparent with the <em><strong>Dark</strong></em> card, where the border color becomes light instead of dark.  
     </p>
     <p>
-        <strong>Infinitely nestable</strong>
+        In Figure 3 below, on line 1, notice the <code>.theme-primary</code> utility. No other elements within the card need colors specified because our theme color utility applies its correlated colors at once. 
     </p>
-    </p>
+</div>
+<!-- .container -->
+
+<figure class="container medium margin-y-4">
+	<pre data-line="1">
+        <code class="language-html">
+            &lt;div class="card theme-primary border-radius"&gt;
+
+                &lt;div class="card__head border-bottom"&gt;
+                    &lt;p&gt;
+                        &lt;strong&gt;Theme: Primary&lt;/strong&gt;
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="card__body"&gt;
+                    &lt;h2 class="h4"&gt;
+                        Rainbow lorikeet
+                    &lt;/h2&gt;
+                    &lt;p&gt;
+                        The rainbow lorikeet is a species of parrot found in Australia. It is common along the eastern seaboard, from northern &lt;a href="#"&gt;Queensland&lt;/a&gt; to &lt;a href="#1"&gt;South Australia&lt;/a&gt;. Its habitat is rainforest, coastal bush and woodland areas.
+                    &lt;/p&gt;
+                &lt;/div&gt;
+
+                &lt;div class="card__foot font-size-md border-top"&gt;
+                    &lt;ul class="nav nav--horizontal justify-content-between"&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Search Images&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a class="button button--outline rounded-pill" href="#1"&gt;
+                                Read on Wikipedia
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                &lt;/div&gt;
+
+            &lt;/div&gt;
+        </code>
+    </pre>
+	<figcaption>
+		<p>Figure 3</p>
+	</figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Infinetly Nestable</h3>
     <p>
-        <strong>Breakpoint Specific</strong>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit doloribus alias omnis dicta, reprehenderit quas assumenda suscipit voluptatem sunt.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="backgroundColorUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Background Color Utilities</h2>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium soluta doloremque similique magni. Porro, necessitatibus ducimus! Praesentium officiis quasi repudiandae distinctio. Dolores cum cumque quia, at magni rem numquam.
+    </p>
+</div>
+<!-- .container -->
+
+<hr class="section-start" id="TextColorUtilities">
+
+<div class="container narrow margin-y-4">
+    <h2>Text Color Utilities</h2>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium soluta doloremque similique magni. Porro, necessitatibus ducimus! Praesentium officiis quasi repudiandae distinctio. Dolores cum cumque quia, at magni rem numquam.
     </p>
 </div>
 <!-- .container -->
