@@ -70,6 +70,10 @@ a[data-logo="brand"] {
         line-height: 1.2;
     }
 
+    svg > g {
+        transition: fill 0.3s ease;
+    }
+
     &:focus, 
     &:hover {
 
@@ -82,7 +86,7 @@ a[data-logo="brand"] {
         }
         
         .tagline {
-            opacity: 0.5;
+            fill: hsla(0, 0%, 0%, 0.5)
         }
     }
 }
