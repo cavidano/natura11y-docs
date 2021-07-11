@@ -64,7 +64,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
         These five colors generate our <a href="#themeColorUtilities">theme color utilities</a>, <a href="#backgroundColorUtilities">background color utilities</a>, and <a href="#1">border color utilities</a> across the framework.
     </p>
     <p>
-        With Natura11y, <strong><em>White</em></strong> is treated as a color&#8212;and this is important&#8212;it serves as your default theme color. The white theme (and its <a href="#correlatedColors">correlated colors</a> ) is applied automatically to the <code>&lt;body&gt;</code> of any document using Naturally's CSS file. 
+        With Natura11y, <strong><em>White</em></strong> is treated as a color&#8212;and this is important&#8212;it serves as your default theme color. The white theme (and its <a href="#correlatedColors">correlated colors</a> ) is applied automatically to the <code>&lt;body&gt;</code> of any document using Natura11y's CSS file. 
     </p>
 </div>
 <!-- .container -->
@@ -73,10 +73,10 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 <div class="container narrow margin-y-4">
     <h2>Correlated Colors</h2>
     <p>
-        Every theme color has five correlated colors. These are designated colors for text, borders, and certain links&#8212;along with instances of <em>confirm</em> and <em>warn</em>. Correlated Colors are applied in isolation within their <a href="#themeColorUtilities">theme color utility</a> class. 
+        Every theme color has five correlated colors. These are designated colors for text, borders, and certain links&#8212;along with instances of <em>confirm</em> and <em>warn</em>. Correlated Colors are applied in isolation within each <a href="#themeColorUtilities">theme color utility</a> class. 
     </p>
     <p>
-        Figure 1 (below) depicts the css variables declared for the <em> <strong>Primary</strong></em> theme (line 5), and primary's correlated colors (lines 9-13).
+        Figure 1 (below) depicts the css variables declared for the <em> <strong>primary</strong></em> theme (line 5), and primary's correlated colors (lines 9-13).
     </p>
 </div>
 <!-- .container -->
@@ -429,7 +429,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
         </div>
         <pre data-line="1">
             <code class="language-html">
-                &lt;div class=".theme-primary--lg"&gt;
+                &lt;div class="theme-primary--lg"&gt;
 
                     &lt;ul class="nav nav--divider nav--horizontal border border-radius"&gt;
                         &lt;li&gt;
@@ -462,7 +462,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 <div class="container narrow margin-y-4">
     <h3>Confirm and Warn</h3>
     <p>
-        In Figure 1 (above), on lines 11 ans 12, you will find declarations for <em><strong>Confirm</strong></em> and  <em><strong>Warn</strong></em> color values. Natura11y allows you to specify <em>confirm</em> and <em>warn</em> values independently for each theme color!   
+        In Figure 1 (above), on lines 11 and 12, you will find declarations for <em><strong>Confirm</strong></em> and  <em><strong>Warn</strong></em> color values. Natura11y allows you to specify <em>confirm</em> and <em>warn</em> values independently for each theme color!   
     </p>
 </div>
 <!-- .container -->
@@ -476,7 +476,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
         
             <div class="grid grid--gap-2 grid--cell-fill text-align-center">
                 <div class="grid__cell">     
-                    <div class="alert alert border">
+                    <div class="alert alert--confirm border">
                         <div class="alert__title">
                             <span class="icon_confirm" aria-hidden="true"></span>
                             <span class="alert__title__text">
