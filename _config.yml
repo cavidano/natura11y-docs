@@ -59,6 +59,8 @@ example-custom-properties: ' style="
   --a11y-link: #0066cc;
   --dark-link: #21b2fa;
   --body-font-family: Source Sans Pro;
-  --body-line-height: 1.4;"
+  --body-line-height: 1.4;
+  --article-sidebar-width: 200px;
+  "
   data-example
   '

@@ -6,138 +6,127 @@ theme: "dark"
 
 <div id="wrap" {{ site.example-custom-properties }}>
 
+    <header id="global-header" role="banner">
 
+        <div class="primary-nav--below--lg box-shadow-1 z-index-1500">
 
-<header id="global-header" role="banner">
+            <div class="primary-nav__logo">
+                <a href="#1" title="Home" data-logo="brand">
+                    {% include logo-svg-168x42.html %}
+                </a>
+            </div>
 
-    <div class="primary-nav--below--lg box-shadow-1 z-index-1500">
+            <nav class="primary-nav__menu" aria-label="navigation" id="primary-menu-below">
+                <ul>
+                    
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                </ul>
 
-        <div class="primary-nav__logo">
-            <a href="#1" title="Home" data-logo="brand">
-                {% include logo-svg-168x42.html %}
-            </a>
-        </div>
+            </nav>
 
-        <nav class="primary-nav__menu" aria-label="navigation" id="primary-menu-below">
-            <ul>
-                <li>
-                    <a href="#1" data-toggle="dropdown">Dropdown</a>
-                    <ul class="nav__dropdown">
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#1" data-toggle="dropdown">Dropdown</a>
-                    <ul class="nav__dropdown">
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#1" data-toggle="dropdown">Dropdown</a>
-                    <ul class="nav__dropdown">
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#1" data-toggle="dropdown">Dropdown</a>
-                    <ul class="nav__dropdown">
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="#1" data-toggle="dropdown">Dropdown</a>
-                    <ul class="nav__dropdown">
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                        <li>
-                            <a href="#1">Link</a>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
+            <div class="primary-nav__actions">
 
-        </nav>
-
-        <div class="primary-nav__actions">
-
-            <button
-                class="button button--icon-only mobile-menu-toggle"
-                data-toggle="collapse"
-                data-target="#primary-menu-below">
-                    <span class="icon_menu"></span>
-            </button>
-            
-            <div class="button-group">
-                <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
-                    <span class="icon_search"></span>
+                <button
+                    class="button button--icon-only mobile-menu-toggle"
+                    data-toggle="collapse"
+                    data-target="#primary-menu-below">
+                        <span class="icon_menu"></span>
                 </button>
+                
+                <div class="button-group">
+                    <button class="button button--icon-only" aria-label="Search" data-modal-open="global-search">
+                        <span class="icon_search"></span>
+                    </button>
+                </div>
+
             </div>
 
         </div>
+        <!-- .primary-nav -->
 
-    </div>
-    <!-- .primary-nav -->
+    </header>
 
-</header>
+    <main class="overflow-hidden" id="skip-header-content">
 
-<main class="overflow-hidden" id="skip-header-content">
-    <div class="backdrop backdrop--fixed theme-dark">
+        <article class="article article--two-column">
 
-        <div class="backdrop__credit">
-            <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
-        </div>
+            <div class="article__header">
 
-        <div class="backdrop__image gradient-veneer-bottom">
-            <img class="opacity-20" src="/images/examples/color-theme-nestable-01.jpg" alt="Placeholder">
-        </div>
+            <header class="backdrop backdrop--fixed theme-dark">
 
-        <div class="backdrop__cover">
+                <div class="backdrop__image">
+                    <img class="opacity-20" src="/images/examples/color-theme-nestable-01.jpg" alt="Placeholder">
+                </div>
 
-            <div class="container medium margin-y-4">
-                <h1 class="banner-headline text-shadow">
-                    Rainbow lorikeet
-                </h1>
+                <div class="backdrop__cover">
+
+                    <div class="margin-y-4">
+                        <div class="container narrow">
+                            <h1 class="banner-headline text-shadow">
+                                Rainbow lorikeet
+                            </h1>
+                        </div> 
+                    </div>
+
+                </div>
+
+                <div class="backdrop__credit">
+                    <p>Photo by <a href="#1">Jane Doe</a> on Unsplash</p>
+                </div>
+
+            </header>
+            <!-- .backdrop -->
+
             </div>
+            <!-- .article__header --> 
 
-        </div>
+            <div class="article__sidebar theme-light">
+                <ul class="nav nav--divider">
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- .article__sidebar --> 
 
-    </div>
-    <!-- .backdrop -->
+            <div class="article__body border-left--lg" id="primary-content">
 
+                <div class="article__body__content">
+
+                    <div class="container narrow margin-y-5">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit eaque voluptatibus quidem commodi, beatae voluptates dolorum alias esse dolores quam praesentium sit voluptas, impedit obcaecati dolore laboriosam veritatis, omnis ipsam? Ipsa quis adipisci quas obcaecati veniam, maiores quae recusandae voluptas repellat facere molestias, sed quam perspiciatis dolorum similique enim assumenda nisi cum. Soluta suscipit ea harum, explicabo voluptatum facilis obcaecati animi voluptatem eligendi iste tempore minus aperiam accusamus unde aliquid, modi esse reiciendis rem consequatur! Possimus magnam neque corporis labore?
+                        </p>
+                    </div>
+                
+                </div>
+                <!-- .article__body__content -->
+
+            </div>
+            <!-- .article__body -->
+
+        </article>
+        
+    </main>
+    
 </div>

@@ -22,7 +22,7 @@ In this file:
 // Scoped to Block
 
 %article-vars {
-    --article-sidebar-width: 280px;
+    --article-sidebar-width: 200px;
 }
 
 //////////////////////////////////////////////
@@ -42,6 +42,18 @@ In this file:
 .article__body {
     overflow: hidden;
 }
+
+// .article__sidebar {
+//     border: 6px solid blue !important;
+// }
+
+// .article__header {
+//     border: 6px solid blueviolet !important;
+// }
+
+// .article__body {
+//     border: 6px solid burlywood !important;
+// }
 
 @include breakpoints.breakpoints-up(lg) {
 

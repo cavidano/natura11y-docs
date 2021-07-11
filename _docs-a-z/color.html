@@ -38,19 +38,19 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
     <div {{ site.example-custom-properties }}>
 
         <div class="theme-primary padding-3 margin-y-2">
-            <p>Primary</p>
+            <p><strong>Primary</strong></p>
         </div>
         <div class="theme-secondary padding-3 margin-y-2">
-            <p>Secondary</p>
+            <p><strong>Secondary</strong></p>
         </div>
         <div class="theme-dark padding-3 margin-y-2">
-            <p>Dark</p>
+            <p><strong>Dark</strong></p>
         </div>
         <div class="theme-light padding-3 margin-y-2">
-            <p>Light</p>
+            <p><strong>Light</strong></p>
         </div>
         <div class="theme-white border padding-3 margin-y-2">
-            <p>White (default)</p>
+            <p><strong>White (default)</strong></p>
         </div>
 
     </div>
@@ -375,7 +375,76 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 </div>
 <!-- .container -->
 
-{% include browser-iframe.html iframe_width="wide" iframe_url="/examples/infinitely-nestable.html" %}
+<figure class="container narrow margin-y-4">
+    <div  {{ site.example-custom-properties }}>
+
+        <div class="theme-primary padding-3 margin-y-2">
+            <p><strong>Primary</strong></p>
+            <div class="theme-secondary padding-3 margin-y-2">
+                <p><strong>Secondary</strong></p>
+                <div class="theme-dark padding-3 margin-y-2">
+                    <p><strong>Dark</strong></p>
+                    <div class="theme-light padding-3 margin-y-2">
+                        <p><strong>Light</strong></p>
+                        <div class="theme-white padding-3 margin-y-2">
+                            <p><strong>White</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <h3>Breakpoint Specific</h3>
+    <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit doloribus alias omnis dicta, reprehenderit quas assumenda suscipit voluptatem sunt.
+    </p>
+</div>
+<!-- .container -->
+
+
+<figure class="container narrow margin-y-4">
+    <div class="aspect-ratio aspect-ratio--3by2 border">
+        <div class="aspect-ratio__content display-flex">
+            <div class="width-100 padding-4 align-self-center">
+                <ul class="nav nav--divider border nav--horizontal margin-y-3" role="navigation">
+                    <li>
+                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                        <ul class="nav__dropdown">
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#1" data-toggle="dropdown">Dropdown</a>
+                        <ul class="nav__dropdown">
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                            <li>
+                                <a href="#1">Link</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- .aspect-ratio -->
+</figure>
 
 <hr class="section-start" id="backgroundColorUtilities">
 
