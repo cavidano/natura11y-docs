@@ -61,10 +61,10 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 
 <div class="container narrow margin-y-4">
     <p> 
-        The five principal theme colors generate our <a href="#themeColorUtilities">theme color utilities</a>, <a href="#1">background color utilities</a>, and <a href="#1">border color utilities</a> across the framework.
+        These five colors generate our <a href="#themeColorUtilities">theme color utilities</a>, <a href="#backgroundColorUtilities">background color utilities</a>, and <a href="#1">border color utilities</a> across the framework.
     </p>
     <p>
-        With Natura11y, <strong><em>White</em></strong> is treated as a color and it serves as your default theme color. The white theme is applied automatically to the <code>&lt;body&gt;</code> of pages linked to Naturally's CSS file. 
+        With Natura11y, <strong><em>White</em></strong> is treated as a color&#8212;and this is important&#8212;it serves as your default theme color. The white theme (and its correlated colors) is applied automatically to the <code>&lt;body&gt;</code> of any document using Naturally's CSS file. 
     </p>
 </div>
 <!-- .container -->
@@ -102,7 +102,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 
 <div class="container narrow margin-y-4">
     <p>
-        In Figure 1, line 4 declares the primary color itself while lines 8-12 declare primary's correlated colors. Each <em>theme</em> represents the sum of their colors.
+        In Figure 1, line 4 declares the primary color itself while lines 8-12 declare primary's correlated colors. Each <em>theme</em> represents the sum of these colors.
     </p>
     <p>
         Refer to our color's <a href="https://github.com/cavidano/natura11y/blob/main/src/modules/color/_style.scss#L20" target="_blank">Scss file on Github</a> for a quick look at all colors available. If you haven't yet done so, read our <a href="{{ site.url }}/docs/customization/#customizingColors">customization</a> docs where we offer a simple practice exercise for customizing colors from Natura11y's CDN.
@@ -172,7 +172,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
                     </li>
                     <li>
                         <a class="button button--outline rounded-pill" href="#1">
-                            Read on Wikipedia
+                            Visit Wikipedia
                         </a>
                     </li>
                 </ul>
@@ -205,7 +205,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
                     </li>
                     <li>
                         <a class="button button--outline rounded-pill" href="#1">
-                            Read on Wikipedia
+                            Visit Wikipedia
                         </a>
                     </li>
                 </ul>
@@ -238,7 +238,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
                     </li>
                     <li>
                         <a class="button button--outline rounded-pill" href="#1">
-                            Read on Wikipedia
+                            Visit Wikipedia
                         </a>
                     </li>
                 </ul>
@@ -271,7 +271,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
                     </li>
                     <li>
                         <a class="button button--outline rounded-pill" href="#1">
-                            Read on Wikipedia
+                            Visit Wikipedia
                         </a>
                     </li>
                 </ul>
@@ -304,7 +304,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
                     </li>
                     <li>
                         <a class="button button--outline rounded-pill" href="#1">
-                            Read on Wikipedia
+                            Visit Wikipedia
                         </a>
                     </li>
                 </ul>
@@ -318,10 +318,10 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 
 <div class="container narrow margin-y-4">
     <p>
-        With the cards above, it's evident that the background color and text color change for each theme. Did you notice the border and link colors change as well? This is most apparent with the <em><strong>Dark</strong></em> card, where the border color becomes light instead of dark.  
+        With the card exampless above, it's evident the background color and text color change for each theme. Did you notice the border and link colors change as well? This is most apparent with the <em><strong>Dark</strong></em> card, where the border color becomes light instead of dark.  
     </p>
     <p>
-        In Figure 3 below, on line 1, notice the <code>.theme-primary</code> utility. No other elements within the card need colors specified because our theme color utility applies its correlated colors at once. 
+        In Figure 3 below, on line 1, notice the <code>.theme-primary</code> utility. No other element within the card needs color specified because our theme color utility applies its correlated colors respectively. 
     </p>
 </div>
 <!-- .container -->
@@ -353,7 +353,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
                         &lt;/li&gt;
                         &lt;li&gt;
                             &lt;a class="button button--outline rounded-pill" href="#1"&gt;
-                                Read on Wikipedia
+                                Visit Wikipedia
                             &lt;/a&gt;
                         &lt;/li&gt;
                     &lt;/ul&gt;
@@ -370,7 +370,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 <div class="container narrow margin-y-4">
     <h3>Infinitely Nestable</h3>
     <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit doloribus alias omnis dicta, reprehenderit quas assumenda suscipit voluptatem sunt.
+        You can nest theme color utilities throughout the DOM.
     </p>
 </div>
 <!-- .container -->
@@ -378,15 +378,15 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 <figure class="container narrow margin-y-4">
     <div  {{ site.example-custom-properties }}>
 
-        <div class="theme-primary padding-3 margin-y-2">
+        <div class="theme-primary padding-3">
             <p><strong>Primary</strong></p>
-            <div class="theme-secondary padding-3 margin-y-2">
+            <div class="theme-secondary padding-3 box-shadow-1">
                 <p><strong>Secondary</strong></p>
-                <div class="theme-dark padding-3 margin-y-2">
+                <div class="theme-dark padding-3 box-shadow-1">
                     <p><strong>Dark</strong></p>
-                    <div class="theme-light padding-3 margin-y-2">
+                    <div class="theme-light padding-3 box-shadow-1">
                         <p><strong>Light</strong></p>
-                        <div class="theme-white padding-3 margin-y-2">
+                        <div class="theme-white padding-3 box-shadow-1">
                             <p><strong>White</strong></p>
                         </div>
                     </div>
@@ -400,68 +400,219 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 <div class="container narrow margin-y-4">
     <h3>Breakpoint Specific</h3>
     <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veritatis odit doloribus alias omnis dicta, reprehenderit quas assumenda suscipit voluptatem sunt.
+        Apply a theme color at a specific breakpoint. Chain a breakpoint modifier (e.g. <code>--lg</code> for a <em>large</em> breakpoint) to a the color utility. In the example below, <code>.theme-primary--lg</code> is present on the parent selector of our nav.  
     </p>
 </div>
 <!-- .container -->
 
-
-<figure class="container narrow margin-y-4">
-    <div class="aspect-ratio aspect-ratio--3by2 border">
-        <div class="aspect-ratio__content display-flex">
-            <div class="width-100 padding-4 align-self-center">
-                <ul class="nav nav--divider border nav--horizontal margin-y-3" role="navigation">
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1 theme-primary--lg" {{ site.example-custom-properties }}>
+            <div class="container narrow">
+                <ul class="nav nav--divider nav--horizontal border border-radius" role="navigation">
                     <li>
-                        <a href="#1" data-toggle="dropdown">Dropdown</a>
-                        <ul class="nav__dropdown">
-                            <li>
-                                <a href="#1">Link</a>
-                            </li>
-                            <li>
-                                <a href="#1">Link</a>
-                            </li>
-                            <li>
-                                <a href="#1">Link</a>
-                            </li>
-                        </ul>
+                        <a href="#1">Link</a>
                     </li>
                     <li>
-                        <a href="#1" data-toggle="dropdown">Dropdown</a>
-                        <ul class="nav__dropdown">
-                            <li>
-                                <a href="#1">Link</a>
-                            </li>
-                            <li>
-                                <a href="#1">Link</a>
-                            </li>
-                            <li>
-                                <a href="#1">Link</a>
-                            </li>
-                        </ul>
+                        <a href="#1">Link</a>
+                    </li>
+                    <li>
+                        <a href="#1">Link</a>
                     </li>
                 </ul>
             </div>
         </div>
+        <pre data-line="1">
+            <code class="language-html">
+                &lt;div class=".theme-primary--lg"&gt;
+
+                    &lt;ul class="nav nav--divider nav--horizontal border border-radius"&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a href="#1"&gt;Link&lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                
+                &lt;/div&gt;
+            </code>
+        </pre>
     </div>
-    <!-- .aspect-ratio -->
+    <figcaption>
+        <p>Figure 4</p>
+    </figcaption>
 </figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        With <code>.theme-primary--lg</code> present, the above example used the default <em><strong>White</strong></em> theme, then applies the <em><strong>Primary</strong></em> theme when the viewport reaches the large breakpoint. Scale your browser horizontally to see this change occur.
+    </p>
+</div>
+<!-- .container -->
+
+
+<div class="container narrow margin-y-4">
+    <h3>Confirm and Warn</h3>
+    <p>
+        In Figure 1 (above), on lines 11 ans 12, you will find declarations for <em><strong>Confirm</strong></em> and  <em><strong>Warn</strong></em> color values. Natura11y allows you to specify <em>confirm</em> and <em>warn</em> values independently for each theme color.   
+    </p>
+    <p>
+    Consider the following where we have an <a href="#1">alert</a> appear within a dark theme:
+    </p>
+</div>
+<!-- .container -->
 
 <hr class="section-start" id="backgroundColorUtilities">
 
 <div class="container narrow margin-y-4">
-    <h2>Background Color Utilities</h2>
+    <h2>Background Color Only</h2>
     <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium soluta doloremque similique magni. Porro, necessitatibus ducimus! Praesentium officiis quasi repudiandae distinctio. Dolores cum cumque quia, at magni rem numquam.
+        Need to apply only a background color? Our <em>background color utilities</em> (e.g. <code>.background-color-primary</code>) apply only the background color to its selector.
     </p>
 </div>
 <!-- .container -->
+
+<figure class="container narrow margin-y-4">
+
+    <div {{ site.example-custom-properties }}>
+
+        <div class="background-color-primary padding-4 margin-y-2">
+            <p class="screen-reader-only">Primary</p>
+        </div>
+        <div class="background-color-secondary padding-4 margin-y-2">
+            <p class="screen-reader-only">Secondary</p>
+        </div>
+        <div class="background-color-dark padding-4 margin-y-2">
+            <p class="screen-reader-only">Dark</p>
+        </div>
+        <div class="background-color-light padding-4 margin-y-2">
+            <p class="screen-reader-only">Light</p>
+        </div>
+        <div class="background-color-white border padding-4 margin-y-2">
+            <p class="screen-reader-only">White</p>
+        </div>
+
+    </div>
+    <!-- .container -->    
+
+</figure>
+<!-- .container -->
+
+<div class="container narrow margin-y-4">
+    <p>
+        Available <em>background color utilities</em> shown in figure 5:
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+	<pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;div class="background-color-primary"&gt;...&lt;/div&gt;
+            &lt;div class="background-color-secondary"&gt;...&lt;/div&gt;
+            &lt;div class="background-color-dark"&gt;...&lt;/div&gt;
+            &lt;div class="background-color-light"&gt;...&lt;/div&gt;
+            &lt;div class="background-color-white"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+	<figcaption>
+		<p>Figure 5</p>
+	</figcaption>
+</figure>
 
 <hr class="section-start" id="TextColorUtilities">
 
 <div class="container narrow margin-y-4">
     <h2>Text Color Utilities</h2>
     <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro praesentium soluta doloremque similique magni. Porro, necessitatibus ducimus! Praesentium officiis quasi repudiandae distinctio. Dolores cum cumque quia, at magni rem numquam.
+        Natura11y's <em>text color utilities</em> are useful for applying text color specificly to certain selectors. 
+    </p>
+    <p>
+     Consider the following example in Figure 6. With our primary theme applied to the containing element (line 1), <code>.text-color-secondary</code> is present on the third button selector.
     </p>
 </div>
 <!-- .container -->
+
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-x-2 padding-y-5 box-shadow-1 theme-primary" {{ site.example-custom-properties }}>
+            <div class="container narrow">
+                <ul class="nav nav--horizontal justify-content-center">
+                    <li>
+                        <a class="button" href="#1">
+                            Button
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button" href="#1">
+                            Button
+                        </a>
+                    </li>
+                    <li>
+                        <a class="button text-color-secondary" href="#1">
+                            Button
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <pre data-line="1,15">
+            <code class="language-html">
+                &lt;div class="theme-light"&gt;
+
+                    &lt;ul class="nav nav--horizontal justify-content-center"&gt;
+                        &lt;li&gt;
+                            &lt;a class="button" href="#1"&gt;
+                                Button
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a class="button" href="#1"&gt;
+                                Button
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                        &lt;li&gt;
+                            &lt;a class="button text-color-secondary" href="#1"&gt;
+                                Button
+                            &lt;/a&gt;
+                        &lt;/li&gt;
+                    &lt;/ul&gt;
+                
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
+    <figcaption>
+        <p>Figure 6</p>
+    </figcaption>
+</figure>
+
+<div class="container narrow margin-y-4">
+    <p>
+        Keep in mind that text color utilities take priority over color applied with theme color utilies. This, of course allows for even more variations within your themes.  
+    </p>
+    <p>
+        Available <em>text color utilities</em> shown in figure 7:
+    </p>
+</div>
+<!-- .container -->
+
+<figure class="container narrow margin-y-4">
+	<pre class="hide-toolbar">
+        <code class="language-html">
+            &lt;div class="text-color-primary"&gt;...&lt;/div&gt;
+            &lt;div class="text-color-secondary"&gt;...&lt;/div&gt;
+            &lt;div class="text-color-dark"&gt;...&lt;/div&gt;
+            &lt;div class="text-color-light"&gt;...&lt;/div&gt;
+            &lt;div class="text-color-white"&gt;...&lt;/div&gt;
+            &lt;div class="text-color-link"&gt;...&lt;/div&gt;
+        </code>
+    </pre>
+	<figcaption>
+		<p>Figure 7</p>
+	</figcaption>
+</figure>
