@@ -26,9 +26,9 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 <hr class="section-start" id="themeColors">
 
 <div class="container narrow margin-y-4">
-    <h2>Theme Colors</h2>
+    <h2>Theme Colors: Your Principle Palette</h2>
     <p>
-        Your principal <em>theme color palette</em> includes <strong><em>Primary</em></strong>, <strong><em>Secondary</em></strong>, <strong><em>Dark</em></strong>, <strong><em>Light</em></strong>, and <strong><em>White</em></strong>.
+        Out of the box, Your principal theme colors</em> include <strong><em>Primary</em></strong>, <strong><em>Secondary</em></strong>, <strong><em>Dark</em></strong>, <strong><em>Light</em></strong>, and <strong><em>White</em></strong>.
     </p>
 </div>
 <!-- .container -->
@@ -64,23 +64,28 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
         These five colors generate our <a href="#themeColorUtilities">theme color utilities</a>, <a href="#backgroundColorUtilities">background color utilities</a>, and <a href="#1">border color utilities</a> across the framework.
     </p>
     <p>
-        With Natura11y, <strong><em>White</em></strong> is treated as a color&#8212;and this is important&#8212;it serves as your default theme color. The white theme (and its correlated colors) is applied automatically to the <code>&lt;body&gt;</code> of any document using Naturally's CSS file. 
+        With Natura11y, <strong><em>White</em></strong> is treated as a color&#8212;and this is important&#8212;it serves as your default theme color. The white theme (and its <a href="#correlatedColors">correlated colors</a> ) is applied automatically to the <code>&lt;body&gt;</code> of any document using Naturally's CSS file. 
     </p>
 </div>
 <!-- .container -->
 
+<hr class="section-start" id="correlatedColors">
 <div class="container narrow margin-y-4">
-    <h3>Correlated Colors</h3>
+    <h2>Correlated Colors</h2>
     <p>
-        Each theme color has five correlated colors&#8212;for text, border, link, confirm, and warn. Figure 1 (below) depicts the colors used within our <strong><em>Primary</em></strong> theme</em>.
+        Every theme color has five correlated colors. These are designated colors for text, borders, and certain links&#8212;along with instances of <em>confirm</em> and <em>warn</em>. Correlated Colors are applied in isolation within their <a href="#themeColorUtilities">theme color utility</a> class. 
+    </p>
+    <p>
+        Figure 1 (below) depicts the css variables declared for the <em> <strong>Primary</strong></em> theme (line 5), and primary's correlated colors (lines 9-13).
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
-    <pre data-line="4,8,9,10,11,12">
+    <pre class="hide-toolbar" data-line="5,9,10,11,12,13">
         <code class="language-css">
             :root {
+
                 // Primary Theme Color
 
                 --primary: #440381;
@@ -92,6 +97,9 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
                 --primary-link: currentColor;
                 --primary-confirm: #16db93;
                 --primary-warn: #ff73aa;
+
+                ...
+
             }
         </code>
     </pre>
@@ -102,10 +110,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 
 <div class="container narrow margin-y-4">
     <p>
-        In Figure 1, line 4 declares the primary color itself while lines 8-12 declare primary's correlated colors. Each <em>theme</em> represents the sum of these colors.
-    </p>
-    <p>
-        Refer to our color's <a href="https://github.com/cavidano/natura11y/blob/main/src/modules/color/_style.scss#L20" target="_blank">Scss file on Github</a> for a quick look at all colors available. If you haven't yet done so, read our <a href="{{ site.url }}/docs/customization/#customizingColors">customization</a> docs where we offer a simple practice exercise for customizing colors from Natura11y's CDN.
+        Jump over to the color's <a href="/docs/customization/#cp_color">css variable reference guide</a> for a full explanation of these colors (and all colors) available within the framework.
     </p>
 </div>
 <!-- .container -->

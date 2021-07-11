@@ -132,7 +132,7 @@
     },
     
     {    
-        "type": "Color System",
+        "type": "Color",
         "scope" : ":root",
         "customProperties": [
             {
