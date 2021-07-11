@@ -55,7 +55,13 @@ example-custom-properties: ' style="
   --dark: #1f163f;
   --light: #f2edeb;
   --primary-text: white;
+  --primary-confirm: #00cc55;
+  --primary-warn: #ff6090;
   --secondary-text: var(--dark);
+  --secondary-confirm: #165a2d;
+  --secondary-warn: #a40e36;
+  --dark-confirm: #00cc53;
+  --dark-warn: #ff5557;
   --a11y-link: #0066cc;
   --dark-link: #21b2fa;
   --body-font-family: Source Sans Pro;
