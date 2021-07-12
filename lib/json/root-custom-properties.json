@@ -4,18 +4,32 @@
         "scope" : ".accordion",
         "customProperties": [
             {
-                "name": "accordion-padding-x",
-                "value": "var(--spacer-2)",
-                "description": "Left and right padding of the <em>accordion</em> component button and panel"
+                "name": "accordion-button-padding-x",
+                "value": "var(--spacer-3)",
+                "description": "Left and right padding of the <em>accordion</em> component button"
             },
             {
-                "name": "accordion-padding-y",
-                "value": "0.75",
-                "description": "Top and bottom padding of the <em>accordion</em> component button and panel"
+                "name": "accordion-button-padding-y",
+                "value": "var(--spacer-3)",
+                "description": "Top and bottom padding of the <em>accordion</em> component button"
+            },
+            {
+                "name": "accordion-panel-padding-x",
+                "value": "var(--spacer-3)",
+                "description": "Left and right padding of the <em>accordion</em> component panel"
+            },
+            {
+                "name": "accordion-panel-padding-y",
+                "value": "var(--spacer-4)",
+                "description": "Top and bottom padding of the <em>accordion</em> component panel"
+            },
+            {
+                "name": "accordion-active-color",
+                "value": "currentColor",
+                "description": "Color of <em>active</em> <em>accordion</em> component button"
             }
         ]
     },
-
     {    
         "type": "Alerts",
         "scope" : ".alert",
@@ -37,7 +51,6 @@
             }
         ]
     },
-
     {    
         "type": "Backdrops",
         "scope" : ".backdrop",
@@ -49,7 +62,6 @@
             }
         ]
     },
-
     {    
         "type": "Borders",
         "scope" : ":root",
@@ -71,7 +83,6 @@
             }
         ]
     },
-
     {    
         "type": "Buttons",
         "scope" : ":root",
@@ -113,7 +124,6 @@
             }
         ]
     },
-
     {    
         "type": "Cards",
         "scope" : ".card",
@@ -130,7 +140,6 @@
             }
         ]
     },
-    
     {    
         "type": "Color",
         "scope" : ":root",
@@ -287,7 +296,6 @@
             }
         ]
     },
-
     {
         "type": "Containers",
         "scope" : ":root",
@@ -346,7 +354,6 @@
             }
         ]
     },
-
     {
         "type": "Typography",
         "scope" : ":root",
