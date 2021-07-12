@@ -18,9 +18,9 @@ backdrop_credit_url: "https://unsplash.com/@rachyhannahphoto"
     <figure class="container narrow margin-y-4">
 
         <button
-            class="button theme-secondary rounded width-100 margin-y-3"
+            class="button theme-primary rounded width-100 margin-y-3"
             data-modal-open="modal-1">
-                Open Modal 1
+                Modal Example
         </button>
 
     </figure>
@@ -29,13 +29,12 @@ backdrop_credit_url: "https://unsplash.com/@rachyhannahphoto"
 
 <div class="modal" id="modal-1" role="dialog">
 	<div class="modal__content narrow medium--md box-shadow-3" aria-labelledby="modal-1-title">
-		<header class="modal__header border-bottom ">
+		<header class="modal__content__head border-bottom ">
                 <h2 class="h5" id="modal-1-title">
                     Modal Title One
                 </h2>
-                <button class="button button--icon-only" data-modal-close>
-                    <span class="sr-only">Close Modal</span>
-                    <span class="fas fa-times"></span>
+                <button class="button button--icon-only" aria-label="Close" data-modal-close>
+                    <span class="icon_close" aria-hidden="true"></span>
                 </button>
             </header>
 
