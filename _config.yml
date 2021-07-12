@@ -49,7 +49,8 @@ cdn_url_css: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/css/natur
 cdn_url_js: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y@main/dist/js/natura11y.js'
 cdn_url_icons: 'https://cdn.jsdelivr.net/gh/cavidano/natura11y-icons@1.0.0/dist/css/natura11y_icons.css'
 
-example-custom-properties: '
+custom-properties-example:
+  '
   style="
   --primary: #440381;
   --secondary: #ffcc66;
@@ -70,4 +71,31 @@ example-custom-properties: '
   --article-sidebar-width: 200px;
   "
   data-example
+  '
+
+custom-properties-practice-exercise:
+  '
+  style="
+      --primary: #00A870;
+      --secondary: #004857;
+      --dark: #131B40;
+      --light: #e6ebed;
+
+      --a11y-link: #0040b2;
+
+      --primary-text: var(--dark);
+      --primary-link: currentColor;
+
+      --secondary-text: white;
+      --secondary-link: currentColor;
+
+      --dark-text: white;
+      --dark-link: currentColor;
+
+      --light-text: var(--dark);
+      --light-link: var(--a11y-link);
+
+      --white-text: var(--dark);
+      --white-link: var(--a11y-link);
+  "
   '
