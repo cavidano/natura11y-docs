@@ -28,7 +28,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 <div class="container narrow margin-y-4">
     <h2>Theme Colors: Your Principle Palette</h2>
     <p>
-        Your principal theme color palette includes <strong><em>Primary</em></strong>, <strong><em>Secondary</em></strong>, <strong><em>Dark</em></strong>, <strong><em>Light</em></strong>, and <strong><em>White</em></strong>.
+        Your principal theme colors include <strong><em>Primary</em></strong>, <strong><em>Secondary</em></strong>, <strong><em>Dark</em></strong>, <strong><em>Light</em></strong>, and <strong><em>White</em></strong>.
     </p>
 </div>
 <!-- .container -->
@@ -71,39 +71,30 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 
 <hr class="section-start" id="correlatedColors">
 <div class="container narrow margin-y-4">
-
-
-
     <h2>Correlated Colors</h2>
     <p>
-        Every theme color has five correlated colors. These are for text, borders, and certain links&#8212;along with instances of <em>confirm</em> and <em>warn</em>. Correlated colors work in isolation within each <a href="#themeColorUtilities">theme color utility</a> class.
+        Every theme color has five correlated colors. These are for text, borders, and certain links&#8212;along with instances of <em>confirm</em> and <em>warn</em>. Correlated colors work in isolation within their corresponding <a href="#themeColorUtilities">theme color utility</a> class.
     </p>
     <p>
-        Figure 1 (below) depicts the css variable declared for the <em><strong>primary</strong></em>  theme on line 5. Lines 9-13 provide css variables for primary's correlated colors.
+        Figure 1 (below) depicts the css variable declared for the <em><strong>primary</strong></em> theme on line 3. Lines 7-11 provide css variables for primary's correlated colors.
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
-    <pre class="hide-toolbar" data-line="5,9,10,11,12,13">
+    <pre class="hide-toolbar" data-line="3,7,8,9,10,11">
         <code class="language-css">
-            :root {
+            // Primary Theme Color
 
-                // Primary Theme Color
+            --primary: #440381;
 
-                --primary: #440381;
-
-                // Primary Correlated Colors
-                
-                --primary-text: var(--dark);
-                --primary-border: hsla(0, 0%, 0%, 0.25);
-                --primary-link: currentColor;
-                --primary-confirm: #16db93;
-                --primary-warn: #ff73aa;
-
-                ...
-
-            }
+            // Primary Correlated Colors
+            
+            --primary-text: var(--dark);
+            --primary-border: hsla(0, 0%, 0%, 0.25);
+            --primary-link: currentColor;
+            --primary-confirm: #16db93;
+            --primary-warn: #ff73aa;
         </code>
     </pre>
     <figcaption>
@@ -113,7 +104,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 
 <div class="container narrow margin-y-4">
     <p>
-        Jump over to the color's <a href="/docs/customization/#cp_color">css variable reference guide</a> for a full explanation of these colors (and all colors) available within the framework.
+        For a descriptive list of all colors available, jump over to the <a href="/docs/customization/#cp_color" target="blank">css variable reference guide</a>.
     </p>
 </div>
 <!-- .container -->
@@ -123,10 +114,10 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 <div class="container narrow margin-y-4">
     <h2>Theme Color Utilities</h2>
     <p>
-        Probably one of Natura11y's most useful features&#8212;our theme color utility classes. Each theme color utility applies a predefined <strong>background color</strong>, <strong>text color</strong>, <strong>border color</strong>, <strong>link color</strong>, <strong>confirm color</strong>, and <strong>warn color</strong> to its selector!  
+        Natura11y's theme color utility classes are one of its most useful features. Each theme color utility provides predefined colors for <strong>background</strong>, <strong>text</strong>, <strong>borders</strong>, and <strong>links</strong> (within paragraphs). Theme color utilities also provide colors for instances of <strong>confirm</strong> and <strong>warn</strong>.   
     </p>
     <p>
-        The above run-on sentence might take a bit to soak in, so let's look at it in practice. Figure 1 below provides our five theme color utilities:
+        Figure 2 (below) provides the five theme color utilities:
     </p>
 </div>
 <!-- .container -->
@@ -148,7 +139,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 
 <div class="container narrow margin-y-4">
     <p>
-        You can apply theme colors to virtually any containing block-level element within the DOM. Consider the following cards, where each applies a different theme color utility. 
+        You may apply theme colors to any containing block-level element within the DOM. Consider the following five cards, each colored with a different theme color utility. 
     </p>
 </div>
 <!-- .container -->
