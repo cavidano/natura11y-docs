@@ -508,7 +508,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 <div class="container narrow margin-y-4">
     <h3>Confirm and Warn</h3>
     <p>
-        In Figure 1 (above), on lines 10 and 11, you will find declarations for <em><strong>confirm</strong></em> and  <em><strong>warn</strong></em> color values. Natura11y allows you to specify <em>confirm</em> and <em>warn</em> values independently for each theme color!   
+        In Figure 1 (above), on lines 10 and 11, you will find declarations for <em><strong>confirm</strong></em> and  <em><strong>warn</strong></em> color values. Natura11y allows you to specify confirm and warn values for each theme color!
     </p>
 </div>
 <!-- .container -->
@@ -695,6 +695,13 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 </figure>
 
 <div class="container narrow margin-y-4">
+    <p>
+        Instances of <em>confirm</em> and <em>warn</em> appear in <a href="/docs/alerts">alerts</a>, and <a href="/docs/forms">forms</a>. 
+    </p>
+</div>
+<!-- .container -->
+
+<div class="container narrow margin-y-4">
     <h3>Infinitely Nestable</h3>
     <p>
         You can nest theme color utilities throughout the DOM.
@@ -786,64 +793,77 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 <div class="container narrow margin-y-4">
     <h2>Background Color Utilities</h2>
     <p>
-        Need to apply only a background color? Our <em>background color utilities</em> (e.g. <code>.background-color-primary</code>) apply only the background color to its selector.
+        Need to apply only a background color? Our background color utilities (shown in Figure 6) apply a background color to its selector.
     </p>
 </div>
 <!-- .container -->
 
-<figure class="container narrow margin-y-4">
 
-    <div {{ site.example-custom-properties }}>
+<figure class="container medium margin-y-4">
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.example-custom-properties }}>
+            <div class="container narrow">
+                <div class="grid grid--gap-2 grid--cell-fill">
 
-        <div class="grid grid--gap-2 grid--cell-fill">
-
-            <div class="grid__cell">
-                <div class="aspect-ratio aspect-ratio--1by1">
-                    <div class="aspect-ratio__content background-color-primary">
-                        <p class="screen-reader-only">Primary</p>
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1">
+                            <div class="aspect-ratio__content background-color-primary">
+                                <p class="screen-reader-only">Primary</p>
+                            </div>
+                        </div> 
                     </div>
-                </div> 
-            </div>
 
-            <div class="grid__cell">
-                <div class="aspect-ratio aspect-ratio--1by1">
-                    <div class="aspect-ratio__content background-color-secondary">
-                        <p class="screen-reader-only">Secondary</p>
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1">
+                            <div class="aspect-ratio__content background-color-secondary">
+                                <p class="screen-reader-only">Secondary</p>
+                            </div>
+                        </div> 
                     </div>
-                </div> 
-            </div>
 
-            <div class="grid__cell">
-                <div class="aspect-ratio aspect-ratio--1by1">
-                    <div class="aspect-ratio__content background-color-dark">
-                        <p class="screen-reader-only">Dark</p>
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1">
+                            <div class="aspect-ratio__content background-color-dark">
+                                <p class="screen-reader-only">Dark</p>
+                            </div>
+                        </div> 
                     </div>
-                </div> 
-            </div>
 
-            <div class="grid__cell">
-                <div class="aspect-ratio aspect-ratio--1by1">
-                    <div class="aspect-ratio__content background-color-light">
-                        <p class="screen-reader-only">Light</p>
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1">
+                            <div class="aspect-ratio__content background-color-light">
+                                <p class="screen-reader-only">Light</p>
+                            </div>
+                        </div> 
                     </div>
-                </div> 
-            </div>
 
-            <div class="grid__cell">
-                <div class="aspect-ratio aspect-ratio--1by1">
-                    <div class="aspect-ratio__content border">
-                        <p class="screen-reader-only">White</p>
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1">
+                            <div class="aspect-ratio__content border">
+                                <p class="screen-reader-only">White</p>
+                            </div>
+                        </div> 
                     </div>
-                </div> 
+                
+                </div>
             </div>
-        
         </div>
-
+        <pre>
+            <code class="language-html">
+                &lt;div class="background-color-primary"&gt;...&lt;/div&gt;
+                &lt;div class="background-color-secondary"&gt;...&lt;/div&gt;
+                &lt;div class="background-color-dark"&gt;...&lt;/div&gt;
+                &lt;div class="background-color-light"&gt;...&lt;/div&gt;
+                &lt;div class="background-color-white"&gt;...&lt;/div&gt;
+            </code>
+        </pre>
     </div>
-    <!-- .container -->    
-
+    <figcaption>
+        <p>Figure 6</p>
+    </figcaption>
 </figure>
-<!-- .container -->
+
+
 
 <div class="container narrow margin-y-4">
     <p>
@@ -851,21 +871,6 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
     </p>
 </div>
 <!-- .container -->
-
-<figure class="container narrow margin-y-4">
-	<pre class="hide-toolbar">
-        <code class="language-html">
-            &lt;div class="background-color-primary"&gt;...&lt;/div&gt;
-            &lt;div class="background-color-secondary"&gt;...&lt;/div&gt;
-            &lt;div class="background-color-dark"&gt;...&lt;/div&gt;
-            &lt;div class="background-color-light"&gt;...&lt;/div&gt;
-            &lt;div class="background-color-white"&gt;...&lt;/div&gt;
-        </code>
-    </pre>
-	<figcaption>
-		<p>Figure 6</p>
-	</figcaption>
-</figure>
 
 <hr class="section-start" id="textColorUtilities">
 
