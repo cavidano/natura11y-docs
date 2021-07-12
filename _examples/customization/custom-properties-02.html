@@ -3,7 +3,33 @@ layout: example-shell
 title: "Custom Properties 02"
 ---
 
-<main class="overflow-hidden"  {{ site.example-custom-properties }}>
+<style>
+    :root {
+        --primary: #00A870;
+        --secondary: #004857;
+        --dark: #131B40;
+        --light: #e6ebed;
+
+        --a11y-link: #0040b2;
+
+        --primary-text: var(--dark);
+        --primary-link: currentColor;
+
+        --secondary-text: white;
+        --secondary-link: currentColor;
+
+        --dark-text: white;
+        --dark-link: currentColor;
+
+        --light-text: var(--dark);
+        --light-link: var(--a11y-link);
+
+        --white-text: var(--dark);
+        --white-link: var(--a11y-link);
+    }
+</style>
+
+<main class="overflow-hidden">
 
     <div class="container narrow margin-y-5">
 
