@@ -18,7 +18,16 @@ tags:
 
 {% capture as_body %}
 <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Error quasi alias culpa quisquam deserunt nobis molestiae.
+    All focusable elements in the accordion are included in the page <kbd>tab</kbd> sequence.
+</p>
+<p>
+    Natura11y's accordions have keyboard support including <kbd>Tab</kbd> and up and down arrows.
+</p>
+<p>
+    When focused, accordion headers expand the panel with <kbd>space</kbd> or <kbd>enter</kbd> keys.
+</p>
+<p>
+    When clicked, accordion headers toggle the appropriate <em>aria-hidden</em> and <em>aria-expanded</em> attributes.
 </p>
 {% endcapture %}
 
@@ -40,18 +49,18 @@ tags:
 
         <button
             class="accordion__button h5"
-            id="acc-button-lion"
+            id="acc-button-lion-01"
             data-toggle="accordion"
-            aria-controls="acc-panel-lion"
+            aria-controls="acc-panel-lion-01"
             aria-expanded="false">
                 Lion
         </button>
 
         <div
             class="accordion__panel"
-            id="acc-panel-lion"
+            id="acc-panel-lion-01"
             data-accordion="panel"
-            aria-labelledby="acc-button-lion"
+            aria-labelledby="acc-button-lion-01"
             role="region">
 
             <div class="accordion__panel__content">
@@ -64,14 +73,14 @@ tags:
 
         <button
             class="accordion__button h5"
-            id="acc-button-leopard"
+            id="acc-button-leopard-01"
             data-toggle="accordion"
-            aria-controls="acc-panel-leopard"
+            aria-controls="acc-panel-leopard-01"
             aria-expanded="false">
                 Leopard
         </button>
 
-        <div class="accordion__panel" id="acc-panel-leopard" data-accordion="panel" aria-labelledby="acc-button-leopard" role="region">
+        <div class="accordion__panel" id="acc-panel-leopard-01" data-accordion="panel" aria-labelledby="acc-button-leopard-01" role="region">
 
             <div class="accordion__panel__content">
                 <p>
@@ -83,18 +92,18 @@ tags:
 
         <button
             class="accordion__button h5"
-            id="acc-button-cheetah"
+            id="acc-button-cheetah-01"
             data-toggle="accordion"
-            aria-controls="acc-panel-cheetah"
+            aria-controls="acc-panel-cheetah-01"
             aria-expanded="false">
                 Cheetah
         </button>
 
         <div
             class="accordion__panel"
-            id="acc-panel-cheetah"
+            id="acc-panel-cheetah-01"
             data-accordion="panel"
-            aria-labelledby="acc-button-cheetah"
+            aria-labelledby="acc-button-cheetah-01"
             role="region">
 
             <div class="accordion__panel__content">
@@ -106,18 +115,18 @@ tags:
         </div>
         <button
             class="accordion__button h5"
-            id="acc-button-caracal"
+            id="acc-button-caracal-01"
             data-toggle="accordion"
-            aria-controls="acc-panel-caracal"
+            aria-controls="acc-panel-caracal-01"
             aria-expanded="false">
                 Caracal
         </button>
 
         <div
             class="accordion__panel"
-            id="acc-panel-caracal"
+            id="acc-panel-caracal-01"
             data-accordion="panel"
-            aria-labelledby="acc-button-caracal"
+            aria-labelledby="acc-button-caracal-01"
             role="region">
 
             <div class="accordion__panel__content">
@@ -130,18 +139,18 @@ tags:
 
         <button
             class="accordion__button h5"
-            id="acc-button-serval"
+            id="acc-button-serval-01"
             data-toggle="accordion"
-            aria-controls="acc-panel-serval"
+            aria-controls="acc-panel-serval-01"
             aria-expanded="false">
                 Serval
         </button>
 
         <div
             class="accordion__panel"
-            id="acc-panel-serval"
+            id="acc-panel-serval-01"
             data-accordion="panel"
-            aria-labelledby="acc-button-serval"
+            aria-labelledby="acc-button-serval-01"
             role="region">
 
             <div class="accordion__panel__content">
@@ -230,8 +239,7 @@ tags:
                         The <code>aria-controls</code> attribute equals its associated panel's <code>id</code> attribute. 
                     </p>
                     <p>
-                        The <code>aria-expanded="false"</code> attribute is present on the button where its associated
-                        accordion panel should be closed when the page loads.
+                        The <code>aria-expanded="false"</code> attribute is present on the button where its associated accordion panel should be closed when the page loads.
                     </p>
                 </td>
             </tr>
@@ -295,9 +303,7 @@ tags:
 
 <div class="container narrow margin-y-4">
     <p>
-        In Figure 2 (line 2) notice the <code>.h5</code> class. Header utility classes are particularly useful in this example. When a
-        semantic header (e.g. <code>&lt;h1&gt;</code>) needs to be smaller (in visual size) than its natural markup style. You can use
-            header utilities on non-semantic tags (e.g., <code>&lt;button&gt;</code>), that need the appearance of a header.
+        In Figure 2 (line 2) notice the <code>.h5</code> class. Header utility classes are particularly useful in this example. When a semantic header (e.g. <code>&lt;h1&gt;</code>) needs to be smaller (in visual size) than its natural markup style. You can use header utilities on non-semantic tags (e.g., <code>&lt;button&gt;</code>), that need the appearance of a header.
     </p>
 </div>
 <!-- .container -->
@@ -313,119 +319,125 @@ tags:
 <!-- .container -->
 
 <figure class="container narrow margin-y-4">
+    
     <div class="accordion">
 
         <button
             class="accordion__button h5"
-            id="acc-button-boroughs-manhattan"
+            id="acc-button-lion-02"
             data-toggle="accordion"
-            aria-controls="acc-panel-boroughs-manhattan"
+            aria-controls="acc-panel-lion-02"
             aria-expanded="true">
-                Manhattan
+                Lion
         </button>
 
         <div
-            class="accordion__panel show"
-            id="acc-panel-boroughs-manhattan"
+            class="accordion__panel shown"
+            id="acc-panel-lion-02"
             data-accordion="panel"
-            aria-labelledby="acc-button-boroughs-manhattan"
+            aria-labelledby="acc-button-lion-02"
             role="region">
+
             <div class="accordion__panel__content">
                 <p>
-                    New York City comprises 5 boroughs sitting where the Hudson River meets the Atlantic Ocean. At its core is <a href="#1">Manhattan</a>, a densely populated borough that’s among the world’s major commercial, financial and cultural centers. Its iconic sites include skyscrapers such as the Empire State Building and sprawling Central Park.
+                    The lion is a large felid of the genus Panthera native mainly to <a href="#1">Africa</a>. It has a muscular, deep-chested body, short, rounded head, round ears, and a hairy tuft at the end of its tail. It is sexually dimorphic; adult male lions are larger than females and have a prominent mane.
                 </p>
             </div>
+
         </div>
 
         <button
             class="accordion__button h5"
-            id="acc-button-boroughs-the-bronx"
+            id="acc-button-leopard-02"
             data-toggle="accordion"
-            aria-controls="acc-panel-boroughs-the-bronx"
+            aria-controls="acc-panel-leopard-02"
             aria-expanded="false">
-                The Bronx
+                Leopard
         </button>
 
-        <div
-            class="accordion__panel"
-            id="acc-panel-boroughs-the-bronx"
-            data-accordion="panel"
-            aria-labelledby="acc-button-boroughs-the-bronx"
-            role="region">
+        <div class="accordion__panel" id="acc-panel-leopard-02" data-accordion="panel" aria-labelledby="acc-button-leopard-02" role="region">
+
             <div class="accordion__panel__content">
                 <p>
-                    The Bronx is a borough of New York City. It's known for Yankee Stadium, the home field of the New York Yankees baseball team. Dating from 1899, the vast Bronx Zoo houses hundreds of species of animals. Nearby, the sprawling New York Botanical Garden features a landmark greenhouse with rainforest and cactus displays.
+                    The leopard is one of the five extant species in the genus Panthera, a member of the cat family, Felidae. It occurs in a wide range in sub-Saharan <a href="#1">Africa</a>, in some parts of Western and Central Asia, Southern Russia, and on the Indian subcontinent to Southeast and East Asia.
                 </p>
             </div>
+
         </div>
 
         <button
             class="accordion__button h5"
-            id="acc-button-boroughs-brooklyn"
+            id="acc-button-cheetah-02"
             data-toggle="accordion"
-            aria-controls="acc-panel-boroughs-brooklyn"
+            aria-controls="acc-panel-cheetah-02"
             aria-expanded="false">
-                Brooklyn
+                Cheetah
         </button>
 
         <div
             class="accordion__panel"
-            id="acc-panel-boroughs-brooklyn"
+            id="acc-panel-cheetah-02"
             data-accordion="panel"
-            aria-labelledby="acc-button-boroughs-brooklyn"
+            aria-labelledby="acc-button-cheetah-02"
             role="region">
+
             <div class="accordion__panel__content">
                 <p>
-                    Brooklyn is a borough of New York City, co-extensive with Kings County, in the U.S. state of New York. It is the most-populous county in the state, the second-most densely populated county in the United States, and New York City's most populous borough, with an estimated 2,648,403 residents in 2020.
+                    The cheetah is a large cat native to <a href="#1">Africa</a> and central Iran. It is the fastest land animal, estimated to be capable of running at 80 to 128 km/h with the fastest reliably recorded speeds being 93 and 98 km/h, and as such has several adaptations for speed, including a light build, long thin legs and a long tail.
                 </p>
             </div>
+
+        </div>
+        <button
+            class="accordion__button h5"
+            id="acc-button-caracal-02"
+            data-toggle="accordion"
+            aria-controls="acc-panel-caracal-02"
+            aria-expanded="false">
+                Caracal
+        </button>
+
+        <div
+            class="accordion__panel"
+            id="acc-panel-caracal-02"
+            data-accordion="panel"
+            aria-labelledby="acc-button-caracal-02"
+            role="region">
+
+            <div class="accordion__panel__content">
+                <p>
+                    The caracal is a medium-sized wild cat native to <a href="#1">Africa</a>, the Middle East, Central Asia, and arid areas of Pakistan and northwestern India. It is characterised by a robust build, long legs, a short face, long tufted ears, and long canine teeth.
+                </p>
+            </div>
+
         </div>
 
         <button
             class="accordion__button h5"
-            id="acc-button-boroughs-queens"
+            id="acc-button-serval-02"
             data-toggle="accordion"
-            aria-controls="acc-panel-boroughs-queens"
+            aria-controls="acc-panel-serval-02"
             aria-expanded="false">
-                Queens
+                Serval
         </button>
 
         <div
             class="accordion__panel"
-            id="acc-panel-boroughs-queens"
+            id="acc-panel-serval-02"
             data-accordion="panel"
-            aria-labelledby="acc-button-boroughs-queens"
+            aria-labelledby="acc-button-serval-02"
             role="region">
+
             <div class="accordion__panel__content">
                 <p>
-                    Queens is a New York City borough on Long Island across the East River from Manhattan. Flushing Meadows Corona Park, with the Unisphere, a 12-story 1964 World's Fair globe sculpture, hosts the annual U.S. Open tennis tournament.
+                    The serval is a wild cat native to <a href="#1">Africa</a>. It is rare in North Africa and the Sahel, but widespread in sub-Saharan countries, except rainforest regions. Across its range, it occurs in protected areas, and hunting it is either prohibited or regulated in range countries. It is the sole member of the genus Leptailurus.
                 </p>
             </div>
-        </div>
 
-        <button
-            class="accordion__button h5"
-            id="acc-button-boroughs-staten-island"
-            data-toggle="accordion"
-            aria-controls="acc-panel-boroughs-staten-island"
-            aria-expanded="false">
-            Staten Island
-        </button>
-
-        <div
-            class="accordion__panel"
-            id="acc-panel-boroughs-staten-island"
-            data-accordion="panel"
-            aria-labelledby="acc-button-boroughs-staten-island"
-            role="region">
-            <div class="accordion__panel__content">
-                <p>
-                    Staten Island is the southernmost of New York City's 5 boroughs. It is connected to Lower Manhattan via the Staten Island Ferry, which runs across New York Harbor. Staten Island Zoo is home to kangaroos, birds of prey and snakes. The Snug Harbor Cultural Center and Botanical Garden features flower beds, Greek revival buildings and art galleries.
-                </p>
-            </div>
         </div>
 
     </div>
+    <!-- .accordion -->
 </figure>
 
 <figure class="container medium margin-y-4">
