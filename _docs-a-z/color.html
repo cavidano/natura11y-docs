@@ -460,30 +460,42 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 
 <div class="container narrow margin-y-4">
     <p>
-        In addition to generic links, the <a href="#textColorUtilities">text color utility</a> <code>.text-color-link</code> is available. In the following example, Lorem ipsum dolor sit amet consectetur adipisicing elit.   
+        Beyond generic links, a <a href="#textColorUtilities">text color utility</a> named <code>.text-color-link</code> is available. With the following example, <code>.text-color-link</code> (Figure 4, Line 5) colors the buttons within the <a href="/docs/buttons/#theButtonGroup">button group</a> selector blue.   
     </p>
 </div>
 <!-- .container -->
 
 <figure class="container medium margin-y-4">
     <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1" {{ site.example-custom-properties }}>
-            <div class="button-group font-size-lg text-color-link">
-                <a class="button button--outline" href="#1">
-                    Sign In
-                </a>
-                <a class="button button--icon-only" href="#1" aria-label="Language">
-                    <span class="icon_language" aria-hidden="true"></span>
-                </a>
-                <a class="button button--icon-only" href="#1" aria-label="Search">
-                    <span class="icon_search" aria-hidden="true"></span>
-                </a>
+        <div class="padding-y-5 box-shadow-1" {{ site.example-custom-properties }}>
+            <div class="container">
+                <div class="button-group font-size-lg text-color-link">
+                    <a class="button button--outline" href="#1">
+                        Sign In
+                    </a>
+                    <a class="button button--icon-only" href="#1" aria-label="Language">
+                        <span class="icon_language" aria-hidden="true"></span>
+                    </a>
+                    <a class="button button--icon-only" href="#1" aria-label="Search">
+                        <span class="icon_search" aria-hidden="true"></span>
+                    </a>
+                </div>
             </div>
         </div>
         <pre data-line="1">
             <code class="language-html">
                 &lt;div class="button-group text-color-link"&gt;
-                    ...
+
+                    &lt;a class="button button--outline" href="#1"&gt;
+                        Sign In
+                    &lt;/a&gt;
+                    &lt;a class="button button--icon-only" href="#1" aria-label="Language"&gt;
+                        &lt;span class="icon_language" aria-hidden="true"&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                    &lt;a class="button button--icon-only" href="#1" aria-label="Search"&gt;
+                        &lt;span class="icon_search" aria-hidden="true"&gt;&lt;/span&gt;
+                    &lt;/a&gt;
+                
                 &lt;/div&gt;
             </code>
         </pre>
@@ -722,7 +734,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 
 <figure class="container medium margin-y-4">
     <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1 theme-primary--lg" {{ site.example-custom-properties }}>
+        <div class="padding-y-5 box-shadow-1 theme-primary--lg" {{ site.example-custom-properties }}>
             <div class="container narrow">
                 <ul class="nav nav--divider nav--horizontal border border-radius" role="navigation">
                     <li>
@@ -870,7 +882,7 @@ backdrop_credit_url: "https://unsplash.com/@davidclode"
 
 <figure class="container medium margin-y-4">
     <div class="example">
-        <div class="padding-x-2 padding-y-5 box-shadow-1 theme-primary" {{ site.example-custom-properties }}>
+        <div class="padding-y-5 theme-primary box-shadow-1" {{ site.example-custom-properties }}>
             <div class="container narrow">
                 <ul class="nav nav--horizontal justify-content-center">
                     <li>
