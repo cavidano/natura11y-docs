@@ -17,7 +17,7 @@ export default class Accordion {
 
             function setKeyboardFocusableElements(element = document, focusable = false) {
 
-                const focusElList = element.querySelectorAll("a[href], button, input, textarea, select, details, [tabindex]:not([tabindex=' - 1 '])");
+                const focusElList = element.querySelectorAll("a[href], button, input, textarea, select, details, [tabindex]:not([tabindex='- 1'])");
 
                 for (const focusEl of focusElList) {
                     if (focusable === true) {
