@@ -139,7 +139,7 @@ h6, .h6 {
     font-weight: var(--body-font-weight-bold);
     line-height: var(--header-line-height);
 
-    &:not(.accordion__button):not(.alert__title){
+    &:not(.accordion__button):not(.alert__title):not(:last-child){
         margin-bottom: var(--spacer-2);
     }
 }
