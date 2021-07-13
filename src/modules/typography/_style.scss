@@ -8,10 +8,9 @@ In this file:
 // D. Font Size Utilities
 // E. Headers
 // F. Body Selectors
-// G. Last Child Margin Bottom
-// H. Text Align Utilities
-// I. Word Wrap Utilities
-// J. Truncate Text
+// G. Text Align Utilities
+// H. Word Wrap Utilities
+// I. Truncate Text
 
 */
 
@@ -213,9 +212,10 @@ body {
 
 p, 
 p ~ ul,
-p ~ ol,
-blockquote {
-    margin-bottom: 1.5em;
+p ~ ol {
+    &:not(:last-child){
+        margin-bottom: 1.25em;
+    }
 }
 
 p ~ ul,
@@ -273,32 +273,7 @@ figure {
 }
 
 //////////////////////////////////////////////
-// G. Last Child Margin Bottom
-//////////////////////////////////////////////
-
-// Remove margin bottom on specific ':last-child' selectors 
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-a,
-ul,
-li,
-dl,
-dd,
-blockquote,
-address {
-    &:last-child {
-        margin-bottom: 0;
-    }
-}
-
-//////////////////////////////////////////////
-// H. Text Align Utilities
+// G. Text Align Utilities
 //////////////////////////////////////////////
 
 @each $breakpoint in map.keys(breakpoints.$breakpoints) {
@@ -321,7 +296,7 @@ address {
 }
 
 //////////////////////////////////////////////
-// I. Word Wrap Utilities
+// H. Word Wrap Utilities
 //////////////////////////////////////////////
 
 .nowrap {
@@ -333,7 +308,7 @@ address {
 }
 
 ////////////////////////////////////////
-// J. Truncate Text
+// I. Truncate Text
 ////////////////////////////////////////
 
 .truncate-text {
