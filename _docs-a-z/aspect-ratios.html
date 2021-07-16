@@ -20,75 +20,57 @@ tags:
 
 <div class="container narrow margin-y-4">
     <h2>Aspect Ratio Sizes</h2>
-    <p>Available aspect ratio sizes shown in the following table.</p>
+    <p>Available aspect ratio sizes shown in Figure 1.</p>
 </div>
 <!-- .container -->
 
-<figure class="container narrow margin-y-4">
-
-    <table class="table table--edge">
-
-        <thead>
-            <tr>
-                <th class="col-a width-50">Modifier Class Name</th>
-                <th class="col-c width-50">Size</th>
-            </tr>
-        </thead>
-
-        <tbody class="va-middle">
-            <tr>
-                <td>
-                    <p><code>.aspect-ratio--16by9</code></p>
-                </td>
-                <td>
-                    <div class="aspect-ratio aspect-ratio--16by9 border border-dark">
-                        <div class="aspect-ratio__content display-flex align-items-center justify-content-center">
-                            <p>16x9</p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <p><code>.aspect-ratio--4by3</code></p>
-                </td>
-                <td>
-                    <div class="aspect-ratio aspect-ratio--4by3 border border-dark">
-                        <div class="aspect-ratio__content display-flex align-items-center justify-content-center">
-                            <p>4x3</p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                   <p><code>.aspect-ratio--1by1</code></p> 
-                </td>
-                <td>
-                    <div class="aspect-ratio aspect-ratio--1by1 border border-dark">
-                        <div class="aspect-ratio__content display-flex align-items-center justify-content-center">
-                            <p>1x1</p>
-                        </div>
-                    </div>
-                </td>
-            </tr>
-
-        </tbody>
-
-    </table>
-
-</figure>
-
 <figure class="container medium margin-y-4">
-    <pre data-line="1,3">
-        <code class="language-html">
-            &lt;div class="aspect-ratio aspect-ratio--16by9"&gt;
+    <div class="example">
+        <div class="padding-y-5 box-shadow-1" {{ site.custom-properties-example }}>
+            <div class="container narrow">
+                <div class="grid grid--gap-2 grid--cell-fill align-items-baseline">
 
-                &lt;div class="aspect-ratio__content"&gt;&lt;/div&gt;
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--16by9 border border-dark">
+                            <div class="aspect-ratio__content display-flex align-items-center justify-content-center">
+                                <p>16x9</p>
+                            </div>
+                        </div> 
+                    </div>
 
-            &lt;/div&gt;
-        </code>
-    </pre>
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--4by3 border border-dark">
+                            <div class="aspect-ratio__content display-flex align-items-center justify-content-center">
+                                <p>4x3</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="grid__cell">
+                        <div class="aspect-ratio aspect-ratio--1by1 border border-dark">
+                            <div class="aspect-ratio__content display-flex align-items-center justify-content-center">
+                                <p>1x1</p>
+                            </div>
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+        <pre data-line="1,2">
+            <code class="language-html">
+                &lt;div class="aspect-ratio aspect-ratio--16by9"&gt;
+                    &lt;div class="aspect-ratio__content"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="aspect-ratio aspect-ratio--4by3"&gt;
+                    &lt;div class="aspect-ratio__content"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="aspect-ratio aspect-ratio--1by1"&gt;
+                    &lt;div class="aspect-ratio__content"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            </code>
+        </pre>
+    </div>
     <figcaption>
         <p>Figure 1</p>
     </figcaption>
@@ -117,7 +99,7 @@ tags:
                 <td>3</td>
                 <td>
                     <p>
-                        The <code>.aspect-ratio__content</code> is required. It contains the feature image.
+                        The <code>.aspect-ratio__content</code> is required. It contains the content.
                     </p>
                 </td>
             </tr>
